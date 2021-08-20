@@ -1,0 +1,148 @@
+:root {
+	/* BreakPoint's */
+	--rt-bp-extra-small: 480px;
+	--rt-bp-small: 600px;
+	--rt-bp-medium: 768px;
+	--rt-bp-large: 992px;
+	--rt-bp-extra-large: 1200px;
+
+	/* Animation's */
+	--rt-a-loader: loader;
+	--rt-a-fadeIn: fadeIn;
+	--rt-a-fadeOut: fadeOut;
+	--rt-a-rubber: rubber;
+}
+
+/* Media's Breakpoint's */
+@media screen and (min-width: 480px) {
+    .container\:section {
+        max-width: var(--rt-bp-extra-small) !important;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .container\:section {
+        max-width: var(--rt-bp-small) !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container\:section {
+        max-width: var(--rt-bp-medium) !important;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .container\:section {
+        max-width: var(--rt-bp-large) !important;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+	.container\:section {
+        max-width: var(--rt-bp-extra-large) !important;
+    }	
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) { }
+
+/* Reduce Transition */
+@media (prefers-reduced-motion: reduce) { }
+
+/* Media's Animation's */
+@keyframes loader { }
+
+@-webkit-keyframes loader { }
+
+@-moz-keyframes loader { }
+
+@-o-keyframes loader { }
+
+@keyframes fadeIn {
+	from {
+		transform: scale(1);
+	}
+
+	to {
+		transform: scale(1.15);
+	}
+}
+
+	@-webkit-keyframes fadeIn {
+		from {
+			-webkit-transform: scale(1);
+		}
+
+		to {
+			-webkit-transform: scale(1.15);
+		}
+	}
+
+	@-moz-keyframes fadeIn {
+		from {
+			-moz-transform: scale(1);
+		}
+
+		to {
+			-moz-transform: scale(1.15);
+		}
+	}
+
+	@-o-keyframes fadeIn {
+		from {
+			-o-transform: scale(1.15);
+		}
+
+		to {
+			-o-transform: scale(1);
+		}
+	}
+
+@keyframes fadeOut {
+	from {
+		transform: scale(1.15);
+	}
+
+	to {
+		transform: scale(1);
+	}
+}
+
+	@-webkit-keyframes fadeOut {
+		from {
+			-webkit-transform: scale(1.15);
+		}
+
+		to {
+			-webkit-transform: scale(1);
+		}
+	}
+
+	@-moz-keyframes fadeOut {
+		from {
+			-moz-transform: scale(1.15);
+		}
+
+		to {
+			-moz-transform: scale(1);
+		}
+	}
+
+	@-o-keyframes fadeOut {
+		from {
+			-o-transform: scale(1.15);
+		}
+
+		to {
+			-o-transform: scale(1);
+		}
+	}
+
+@keyframes rubber { }
+
+	@-webkit-keyframes rubber { }
+
+	@-moz-keyframes rubber { }
+
+	@-o-keyframes rubber { }
