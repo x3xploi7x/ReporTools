@@ -1,0 +1,83 @@
+/******************************COMPONENTS******************************/
+:root {
+    /* Components' Rule's */
+    --rt-cm-mirror: rgba(255, 255, 255, 0.5);
+    --rt-cm-wrapper: rgba(10, 10, 10, 0.75);
+
+    /* Filter's */
+    --rt-bd-blur: blur(5px);
+}
+
+
+/* Mirror Wrapper */
+.section\:mirror {
+    position: var(--rt-ps-absolute);
+    background-color: var(--rt-cm-wrapper);
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: var(--rt-bd-blur);
+    opacity: 0.98;
+    z-index: 9999;
+}
+
+    /* Modal Container */
+    .section\:mirror > .modal\:container {
+        display: var(--rt-ds-flex);
+        background-color: var(--rt-cm-mirror);
+        font-family: var(--rt-fn-monaco);
+        width: 100%;
+        height: 100%;
+        backdrop-filter: var(--rt-bd-blur);
+        justify-content: center;
+        align-items: center;
+        z-index: 99999;
+    }
+
+        .modal\:container > .section\:header,
+        .modal\:container > .section\:body,
+        .modal\:container > .section\:footer {
+            display: var(--rt-ds-flex);
+            position: var(--rt-ps-absolute);
+            width: 100%;
+            height: auto;
+        }
+
+/* Loader */
+.section\:mirror > .spinner\:solid, 
+.section\:mirror > .spinner\:dashed, 
+.section\:mirror > .spinner\:dotted {
+    display: var(--rt-ds-none);
+    position: var(--rt-ps-absolute);
+    border: 10px var(--rt-bg-white);
+    animation: 1.5s var(--rt-a-loader) cubic-bezier(0, 0.25, 1, 1) infinite;
+    z-index: 99999;
+}
+
+    .section\:mirror > .spinner\:solid, 
+    .section\:mirror > .spinner\:solid::after,
+    .section\:mirror > .spinner\:dashed,
+    .section\:mirror > .spinner\:dashed::after,
+    .section\:mirror > .spinner\:dotted,
+    .section\:mirror > .spinner\:dotted::after {
+        border-radius: 75%;
+        width: 5em;
+        height: 5em;
+        left: 50%;
+        top: 50%;
+    }
+
+        .section\:mirror > .spinner\:solid {
+            border-style: solid !important;
+        }
+
+        .section\:mirror > .spinner\:dashed {
+            border-style: dashed !important;
+        }
+
+        .section\:mirror > .spinner\:dotted {
+            border-style: dotted !important;
+        }

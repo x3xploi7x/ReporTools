@@ -1,0 +1,6 @@
+### Cambios o Modificaciones 20210930
+
+- Modificar DateTime
+- Agregar Compatibilidad
+- Transpilar JS - CSS [TypeScript - Sass]
+- Mimificar el codigo { Variables, Sintaxis }

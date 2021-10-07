@@ -1,0 +1,45 @@
+## Import Color's To Style's Schema Palette
+
+color: 
+  none: transparent
+  white: #fff
+  black: #000
+  grey: #757a79
+	  light: #ececec
+    dark: #393e46
+	red: #dc2f2f
+	  light: #f83e4b
+	  dark: #9d0b28
+	green: #347474
+	  light: #4c9173
+	  dark: #283739
+	blue: #007cb9
+	  light: #4f81c7
+	  dark: #142d4c
+	yellow: #facc2e
+	  light: #f8ed86
+	  dark: #f3a333
+	orange: #e8630a
+	  light: #ff895d
+	  dark: #d34c26
+	pink: #ff9de2
+	  light: #ff5d9e
+	  dark: #680747
+  purple: #5e63b6
+	  light: #b693fe
+	  dark: #27296d
+	brown: #915b4a
+	  light: #b85b3f
+	  dark: #522e24
+    turquoise: #53a8b6
+      light: #72e8e1
+      dark: #137083
+
+font:
+	normal:
+		georigia: 'Georigia', serif
+		verdana: 'Verdana', sans-serif
+		lucida: 'Lucida Sans', sans-serif
+		helveltica: 'Helveltica', sans-serif
+		monaco: 'Monaco', monospace
+		courier: 'Courier New', monospace

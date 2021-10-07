@@ -1,0 +1,214 @@
+/******************************MEDIA******************************/
+:root {
+	/* BreakPoint's Root Container */
+	--rt-bp-extra-small: 480px;
+	--rt-bp-small: 600px;
+	--rt-bp-medium: 768px;
+	--rt-bp-large: 992px;
+	--rt-bp-extra-large: 1200px;
+
+	/* BreakPoint's Modal Container */
+	--rt-md-extra-small: 240px;
+	--rt-md-small: 480px;
+	--rt-md-medium: 600px;
+
+	/* Animation's */
+	--rt-a-loader: loader;
+	--rt-a-fadeIn: fadeIn;
+	--rt-a-fadeOut: fadeOut;
+	--rt-a-rubber: rubber;
+}
+
+/* Media's Breakpoint's */
+@media screen and (min-width: 240px) {
+	.modal\:container > .section\:header,
+	.modal\:container > .section\:body,
+	.modal\:container > .section\:footer {
+		max-width: var(--rt-md-extra-small) !important;
+	}
+}
+
+@media screen and (min-width: 480px) {
+	.root\:container > .section\:group,
+    .root\:container > .section\:header,
+    .root\:container > .section\:body,
+    .root\:container > .section\:footer,
+    .section\:external-component {
+        max-width: var(--rt-bp-extra-small) !important;
+    }
+
+	.modal\:container > .section\:header,
+	.modal\:container > .section\:body,
+	.modal\:container > .section\:footer {
+		max-width: var(--rt-md-small) !important;
+	}
+}
+
+@media screen and (min-width: 600px) {
+    .root\:container > .section\:group,
+    .root\:container > .section\:header,
+    .root\:container > .section\:body,
+    .root\:container > .section\:footer,
+    .section\:external-component  {
+        max-width: var(--rt-bp-small) !important;
+    }
+	
+	.modal\:container > .section\:header,
+	.modal\:container > .section\:body,
+	.modal\:container > .section\:footer {
+		max-width: var(--rt-md-medium) !important;
+	}
+}
+
+@media screen and (min-width: 768px) {
+    .root\:container > .section\:group,
+    .root\:container > .section\:header,
+    .root\:container > .section\:body,
+    .root\:container > .section\:footer,
+    .section\:external-component  {
+        max-width: var(--rt-bp-medium) !important;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .root\:container > .section\:group,
+    .root\:container > .section\:header,
+    .root\:container > .section\:body,
+    .root\:container > .section\:footer,
+    .section\:external-component  {
+        max-width: var(--rt-bp-large) !important;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+	.root\:container > .section\:group,
+    .root\:container > .section\:header,
+    .root\:container > .section\:body,
+    .root\:container > .section\:footer,
+    .section\:external-component  {
+        max-width: var(--rt-bp-extra-large) !important;
+    }	
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) { }
+
+/* Reduce Transition */
+@media (prefers-reduced-motion: reduce) { }
+
+/* Media's Animation's */
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+        border: 10px var(--rt-bg-white);
+    }
+
+    25% {
+        transform: rotate(90deg);
+        border: 10px solid var(--rt-bg-blue-light);
+    }
+
+    50% {
+        transform: rotate(180deg);
+        border: 10px solid var(--rt-bg-blue);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        border: 10px solid var(--rt-bg-blue-dark);
+    }
+}
+
+@-webkit-keyframes loader { }
+
+@-moz-keyframes loader { }
+
+@-o-keyframes loader { }
+
+@keyframes fadeIn {
+	from {
+		transform: scale(1);
+	}
+
+	to {
+		transform: scale(1.15);
+	}
+}
+
+	@-webkit-keyframes fadeIn {
+		from {
+			-webkit-transform: scale(1);
+		}
+
+		to {
+			-webkit-transform: scale(1.15);
+		}
+	}
+
+	@-moz-keyframes fadeIn {
+		from {
+			-moz-transform: scale(1);
+		}
+
+		to {
+			-moz-transform: scale(1.15);
+		}
+	}
+
+	@-o-keyframes fadeIn {
+		from {
+			-o-transform: scale(1.15);
+		}
+
+		to {
+			-o-transform: scale(1);
+		}
+	}
+
+@keyframes fadeOut {
+	from {
+		transform: scale(1.15);
+	}
+
+	to {
+		transform: scale(1);
+	}
+}
+
+	@-webkit-keyframes fadeOut {
+		from {
+			-webkit-transform: scale(1.15);
+		}
+
+		to {
+			-webkit-transform: scale(1);
+		}
+	}
+
+	@-moz-keyframes fadeOut {
+		from {
+			-moz-transform: scale(1.15);
+		}
+
+		to {
+			-moz-transform: scale(1);
+		}
+	}
+
+	@-o-keyframes fadeOut {
+		from {
+			-o-transform: scale(1.15);
+		}
+
+		to {
+			-o-transform: scale(1);
+		}
+	}
+
+@keyframes rubber { }
+
+	@-webkit-keyframes rubber { }
+
+	@-moz-keyframes rubber { }
+
+	@-o-keyframes rubber { }

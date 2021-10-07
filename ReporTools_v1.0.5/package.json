@@ -1,0 +1,16 @@
+[
+	{
+		"name": "ReporTools",
+		"version": 1.0,
+		"author": "x3xploi7x",
+		"devDependencies": [],
+		"keywords": {
+			"report": ["Office", "Work", "Job"],
+		},
+		"scripts":
+		{
+			"main": "src/assets/js/index.js",
+		},
+		"github": "github.com/x3xploi7x/ReporTools"
+	}
+]

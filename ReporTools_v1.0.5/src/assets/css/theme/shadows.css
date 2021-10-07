@@ -1,0 +1,32 @@
+/******************************SHADOWS******************************/
+:root {
+	/* Shadow's */
+	--rt-bs-regular: 5px 0 15px 5px rgba(15, 15, 15, 0.35); /* Regular Shadow */
+	--rt-bs-form: 2.5px 2.5px 2.5px 2.5px rgba(0, 0, 0, 0.50);
+	
+	--rt-bs-react: 1px ​3px 15px 1px rgb(255, 255, 255); /* Spinner On */
+	
+	--rt-bs-hover: inset 0 0 0 100px rgba(0, 0, 0, 0.25); /* Hover Element */
+	--rt-bs-hover-combine: inset 0 0 0 100px rgba(0, 0, 0, 0.25), 1.5px 1.5px 2px 0 rgba(255, 255, 255, 0.85);
+}
+
+/* Shadow's */
+.shadow\:normal {
+    box-shadow: var(--rt-bs-regular) !important;
+}
+
+.shadow\:form {
+	box-shadow: var(--rt-bs-form) !important;
+}
+
+/*.shadow\:react {
+	box-shadow: var(--rt-bs-react) !important;
+}*/
+
+.shadow\:hover {
+	box-shadow: var(--rt-bs-hover) !important;
+}
+
+	.shadow\:hover-scale {
+		box-shadow: var(--rt-bs-hover-combine) !important;
+	}
