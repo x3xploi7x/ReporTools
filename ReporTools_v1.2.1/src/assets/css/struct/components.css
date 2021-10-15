@@ -1,0 +1,117 @@
+/******************************?COMPONENTS?******************************/
+:root {
+    /*!Components' Rule's!*/
+    --rt-cm-mirror: rgba(255, 255, 255, 0.5);
+    --rt-cm-wrapper: rgba(10, 10, 10, 0.75);
+    --rt-cm-border: rgba(100, 100, 100, 0.20);
+
+    /*!Filter's!*/
+    --rt-bd-blur: blur(5px);
+}
+
+.section\:mirror { /*TODO: Modal*/
+    display: var(--rt-ds-none);
+    position: var(--rt-ps-absolute);
+    background-color: var(--rt-cm-wrapper);
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: var(--rt-bd-blur);
+    opacity: 0.98;
+    z-index: 9999;
+}
+
+    .section\:mirror > .modal\:alert,
+    .section\:mirror > .modal\:form,
+    .section\:mirror > .modal\:notify {
+        position: var(--rt-ps-absolute);
+        left: 40%;
+        top: 40%;
+        word-break: break-word;
+        z-index: 99999;
+    }
+
+    .section\:mirror > .modal\:alert { /*TODO: Modal alert*/
+        display: var(--rt-ds-flex);
+        border: 7.5px solid var(--rt-cm-border);
+        width: calc(100vw / 4);
+        height: auto;
+        border-bottom-left-radius: 1.5em;
+        border-top-right-radius: 1.5em;
+        padding: 0.5em;
+        text-align: center;
+        animation: 0.5s var(--rt-a-fadeIn) forwards;;
+        box-shadow: var(--rt-bs-components);
+        flex-direction: column;
+    }
+
+        .modal\:alert > .content\:title,
+        .modal\:alert > .content\:message,
+        .modal\:alert > .content\:options {
+            width: 100%;
+        }
+
+        .modal\:alert > .content\:title {
+            max-height: 30%;
+        }
+
+        .modal\:alert > .content\:message {
+            max-height: 45%;
+        }
+
+        .modal\:alert > .content\:options {
+            max-height: 15%;
+        }
+
+    .section\:mirror > .modal\:form { /*TODO: Modal form*/
+        width: calc(100vw / 4);
+        height: calc(100vh / 2);
+        border-radius: 3em;
+        text-align: center;
+    }
+
+    .section\:mirror > .modal\:notify { /*TODO: Modal notify*/
+        position: var(--rt-ps-relative);
+        background-color: var(--rt-bg-white);
+        width: calc(100% / 2);
+        height: calc(100% / 12);
+        top: 0;
+        left: 35%;
+    }
+
+    .section\:mirror > .spinner\:solid,  
+    .section\:mirror > .spinner\:dashed, 
+    .section\:mirror > .spinner\:dotted { /*TODO: Spinner*/
+        position: var(--rt-ps-absolute);
+        border: 10px var(--rt-bg-white);
+        animation: 1.5s var(--rt-a-loader) cubic-bezier(0, 0.25, 1, 1) infinite;
+        left: 50%;
+        top: 50%;
+        z-index: 99999;
+    }
+
+        .section\:mirror > .spinner\:solid, 
+        .section\:mirror > .spinner\:solid::after,
+        .section\:mirror > .spinner\:dashed,
+        .section\:mirror > .spinner\:dashed::after,
+        .section\:mirror > .spinner\:dotted,
+        .section\:mirror > .spinner\:dotted::after {
+            border-radius: 75%;
+            width: 5em;
+            height: 5em;
+        }
+
+            .section\:mirror > .spinner\:solid {
+                border-style: solid !important;
+            }
+
+            .section\:mirror > .spinner\:dashed {
+                border-style: dashed !important;
+            }
+
+            .section\:mirror > .spinner\:dotted {
+                border-style: dotted !important;
+            }

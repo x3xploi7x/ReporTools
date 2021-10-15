@@ -1,0 +1,76 @@
+/******************************?FONTS?******************************/
+:root {
+	/*! Serif !*/
+	--rt-fn-georigia: 'Georigia', serif;
+
+	/*! Sans !*/
+	--rt-fn-verdana: 'Verdana', sans-serif;
+	--rt-fn-lucida: 'Lucida Sans', sans-serif;
+	--rt-fn-helveltica: 'Helveltica', sans-serif;
+
+	/*! Monospace !*/
+	--rt-fn-monaco: 'Monaco', monospace;
+	--rt-fn-courier: 'Courier New', monospace;
+
+	/*! System !*/
+	--rt-fn-apple: -apple-system, BlinkMacSystemFont;
+}
+
+.font\:family-georgia, 
+.font\:family-verdana, 
+.font\:family-lucida, 
+.font\:family-helveltica, 
+.font\:family-monaco,
+.font\:family-courier,
+.font\:family-apple { /*TODO: Type font style's*/
+	font-weight: 450;
+    font-stretch: condensed;
+}
+
+	.font\:family-georgia {
+		font-family: var(--rt-fn-georgia) !important;
+	}
+
+	.font\:family-verdana {
+		font-family: var(--rt-fn-verdana) !important;
+	}
+
+	.font\:family-lucida {
+		font-family: var(--rt-fn-lucida) !important;
+	}
+
+	.font\:family-helveltica {
+		font-family: var(--rt-fn-helveltica) !important;
+	}
+
+	.font\:family-monaco {
+		font-family: var(--rt-fn-monaco) !important;
+	}
+
+	.font\:family-courier {
+		font-family: var(--rt-fn-courier) !important;
+	}
+
+	.font\:family-apple {
+		font-family: var(--rt-fn-apple) !important;
+	}
+
+.font\:weight-normal { /*TODO: Type font size*/
+	font-weight: normal !important;
+}
+
+.font\:weight-bold {
+	font-weight: bold !important;
+}
+
+.font\:transform-uppercase { /*TODO: Type font letter*/
+	text-transform: uppercase !important;
+}
+
+.font\:transform-lower {
+	text-transform: lowercase !important; 
+}
+
+.font\:transform-capitalize {
+	text-transform: capitalize !important;
+}
