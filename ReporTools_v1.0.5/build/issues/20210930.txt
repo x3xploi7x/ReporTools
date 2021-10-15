@@ -4,3 +4,9 @@
 - Agregar Compatibilidad
 - Transpilar JS - CSS [TypeScript - Sass]
 - Mimificar el codigo { Variables, Sintaxis }
+
+
+### Actualizaciones 20211015
+- Se agrego otro break point para pantallas mas grandes(1820px)
+- Modificar Estilo en cascada
+- Cambiar la configuracion para los date-time
