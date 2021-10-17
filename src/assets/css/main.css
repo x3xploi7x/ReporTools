@@ -1,0 +1,24 @@
+/** 
+    Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/> 
+    Everyone is permitted to copy and distribute
+    verbatim copies of this license document, but changing it is not allowed. 
+**/
+
+/* Default Encoding */
+@charset    "UTF-8";
+
+/* Setting's */
+@import     "struct/base.css";
+@import 	"typography/fonts.css";
+
+/* Tools */
+@import 	"theme/colors.css";
+@import     "theme/shadows.css";
+@import 	"theme/media.css";
+
+/* Elements */
+@import 	"struct/utilities.css";
+@import     "struct/components.css";
+@import 	"struct/size.css";
+
+/*******************************# sourceMappingURL=ReporTools.css ? { NAME: ReporTools / AUTHOR: x3xploi7x / VERSION: 1.0 } ******************************/

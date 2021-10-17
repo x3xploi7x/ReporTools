@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	    <meta name="keywords" content="reports, framework, ui/ux">
+		<title>Cambia Precio Unitario</title>
+		<link type="text/css" rel="stylesheet" href="../../src/assets/css/main.css" />
+	</head>
+	<body class="scroll:y:auto">
+		<main id="app__container" class="root:container margin:50% font:family-lucida">
+			<section class="section:body width:50% height:auto border:1 border:grey-light justify:content-center">
+				<div class="group">
+					<div class="size:1">
+						<input id="text__field" class="text:medium text:hover font:transform-upper" type="text" placeholder="Ingrese la OC">
+						<button id="button__search" class="button:extra-small button:hover background:red-light color:white">Buscar</button>
+					</div>
+				</div>
+				<div class="group inactive">
+					<div class="size:1">
+						<ul class="list:portrait list:hover background:grey-light width:50% height:auto">
+							<li class="list:item">
+								<span class="letter:extra-small color:black font:weight-bold">OC:</span>
+								<input class="text:large text:hover" type="text" disabled="true">
+							</li>
+							<li class="list:item">
+								<span class="letter:extra-small color:black font:weight-bold">Precio:</span>
+								<input class="text:large text:hover" type="text" disabled="true">
+							</li>
+							<li class="list:item">
+								<span class="letter:extra-small color:black font:weight-bold">Cantidad:</span>
+								<input class="text:large text:hover" type="text" disabled="true">
+							</li>
+							<li class="list:item">
+								<span class="letter:extra-small font:weight-bold color:black">Factor:</span>
+								<input class="text:large text:hover" type="text">
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="group inactive">
+					<div class="size:1 divider:x"></div>
+				</div>
+				<div class="group inactive">
+					<div class="size:1">
+						<button id="button__continue" class="button:small button:hover background:red-light color:white">Cambiar</button>
+					</div>
+				</div>
+			</section>
+		</main>
+		<script type="text/javascript" src="../../src/dist/js/ReporTools.js"></script>
+		<script type="text/javascript">
+			const txt = document.getElementById("text__field");
+			const btn_1 = document.getElementById("button__search");
+			const btn_2 = document.getElementById("button__continue");
+			var el = document.querySelectorAll(".inactive");
+
+			var modal = new ReporTools("app__container");
+
+			btn_1.addEventListener("click", function(){
+				modal.loader("on");
+
+				if(txt.value == "") {
+					modal.message("Error", "Favor de llenar todos los campos.");
+					return;
+				}
+
+				setTimeout(function(){ modal.loader("off"); }, 650);
+
+				for(var i = 0; i < el.length; i++) {
+					el[i].classList.remove("inactive");
+					el[i].classList.add("active");
+				}
+			}, false);
+			btn_2.addEventListener("click", function(){
+				modal.message("Atencion", `Se a cambiado el precio en la oc: ${txt.value}`);
+			}, false);
+		</script>
+	</body>
+</html>
