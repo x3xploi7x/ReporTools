@@ -1756,7 +1756,7 @@ hr {
     --rt-cm-mirror: rgba(255, 255, 255, 0.5);
     --rt-cm-wrapper: rgba(10, 10, 10, 0.75);
     --rt-cm-border: rgba(100, 100, 100, 0.20);
-    --rt-cm-hover: rgba(40, 30, 15, 0.25);
+    --rt-cm-hover: rgba(40, 30, 15, 0.65);
 
     /*!Filter's!*/
     --rt-bd-blur: blur(5px);
