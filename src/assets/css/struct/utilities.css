@@ -266,7 +266,9 @@
     position: var(--rt-ps-relative);
     width: 100%;
     height: auto;
-    border: none;
+    border-color: var(--rt-bg-none);
+    border-style:solid;
+    border-width: 0.3em;
     border-radius: 0.45em;
     padding: 3.5px;
     font-weight: 400;
