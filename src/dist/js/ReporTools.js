@@ -11,10 +11,10 @@
         if(!document.getElementById(parent).length) {
             this.modal = document.createElement("div");
             this.modal.setAttribute("id", "container__modal");
-            this.modal.setAttribute("class", "section:mirror");
+            this.modal.setAttribute("class", "group:mirror");
             this.child = this.modal;
         } else {
-            this.modal = document.querySelector("section:mirror");
+            this.modal = document.querySelector("group:mirror");
             this.child = this.modal;
         }
         
@@ -35,7 +35,7 @@
                                         <p id="letter__message" class="color:grey font:weight-bold"></p>
                                     </div>
                                     <div class="content:options">
-                                        <button id="button__notify" class="button:small button:hover background:blue color:white">Continuar</button>
+                                        <button id="button__notify" class="button:small button:hover background:blue color:white" onclick="return false;">Continuar</button>
                                     </div>
                                 </div>`;
 
@@ -61,6 +61,38 @@
                 parent.classList.remove("display:block");
                 parent.innerHTML = '';
                 break;
+        }
+    }
+
+    toggle(selector, options={}) {
+        const parent = document.querySelector(selector);
+        options = {}
+    }
+
+    date(selector, period) {
+        const day = 0;
+        const month = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+        const year = [2015, 2016, 2017, 2018, 2019, 2020, 2021];
+
+        var parent = document.querySelector(selector);
+
+        switch(period) {
+            case "day":
+                for(var i = 1; i < 32; i++) {
+                    let count = i < 10 ? "0" + i : i;
+                    parent.innerHTML += `<option id=item__${count} class="option:item" value=${count}>${day[i]}</option>`;
+                }
+                break;
+            case "month":
+                for(var i = 0; i <= month.length - 1; i++) {
+                    let count = i < 9 ? "0" + (i + 1) : i + 1; 
+                    parent.innerHTML += `<option id=item__${i+1} class="option:item" value=${count}>${month[i]}</option>`;
+                }
+                break;
+            case "year":
+                for(var i = 0; i <= year.length - 1; i++) {
+                    parent.innerHTML += `<option id=item__${i} class="option:item" value=${i+1}>${year[i]}</option>`;
+                }
         }
     }
 }
