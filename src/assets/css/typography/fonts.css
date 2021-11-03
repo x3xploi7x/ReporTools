@@ -1,25 +1,27 @@
 /******************************?FONTS?******************************/
-:root {
-	/*! Defaul !*/
+:root { /*!Only modify with Sass or Less!*/
 	--rt-fn-arial: 'Arial';
 
-	/*! Serif !*/
 	--rt-fn-georigia: 'Georigia', serif;
 
-	/*! Sans !*/
 	--rt-fn-verdana: 'Verdana', sans-serif;
 	--rt-fn-lucida: 'Lucida Sans', sans-serif;
 	--rt-fn-helveltica: 'Helveltica', sans-serif;
 
-	/*! Monospace !*/
 	--rt-fn-monaco: 'Monaco', monospace;
 	--rt-fn-courier: 'Courier New', monospace;
 
-	/*! System !*/
 	--rt-fn-apple: -apple-system, BlinkMacSystemFont;
 }
 
-.font\:family-arial, .font\:family-georgia, .font\:family-verdana, .font\:family-lucida, .font\:family-helveltica, .font\:family-monaco, .font\:family-courier, .font\:family-apple { /*TODO: Type font style's*/
+.font\:family-arial, 
+.font\:family-georgia, 
+.font\:family-verdana, 
+.font\:family-lucida, 
+.font\:family-helveltica, 
+.font\:family-monaco, 
+.font\:family-courier, 
+.font\:family-apple { /*TODO: Type font style's*/
 	font-weight: 450;
     font-stretch: condensed;
 }
