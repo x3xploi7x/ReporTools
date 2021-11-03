@@ -1,5 +1,7 @@
 /******************************?BASE?******************************/
-*, ::after, ::before { /*!Alter all document!*/
+*, 
+::after, 
+::before { /*!Alter all document!*/
     box-sizing: border-box;
 }
 
@@ -21,25 +23,52 @@ body {
     overflow: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
     font-size: 2em;
 }
 
-input[type="text"], input[type="password"], input[type="submit"], input[type="reset"], textarea, select {
+input:-internal-autofill-selected, 
+input:-webkit-autofill {
+    background-color: var(--rt-bg-blue-light) !important;
+    -webkit-text-fill-color: var(--rt-bg-black) !important;
+}
+
+input[type="text"], 
+input[type="password"], 
+input[type="submit"], 
+input[type="reset"], 
+textarea, 
+select {
     background-color: var(--rt-bg-white);
 }
 
-button, input[type="text"], input[type="button"], input[type="submit"], input[type="reset"], input[type="check"], input[type="date"], select {
+button, 
+input[type="text"], 
+input[type="button"], 
+input[type="submit"], 
+input[type="reset"], 
+input[type="check"], 
+input[type="date"], 
+select {
     text-align: center;
     cursor: pointer;
 }
 
-textarea, input[type="text"], input[type="password"] {
+textarea, 
+input[type="text"], 
+input[type="password"] {
     text-align: start;
     cursor: text;
 }
 
-input, button, select {
+input,
+button, 
+select {
     font-size: 100%;
     margin: 0;
 }
@@ -49,7 +78,8 @@ select {
     -webkit-appearance: none;
 }
 
-select, a {
+select, 
+a {
     text-decoration: none;
 }
 
@@ -57,11 +87,14 @@ a {
     background-color: transparent !important;
 }
 
-    a:active, a:visited {
+    a:active, 
+    a:visited {
         background: none !important;
     }
 
-ol, ul, dl {
+ol, 
+ul, 
+dl {
     list-style: none;
 }
 
@@ -73,7 +106,9 @@ img {
     border-style: none;
 }
 
-audio, video, svg {
+audio, 
+video, 
+svg {
     display: var(--rt-ds-block);
     overflow: none;
 }
@@ -91,6 +126,7 @@ hr {
     visibility: hidden;
 }
 
-    [visible], [hidden] {
+    [visible], 
+    [hidden] {
         overflow: auto;
     }
