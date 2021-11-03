@@ -1,9 +1,15 @@
 /******************************?SIZE?******************************/
-:root {
-    /*!Border size's!*/
-    --rt-border-1: 0.25em;
-    --rt-border-2: 0.50em;
-    --rt-border-3: 0.75em;
+:root { /*!Only modify with Sass or Less!*/
+    --rt-sz-0: 0;
+    --rt-sz-1: 0.25em;
+    --rt-sz-2: 0.50em;
+    --rt-sz-3: 0.75em;
+    --rt-sz-4: 1em;
+
+    --rt-dg-90: 90deg;
+    --rt-dg-180: 180deg;
+    --rt-dg-270: 270deg;
+    --rt-dg-360: 360deg;
 }
 
 .width { /*TODO: Size width the content box element*/
@@ -51,7 +57,7 @@
     }
 
 .height { /*TODO: Size height the content box element*/
-    height: 0 !important;
+    height: var(--rt-sz-0) !important;
 }
 
     .height\:auto {
@@ -94,274 +100,312 @@
         height: 1000px !important;
     }
 
-.border\:1, .border\:2, .border\:3,
-.border\:left-1, .border\:left-2, .border\:left-3,
-.border\:right-1, .border\:right-2, .border\:right-3
-.border\:top-1, .border\:top-2, .border\:top-3,
-.border\:bottom-1, .border\:bottom-2, .border\:bottom-3 {
+.border\:1, 
+.border\:2, 
+.border\:3,
+.border\:left-1, 
+.border\:left-2, 
+.border\:left-3,
+.border\:right-1, 
+.border\:right-2, 
+.border\:right-3
+.border\:top-1, 
+.border\:top-2, 
+.border\:top-3,
+.border\:bottom-1, 
+.border\:bottom-2, 
+.border\:bottom-3 {
     border-style: groove !important;
 }
 
 .border\:1 { /*TODO: Border element delimited in box*/
-    border: var(--rt-border-1);
+    border: var(--rt-sz-1);
 }
 
 .border\:2 {
-    border: var(--rt-border-2);
+    border: var(--rt-sz-2);
 }
 
 .border\:3 {
-    border: var(--rt-border-3);
+    border: var(--rt-sz-3);
 }
 
     .border\:left-1 {
-        border-left: var(--rt-border-1);
+        border-left: var(--rt-sz-1);
     }
 
     .border\:left-2 {
-        border-left: var(--rt-border-2);
+        border-left: var(--rt-sz-2);
     }
 
     .border\:left-3 {
-        border-left: var(--rt-border-3);
+        border-left: var(--rt-sz-3);
     }
 
     .border\:right-1 {
-        border-right: var(--rt-border-1);
+        border-right: var(--rt-sz-1);
     }
 
     .border\:right-2 {
-        border-right: var(--rt-border-2);
+        border-right: var(--rt-sz-2);
     }
 
     .border\:right-3 {
-        border-right: var(--rt-border-3);
+        border-right: var(--rt-sz-3);
     }
 
     .border\:top-1 {
-        border-top: var(--rt-border-1);
+        border-top: var(--rt-sz-1);
     }
 
     .border\:top-2 {
-        border-top: var(--rt-border-2);
+        border-top: var(--rt-sz-2);
     }
 
     .border\:top-3 {
-        border-top: var(--rt-border-3);
+        border-top: var(--rt-sz-3);
     }
 
     .border\:bottom-1 {
-        border-bottom: var(--rt-border-1);
+        border-bottom: var(--rt-sz-1);
     }
 
     .border\:top-2 {
-        border-bottom: var(--rt-border-2);
+        border-bottom: var(--rt-sz-2);
     }
 
     .border\:top-3 {
-        border-bottom: var(--rt-border-3);
+        border-bottom: var(--rt-sz-3);
     }
 
 .margin { /*TODO: Margin element in box*/
-    margin: 0 !important;
+    margin: var(--rt-sz-0) !important;
 }
 
+    .margin\:auto {
+        margin: auto !important;
+    }
+
     .margin\:25\% {
-        margin: 0.25em !important;
+        margin: var(--rt-sz-1) !important;
     }
 
     .margin\:50\% {
-        margin: 0.50em !important;
+        margin: var(--rt-sz-2) !important;
     }
 
     .margin\:75\% {
-        margin: 0.75em !important;
+        margin: var(--rt-sz-3) !important;
     }
 
     .margin\:100\% {
-        margin: 1em !important;
+        margin: var(--rt-sz-4) !important;
     }
 
 .margin\:x {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin-left: var(--rt-sz-0) !important;
+    margin-right: var(--rt-sz-0) !important;
 }
 
+    .margin\:x-auto {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
     .margin\:x-25\% {
-        margin-left: 0.25em !important;
-        margin-right: 0.25em !important;
+        margin-left: var(--rt-sz-1) !important;
+        margin-right: var(--rt-sz-1) !important;
     }
 
     .margin\:x-50\% {
-        margin-left: 0.50em !important;
-        margin-right: 0.50em !important;
+        margin-left: var(--rt-sz-2) !important;
+        margin-right: var(--rt-sz-2) !important;
     }
 
     .margin\:x-75\% {
-        margin-left: 0.75em !important;
-        margin-right: 0.75em !important;
+        margin-left: var(--rt-sz-3) !important;
+        margin-right: var(--rt-sz-3) !important;
     }
 
     .margin\:x-100\% {
-        margin-left: 1em !important;
-        margin-right: 1em !important;
+        margin-left: var(--rt-sz-4) !important;
+        margin-right: var(--rt-sz-4) !important;
     }
 
 .margin\:y {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
+    margin-top: var(--rt-sz-0) !important;
+    margin-bottom: var(--rt-sz-0) !important;
 }
 
+    .margin\:y-auto {
+        margin-top: auto !important;
+        margin-bottom: auto !important;
+    }
+
     .margin\:y-25\% {
-        margin-top: 0.25em !important;
-        margin-bottom: 0.25em !important;
+        margin-top: var(--rt-sz-1) !important;
+        margin-bottom: var(--rt-sz-1) !important;
     }
 
     .margin\:y-50\% {
-        margin-top: 0.50em !important;
-        margin-bottom: 0.50em !important;
+        margin-top: var(--rt-sz-2) !important;
+        margin-bottom: var(--rt-sz-2) !important;
     }
 
     .margin\:y-75\% {
-        margin-top: 0.75em !important;
-        margin-bottom: 0.75em !important;
+        margin-top: var(--rt-sz-3) !important;
+        margin-bottom: var(--rt-sz-3) !important;
     }
 
     .margin\:y-100\% {
-        margin-top: 1em !important;
-        margin-bottom: 1em !important;
+        margin-top: var(--rt-sz-4) !important;
+        margin-bottom: var(--rt-sz-4) !important;
     }
 
 .padding { /*TODO: Padding reference element in box content*/
-    padding: 0 !important;
+    padding: var(--rt-sz-0) !important;
 }
 
+    .padding\:auto {
+        padding: auto !important;
+    }
+
     .padding\:25\% {
-        padding: 0.25em !important;
+        padding: var(--rt-sz-1) !important;
     }
 
     .padding\:50\% {
-        padding: 0.50em !important;
+        padding: var(--rt-sz-2) !important;
     }
 
     .padding\:75\% {
-        padding: 0.75em !important;
+        padding: var(--rt-sz-3) !important;
     }
 
     .padding\:100\% {
-        padding: 1em !important;
+        padding: var(--rt-sz-4) !important;
     }
 
 .padding\:x {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding-left: var(--rt-sz-0) !important;
+    padding-right: var(--rt-sz-0) !important;
 }
 
+    .padding\:x-auto {
+        padding-left: auto !important;
+        padding-right: auto !important;    
+    }
+
     .padding\:x-25\% {
-        padding-left: 0.25em !important;
-        padding-right: 0.25em !important;
+        padding-left: var(--rt-sz-1) !important;
+        padding-right: var(--rt-sz-1) !important;
     }
 
     .padding\:x-50\% {
-        padding-left: 0.50em !important;
-        padding-right: 0.50em !important;
+        padding-left: var(--rt-sz-2) !important;
+        padding-right: var(--rt-sz-2) !important;
     }
 
     .padding\:x-75\% {
-        padding-left: 0.75em !important;
-        padding-right: 0.75em !important;
+        padding-left: var(--rt-sz-3) !important;
+        padding-right: var(--rt-sz-3) !important;
     }
 
     .padding\:x-100\% {
-        padding-left: 1em !important;
-        padding-right: 1em !important;
+        padding-left: var(--rt-sz-4) !important;
+        padding-right: var(--rt-sz-4) !important;
     }
 
 .padding\:y {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+    padding-top: var(--rt-sz-0) !important;
+    padding-bottom: var(--rt-sz-0) !important;
 }
 
+    .padding\:y-auto {
+        padding-top: auto !important;
+        padding-bottom: auto !important;    
+    }
+
     .padding\:y-25\% {
-        padding-top: 0.25em !important;
-        padding-bottom: 0.25em !important;
+        padding-top: var(--rt-sz-1) !important;
+        padding-bottom: var(--rt-sz-1) !important;
     }
 
     .padding\:y-50\% {
-        padding-top: 0.50em !important;
-        padding-bottom: 0.50em !important;
+        padding-top: var(--rt-sz-2) !important;
+        padding-bottom: var(--rt-sz-2) !important;
     }
 
     .padding\:y-75\% {
-        padding-top: 0.75em !important;
-        padding-bottom: 0.75em !important;
+        padding-top: var(--rt-sz-3) !important;
+        padding-bottom: var(--rt-sz-3) !important;
     }
 
     .padding\:y-100\% {
-        padding-top: 1em !important;
-        padding-bottom: 1em !important;
+        padding-top: var(--rt-sz-4) !important;
+        padding-bottom: var(--rt-sz-4) !important;
     }
 
 .rotate\:90\deg { /*TODO: Rotate element in window*/
-    transform: rotate(90deg) !important;
+    transform: rotate(var(--rt-dg-90)) !important;
 }
 
 .rotate\:180\deg {
-    transform: rotate(180deg) !important;
+    transform: rotate(var(--rt-dg-180)) !important;
 }
 
 .rotate\:270\deg {
-    transform: rotate(270deg) !important;
+    transform: rotate(var(--rt-dg-270)) !important;
 }
 
 .rotate\:360\deg {
-    transform: rotate(360deg) !important;
+    transform: rotate(var(--rt-dg-360)) !important;
 }
 
     .rotate\:x-90\deg {
-        transform: rotateX(90deg) !important;
+        transform: rotateX(var(--rt-dg-90)) !important;
     }
 
     .rotate\:x-180\deg {
-        transform: rotateX(180deg) !important;
+        transform: rotateX(var(--rt-dg-180)) !important;
     }
 
     .rotate\:x-270\deg {
-        transform: rotateX(270deg) !important;
+        transform: rotateX(var(--rt-dg-270)) !important;
     }
 
     .rotate\:x-360\deg {
-        transform: rotateY(360deg) !important;
+        transform: rotateX(var(--rt-dg-360)) !important;
     }
 
     .rotate\:y-90\deg {
-        transform: rotateY(90deg) !important;
+        transform: rotateY(var(--rt-dg-90)) !important;
     }
 
     .rotate\:y-180\deg {
-        transform: rotateY(180deg) !important;
+        transform: rotateY(var(--rt-dg-180)) !important;
     }
 
     .rotate\:y-270\deg {
-        transform: rotateY(270deg) !important;
+        transform: rotateY(var(--rt-dg-270)) !important;
     }
 
     .rotate\:y-360\deg {
-        transform: rotateY(360deg) !important;
+        transform: rotateY(var(--rt-dg-180)) !important;
     }
 
     .rotate\:z-90\deg {
-        transform: rotateZ(90deg) !important;
+        transform: rotateZ(var(--rt-dg-90)) !important;
     }
 
     .rotate\:z-180\deg {
-        transform: rotateZ(180deg) !important;
+        transform: rotateZ(var(--rt-dg-180)) !important;
     }
 
     .rotate\:z-270\deg {
-        transform: rotateZ(270deg) !important;
+        transform: rotateZ(var(--rt-dg-270)) !important;
     }
 
     .rotate\:z-360\deg {
-        transform: rotateZ(360deg) !important;
+        transform: rotateZ(var(--rt-dg-360)) !important;
     }
