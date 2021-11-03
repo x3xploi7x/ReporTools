@@ -1,17 +1,15 @@
 /******************************?COMPONENTS?******************************/
-:root {
-    /*!Components' Rule's!*/
+:root { /*!Only modify with Sass or Less!*/
     --rt-cm-mirror: rgba(255, 255, 255, 0.5);
     --rt-cm-wrapper: rgba(10, 10, 10, 0.75);
     --rt-cm-border: rgba(100, 100, 100, 0.20);
     --rt-cm-hover-light: rgba(40, 30, 15, 0.65);
     --rt-cm-hover-dark: rgba(80, 60, 30, 0.35);
 
-    /*!Filter's!*/
     --rt-bd-blur: blur(5px);
 }
 
-.section\:mirror { /*TODO: Modal*/
+.group\:mirror { /*TODO: Modal*/
     display: var(--rt-ds-none);
     position: var(--rt-ps-absolute);
     background-color: var(--rt-cm-wrapper);
@@ -26,7 +24,9 @@
     z-index: 9999;
 }
 
-    .section\:mirror .modal\:alert, .section\:mirror .modal\:form, .section\:mirror .modal\:notify {
+    .group\:mirror .modal\:alert, 
+    .group\:mirror .modal\:form, 
+    .group\:mirror .modal\:notify {
         position: var(--rt-ps-absolute);
         top: 50%;
         left: 50%;
@@ -35,7 +35,7 @@
         z-index: 99999;
     }
 
-    .section\:mirror .modal\:alert { /*TODO: Modal alert*/
+    .group\:mirror .modal\:alert { /*TODO: Modal alert*/
         display: var(--rt-ds-flex);
         border: 7.5px solid var(--rt-cm-border);
         width: calc(100vw / 4);
@@ -44,12 +44,17 @@
         border-top-right-radius: 1.5em;
         padding: 0.5em;
         text-align: center;
-        animation: 0.5s var(--rt-a-fadeIn) forwards;;
+        animation: 0.5s var(--rt-a-fadeIn) forwards;
+        -webkit-animation: 0.5s var(--rt-a-fadeIn) forwards;
+        -moz-animation: 0.5s var(--rt-a-fadeIn) forwards;
+        -o-animation: 0.5s var(--rt-a-fadeIn) forwards;
         box-shadow: var(--rt-bs-components);
         flex-direction: column;
     }
 
-        .modal\:alert .content\:title, .modal\:alert .content\:message, .modal\:alert .content\:options {
+        .modal\:alert .content\:title, 
+        .modal\:alert .content\:message, 
+        .modal\:alert .content\:options {
             width: 100%;
         }
 
@@ -65,14 +70,14 @@
             max-height: 15%;
         }
 
-    .section\:mirror .modal\:form { /*TODO: Modal form*/
+    .group\:mirror .modal\:form { /*TODO: Modal form*/
         width: calc(100vw / 4);
         height: calc(100vh / 2);
         border-radius: 3em;
         text-align: center;
     }
 
-    .section\:mirror .modal\:notify { /*TODO: Modal notify*/
+    .group\:mirror .modal\:notify { /*TODO: Modal notify*/
         position: var(--rt-ps-relative);
         background-color: var(--rt-bg-white);
         width: calc(100% / 2);
@@ -81,32 +86,41 @@
         left: 35%;
     }
 
-    .section\:mirror .spinner\:solid, .section\:mirror .spinner\:dashed, .section\:mirror .spinner\:dotted { /*TODO: Spinner*/
+    .group\:mirror .spinner\:solid, 
+    .group\:mirror .spinner\:dashed, 
+    .group\:mirror .spinner\:dotted { /*TODO: Spinner*/
         position: var(--rt-ps-fixed);
-        border: 10px var(--rt-bg-white);
+        border-width: 0.35em;
+        border-left: var(--rt-bg-none) !important;
         animation: 1.5s var(--rt-a-loader) cubic-bezier(0, 0.25, 1, 1) infinite;
+        -webkit-animation: 1.5s var(--rt-a-loader) cubic-bezier(0, 0.25, 1, 1) infinite;
+        -moz-animation: 1.5s var(--rt-a-loader) cubic-bezier(0, 0.25, 1, 1) infinite;
+        -o-animation: 1.5s var(--rt-a-loader) cubic-bezier(0, 0.25, 1, 1) infinite;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 99999;
     }
 
-        .section\:mirror .spinner\:solid, .section\:mirror .spinner\:solid::after,
-        .section\:mirror .spinner\:dashed, .section\:mirror .spinner\:dashed::after,
-        .section\:mirror .spinner\:dotted, .section\:mirror .spinner\:dotted::after {
+        .group\:mirror .spinner\:solid, 
+        .group\:mirror .spinner\:solid::after,
+        .group\:mirror .spinner\:dashed, 
+        .group\:mirror .spinner\:dashed::after,
+        .group\:mirror .spinner\:dotted, 
+        .group\:mirror .spinner\:dotted::after {
             border-radius: 75%;
             width: 5em;
             height: 5em;
         }
 
-            .section\:mirror .spinner\:solid {
+            .group\:mirror .spinner\:solid {
                 border-style: solid !important;
             }
 
-            .section\:mirror .spinner\:dashed {
+            .group\:mirror .spinner\:dashed {
                 border-style: dashed !important;
             }
 
-            .section\:mirror .spinner\:dotted {
+            .group\:mirror .spinner\:dotted {
                 border-style: dotted !important;
             }
