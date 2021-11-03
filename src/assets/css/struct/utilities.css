@@ -1,6 +1,5 @@
 /******************************?UTILITIES?******************************/
-:root {
-    /*!Display's!*/
+:root { /*!Only modify with Sass or Less!*/
     --rt-ds-none: none;
     --rt-ds-inline: inline;
     --rt-ds-block: block;
@@ -10,7 +9,6 @@
     --rt-ds-inline-flex: inline-flex;
     --rt-ds-grid: grid;
 
-    /*!Position's!*/
     --rt-ps-none: none;
     --rt-ps-relative: relative;
     --rt-ps-absolute: absolute;
@@ -69,97 +67,127 @@
         position: var(--rt-ps-fixed) !important;
     }
 
-.root\:container { /*TODO: Main*/
-    width: 100%;
-    z-index: 9999;
+.app { /*TODO: All document*/
+    display: var(--rt-ds-flex);
+    width: 100vw;
+    height: 100vh;
 }
 
-    .root\:container .section\:header,
-    .root\:container .section\:body, 
-    .root\:container .section\:footer {
-        display: var(--rt-ds-flex);
-        position: var(--rt-ps-relative);
+    .app .nav\:container,
+    .app .root\:container { /*TODO: Nav-Main*/
         width: 100%;
-        height: auto;
-        flex-wrap: wrap;
+        height: 100%;
+        z-index: 9999;
     }
 
-    .root\:container .section\:header,
-    .root\:container .section\:body, 
-    .root\:container .section\:footer,
-    .section\:external-component {
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 0.25em;
-        padding-bottom: 0.25em;
-    }
+        .nav\:container .group\:header,
+        .nav\:container .group\:body,
+        .nav\:container .group\:footer,
+        .root\:container .group\:header,
+        .root\:container .group\:body,
+        .root\:container .group\:footer {
+            display: var(--rt-ds-flex);
+            position: var(--rt-ps-relative);
+            width: 100%;
+            height: auto;
+            flex-wrap: wrap;
+        }
 
-    .root\:container .section\:header .group, .root\:container .section\:body .group, .root\:container .section\:footer .group,
-    .modal\:container .section\:header .group, .modal\:container .section\:body .group, .modal\:container .section\:footer .group { /*TODO: Row*/
-        display: var(--rt-ds-flex);
-        width: 100%;
-        order: 0;
-    }
+        .nav\:container .group\:header,
+        .nav\:container .group\:body,
+        .nav\:container .group\:footer,
+        .root\:container .group\:header,
+        .root\:container .group\:body,
+        .root\:container .group\:footer,
+        .group\:external-component {
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 0.25em;
+            padding-bottom: 0.25em;
+        }
 
-    .group * {
-        width: 100%;
-        padding-top: 0.50em;
-        padding-bottom: 0.50em;
-    }
+            .nav\:container .group\:header .section,
+            .nav\:container .group\:body .section,
+            .nav\:container .group\:footer .section,
+            .root\:container .group\:header .section,
+            .root\:container .group\:body .section,
+            .root\:container .group\:footer .section,
+            .modal\:container .group\:header .section, 
+            .modal\:container .group\:body .section, 
+            .modal\:container .group\:footer .section,
+            .group\:external-component { /*TODO: Row*/
+                display: var(--rt-ds-flex);
+                width: 100%;
+                order: 0;
+            }
 
-    .size\:1, .size\:2, .size\:3, .size\:4, .size\:5, .size\:6, .size\:7, .size\:8, .size\:9, .size\:10, .size\:11, .size\:12 { /*TODO: Cols*/
-        flex: 0 0 auto;
-        text-align: center;
-    }
+            .section div {
+                width: 100%;
+            }
 
+            .size\:1, 
+            .size\:2, 
+            .size\:3, 
+            .size\:4, 
+            .size\:5, 
+            .size\:6, 
+            .size\:7, 
+            .size\:8, 
+            .size\:9, 
+            .size\:10,
+            .size\:11, 
+            .size\:12 { /*TODO: Cols*/
+                flex: 0 0 auto;
+                text-align: center;
+            }
 
-    .size\:1 {
-        max-width: 100%;
-    }
-    
-    .size\:2 {
-        max-width: 91.6666666667%;
-    }
+            .size\:1 {
+                max-width: 100%;
+            }
+            
+            .size\:2 {
+                max-width: 91.6666666667%;
+            }
 
-    .size\:3 {
-        max-width: 83.3333333333%;
-    }
+            .size\:3 {
+                max-width: 83.3333333333%;
+            }
 
-    .size\:4 {
-        max-width: 75%;
-    }
+            .size\:4 {
+                max-width: 75%;
+            }
 
-    .size\:5 {
-        max-width: 66.6666666667%;
-    }
+            .size\:5 {
+                max-width: 66.6666666667%;
+            }
 
-    .size\:6 {
-        max-width: 58.3333333333%;
-    }
+            .size\:6 {
+                max-width: 58.3333333333%;
+            }
 
-    .size\:7 {
-        max-width: 50%;   
-    }
-    
-    .size\:8 {
-        max-width: 41.6666666667%;   
-    }
+            .size\:7 {
+                max-width: 50%;   
+            }
+            
+            .size\:8 {
+                max-width: 41.6666666667%;   
+            }
 
-    .size\:9 {
-        max-width: 33.3333333333%;
-    }
+            .size\:9 {
+                max-width: 33.3333333333%;
+            }
 
-    .size\:10 {
-        max-width: 25%;
-    }
+            .size\:10 {
+                max-width: 25%;
+            }
 
-    .size\:11 {
-        max-width: 16.6666666667%;
-    }
+            .size\:11 {
+                max-width: 16.6666666667%;
+            }
 
-    .size\:12 {
-        max-width: 8.3333333333%;
-    }
+            .size\:12 {
+                max-width: 8.3333333333%;
+            }
 
 .justify\:content-left { /*TODO: Align element's with flexbox*/
     justify-content: flex-start !important;    
@@ -261,7 +289,11 @@
     text-align: end !important;
 }
 
-.button\:extra-small, .button\:small, .button\:medium, .button\:large, .button\:extra-large { /*TODO: Button's property's*/
+.button\:extra-small, 
+.button\:small, 
+.button\:medium, 
+.button\:large, 
+.button\:extra-large { /*TODO: Button's property's*/
     display: var(--rt-ds-inline-block);
     position: var(--rt-ps-relative);
     width: 100%;
@@ -296,11 +328,19 @@
         max-width: 100%;
     }
 
-        .button\:extra-small:active, .button\:small:active, .button\:medium:active, .button\:large:active, .button\:extra-large:active {
+        .button\:extra-small:active, 
+        .button\:small:active, 
+        .button\:medium:active, 
+        .button\:large:active, 
+        .button\:extra-large:active {
             transform: scale(0.85);
         }
 
-    .button\:extra-small::after, .button\:small::after, .button\:medium::after, .button\:large::after, .button\:extra-large::after {
+    .button\:extra-small::after, 
+    .button\:small::after, 
+    .button\:medium::after, 
+    .button\:large::after, 
+    .button\:extra-large::after {
     	content: "";
     	position: var(--rt-ps-absolute);
     	border-right: 50px solid var(--rt-bg-none);
@@ -324,7 +364,11 @@
             font-weight: 530;
         }
 
-.text\:extra-small, .text\:small, .text\:medium, .text\:large, .text\:extra-large { /*TODO: Text field's property's*/
+.text\:extra-small, 
+.text\:small, 
+.text\:medium, 
+.text\:large, 
+.text\:extra-large { /*TODO: Text field's property's*/
     width: 100%;
     height: auto;
     border: 1.5px solid rgba(10, 10, 10, 0.45);
@@ -353,9 +397,13 @@
 
     .text\:extra-large {
         max-width: 100%;
-    }   
+    }
 
-.date\:extra-small, .date\:small, .date\:medium, .date\:large, .date\:extra-large { /*TODO: Date field's property's*/
+.date\:extra-small, 
+.date\:small, 
+.date\:medium, 
+.date\:large, 
+.date\:extra-large { /*TODO: Date field's property's*/
     width: 100%;
     outline-style: double;
     border: none;
@@ -381,7 +429,11 @@
         max-width: 100%;
     }
 
-    .date\:extra-small .date:modal, .date\:small .date:modal, .date\:medium .date:modal, .date\:large .date:modal, .date\:extra-large .date:modal {
+    .date\:extra-small .date\:modal, 
+    .date\:small .date\:modal, 
+    .date\:medium .date\:modal, 
+    .date\:large .date\:modal, 
+    .date\:extra-large .date\:modal {
         position: var(--rt-ps-absolute);
         width: calc(100% / 2);
         height: auto;
@@ -389,7 +441,11 @@
         padding-bottom: 0.25em;
     }
 
-.select\:extra-small, .select\:small, .select\:medium, .select\:large, .select\:extra-large { /*TODO: Combo's property's*/
+.select\:extra-small, 
+.select\:small, 
+.select\:medium, 
+.select\:large, 
+.select\:extra-large { /*TODO: Combo's property's*/
     width: 100%;
     height: auto;
     background-position: right center !important;
@@ -406,23 +462,28 @@
     -webkit-appearance: menulist-button;
 }
 
-    .select\:extra-small, .option\:item { /*TODO: Combo's item's property's*/
+    .select\:extra-small, 
+    .option\:item { /*TODO: Combo's item's property's*/
         max-width: 20%;
     }
 
-    .select\:small, .option\:item {
+    .select\:small, 
+    .option\:item {
         max-width: 40%;
     }
 
-    .select\:medium, .option\:item {
+    .select\:medium, 
+    .option\:item {
         max-width: 60%;
     }
 
-    .select\:large, .option\:item {
+    .select\:large,
+    .option\:item {
         max-width: 80%;
     }
 
-    .select\:extra-large, .option\:item {
+    .select\:extra-large, 
+    .option\:item {
         max-width: 100%;
     }
 
@@ -438,7 +499,8 @@
         background-color: var(--rt-bg-blue-dark);
     }
 
-.table\:border, .table\:stripped { /*TODO: Table's property's*/
+.table\:border, 
+.table\:stripped { /*TODO: Table's property's*/
     width: 100%;
     height: auto;
     text-align: center !important;
@@ -446,13 +508,22 @@
     word-break: normal;
 }
 
-    .table\:border thead, .table\:stripped thead, 
-    .table\:border tbody, .table\:stripped tbody {
+    .table\:border thead, 
+    .table\:stripped thead, 
+    .table\:border tbody, 
+    .table\:stripped tbody {
         border-radius: 3em;
     }
 
-        .table\:border thead tr th, .table\:stripped thead tr th, 
-        .table\:border tbody tr td, .table\:stripped tbody tr td {
+    .table\:border tbody,
+    .table\:stripped tbody {
+        border-bottom: 0.5px solid var(--rt-bg-grey-light);
+    }
+
+        .table\:border thead tr th, 
+        .table\:stripped thead tr th, 
+        .table\:border tbody tr td, 
+        .table\:stripped tbody tr td {
             padding: 1.35em;
         }
 
@@ -464,8 +535,11 @@
         border-collapse: collapse !important;
     }
 
+    .table\:hover tbody .row\:active,
     .table\:hover tbody tr:hover, 
-    .table\:hover-scale thead tr:hover, .table\:hover-scale tbody tr:hover {
+    .table\:hover-scale thead tr:hover, 
+    .table\:hover-scale tbody tr:hover {
+        color: var(--rt-bg-white);
         box-shadow: var(--rt-bs-hover);
     }
 
@@ -476,7 +550,8 @@
             -o-animation: 1.5s var(--rt-a-fadeIn);
         }
 
-.list\:landscape, .list\:portrait { /*TODO: List's property's*/
+.list\:landscape, 
+.list\:portrait { /*TODO: List's property's*/
     width: 100%;
     height: auto;
     margin: 0.50em auto;
@@ -484,7 +559,8 @@
     white-space: initial;
 }
 
-    .list\:landscape .list\:item, .list\:portrait .list\:item { /*TODO: List's item's property's*/
+    .list\:landscape .list\:item, 
+    .list\:portrait .list\:item { /*TODO: List's item's property's*/
         border-radius: 0.25em;
         padding: 0.50em;
         text-align: center;
@@ -493,7 +569,8 @@
         align-items: center;
     }
 
-        .list\:landscape .list\:item:hover, .list\:portrait .list\:item:hover {
+        .list\:landscape .list\:item:hover, 
+        .list\:portrait .list\:item:hover {
             cursor: pointer;
         }
 
@@ -508,7 +585,8 @@
             height: 3.5em;
         }
 
-    .list\:hover .list\:item:hover, .list\:hover-scale .list\:item:hover {
+    .list\:hover .list\:item:hover, 
+    .list\:hover-scale .list\:item:hover {
         box-shadow: var(--rt-bs-hover);
     }
 
@@ -519,7 +597,11 @@
             -o-animation: 1.5s var(--rt-a-fadeIn);
         }
 
-.image\:extra-small, .image\:small, .image\:medium, .image\:large, .image\:extra-large { /*TODO: Image's or Icon's property's*/
+.image\:extra-small, 
+.image\:small, 
+.image\:medium, 
+.image\:large, 
+.image\:extra-large { /*TODO: Image's or Icon's property's*/
     display: var(--rt-ds-block);   
     width: 50%;
     height: auto;
@@ -547,7 +629,8 @@
         max-width: 50%;
     }
 
-    .image\:hover:hover, .image\:hover-round:hover {
+    .image\:hover:hover, 
+    .image\:hover-round:hover {
         animation: 1.5s var(--rt-a-fadeOut);
         -webkit-animation: 1.5s var(--rt-a-fadeOut);
         -moz-animation: 1.5s var(--rt-a-fadeOut);
@@ -555,7 +638,11 @@
         box-shadow: var(--rt-bs-regular);
     }
 
-.letter\:extra-small, .letter\:small, .letter\:medium, .letter\:large, .letter\:extra-large { /*TODO: Text letter's property's*/
+.letter\:extra-small, 
+.letter\:small, 
+.letter\:medium, 
+.letter\:large, 
+.letter\:extra-large { /*TODO: Text letter's property's*/
     display: var(--rt-ds-block);
     width: auto;
     height: auto;
@@ -581,6 +668,22 @@
         font-size: 3.50em;
     }
 
+.card\:expand,
+.card\:cover {
+    display: var(--rt-ds-flex);
+    width: 250px;
+    height: auto;
+    border-radius: 3em;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+    .card\:hover:hover {
+        box-shadow: var(--rt-bs-card);
+        backdrop-filter: blur(30px);
+    }
+
 .scroll\:hidden { /*TODO: Scroll's property's*/
     overflow: hidden !important;
 }
@@ -594,15 +697,6 @@
     height: 100%;
     overflow: scroll !important;
 }
-
-    .scroll\:visible\::-webkit-scrollbar, .scroll\:x-visible\::-webkit-scrollbar, .scroll\:y-visible\::-webkit-scrollbar {
-        position: var(--rt-ps-fixed);
-        border-radius: 3em;
-    }
-
-        .scroll\:visible\::-webkit-scrollbar-thumb, .scroll\:x-visible\::-webkit-scrollbar-thumb, .scroll\:y-visible\::-webkit-scrollbar-thumb {
-            background-color: var(--rt-bg-red);
-        }
 
     .scroll\:x-hidden {
         overflow-x: hidden !important;
@@ -632,7 +726,39 @@
         overflow-x: hidden !important;
     }
 
-.divider, .divider\:x, .divider\:y { /*TODO: Separator's property's*/
+    .scroll\:auto::-webkit-scrollbar,
+    .scroll\:y-auto::-webkit-scrollbar,
+    .scroll\:y-visible::-webkit-scrollbar {
+        width: 1.2em;
+        height: 100%;
+    }
+
+    .scroll\:auto::-webkit-scrollbar,
+    .scroll\:x-auto::-webkit-scrollbar,
+    .scroll\:x-visible::-webkit-scrollbar {
+        width: 100%;
+        height: 1.2em;
+    }
+
+    .scroll\:auto::-webkit-scrollbar-track-piece:start,
+    .scroll\:visible::-webkit-scrollbar-track-piece:start,
+    .scroll\:y-auto::-webkit-scrollbar-track-piece:start,
+    .scroll\:y-visible::-webkit-scrollbar-track-piece:start {
+        background-color: var(--rt-bg-none);
+        margin-top: 0.75em;
+    }
+
+    .scroll\:auto::-webkit-scrollbar-track-piece:end,
+    .scroll\:visible::-webkit-scrollbar-track-piece:end,
+    .scroll\:y-auto::-webkit-scrollbar-track-piece:end,
+    .scroll\:y-visible::-webkit-scrollbar-track-piece:end {
+        background-color: var(--rt-bg-none);
+        margin-bottom: 0.75em;
+    }
+
+.divider, 
+.divider\:x, 
+.divider\:y { /*TODO: Separator's property's*/
     width: 100%;
     height: 100%;
     margin-top: 0.50em;
