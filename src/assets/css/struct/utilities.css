@@ -554,7 +554,7 @@
 .list\:portrait { /*TODO: List's property's*/
     width: 100%;
     height: auto;
-    margin: 0.50em auto;
+    margin: auto;
     padding: 0;
     white-space: initial;
 }
