@@ -373,7 +373,7 @@
     height: auto;
     border: 1.5px solid rgba(10, 10, 10, 0.45);
     border-radius: 0.5em;
-    padding: 1.5px;
+    padding: 3.5px;
     font-weight: 450;
     text-align: center !important;
     text-transform: capitalize;
@@ -455,7 +455,7 @@
     border-radius: 0.5em;
     text-align: left;
     text-overflow: ellipsis;
-    padding: 0.10em;
+    padding: 3.5px;
     outline: none !important;
     appearance: menulist-button;
     -webkit-appearance: menulist-button;
