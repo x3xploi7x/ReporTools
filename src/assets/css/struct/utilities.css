@@ -455,7 +455,6 @@
     border-radius: 0.5em;
     text-align: left;
     text-overflow: ellipsis;
-    margin: 0.10em;
     padding: 0.10em;
     outline: none !important;
     appearance: menulist-button;
