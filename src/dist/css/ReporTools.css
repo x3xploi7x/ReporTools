@@ -34,141 +34,9 @@
 
     This is not legal advice. Learn more about repository licenses.
 **/
-@charset   "UTF-8";
-@namespace url(http://www.w3.org/1999/xhtml);
-@namespace svg url(http://www.w3.org/2000/svg);
-/******************************?BASE?******************************/
-*, 
-::after, 
-::before { /*!Alter all document!*/
-    box-sizing: border-box;
-}
-
-    *::selection {
-        background: var(--rt-bg-blue-light) !important;
-    }
-
-html {
-    line-height: 1.25;
-    -webkit-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-}
-
-body {
-    background-color: var(--rt-bg-white);
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    overflow: hidden;
-}
-
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
-h6 {
-    font-size: 2em;
-}
-
-input:-internal-autofill-selected, 
-input:-webkit-autofill {
-    background-color: var(--rt-bg-blue-light) !important;
-    -webkit-text-fill-color: var(--rt-bg-black) !important;
-}
-
-input[type="text"], 
-input[type="password"], 
-input[type="submit"], 
-input[type="reset"], 
-textarea, 
-select {
-    background-color: var(--rt-bg-white);
-}
-
-button, 
-input[type="text"], 
-input[type="button"], 
-input[type="submit"], 
-input[type="reset"], 
-input[type="check"], 
-input[type="date"], 
-select {
-    text-align: center;
-    cursor: pointer;
-}
-
-textarea, 
-input[type="text"], 
-input[type="password"] {
-    text-align: start;
-    cursor: text;
-}
-
-input,
-button, 
-select {
-    font-size: 100%;
-    margin: 0;
-}
-
-select {
-    appearance: none;
-    -webkit-appearance: none;
-}
-
-select, 
-a {
-    text-decoration: none;
-}
-
-a {
-    background-color: transparent !important;
-}
-
-    a:active, 
-    a:visited {
-        background: none !important;
-    }
-
-ol, 
-ul, 
-dl {
-    list-style: none;
-}
-
-textarea {
-    overflow: auto;
-}
-
-img {
-    border-style: none;
-}
-
-audio, 
-video, 
-svg {
-    display: var(--rt-ds-block);
-    overflow: none;
-}
-
-hr {
-    margin: 0;
-    padding: 0;
-}
-
-[visible] { /*TODO: Default config*/
-    visibility: visible;
-}
-
-[hidden] { /*TODO: Custom config*/
-    visibility: hidden;
-}
-
-    [visible], 
-    [hidden] {
-        overflow: auto;
-    }
+@charset    "UTF-8";
+@namespace  url(http://www.w3.org/1999/xhtml);
+@namespace  svg url(http://www.w3.org/2000/svg);
 /******************************?FONTS?******************************/
 :root { /*!Only modify with Sass or Less!*/
 	--rt-fn-arial: 'Arial';
@@ -228,6 +96,22 @@ hr {
 	.font\:family-apple {
 		font-family: var(--rt-fn-apple) !important;
 	}
+
+.font\:size-25\% { /*TODO: Font's size's*/
+	font-size: 0.25em;
+}
+
+.font\:size-50\% {
+	font-size: 0.5em;
+}
+
+.font\:size-75\% {
+	font-size: 0.75em;
+}
+
+.font\:size-100\% {
+	font-size: 1em;
+}
 
 .font\:weight-normal { /*TODO: Type font size*/
 	font-weight: normal !important;
@@ -808,10 +692,8 @@ hr {
 		font-size: 0.5em;
 	}
 
-	.table\:border thead, 
-	.table\:stripped thead, 
-    .table\:border tbody, 
-	.table\:stripped tbody {
+	.table\:normal thead, 
+	.table\:normal tbody {
 		font-size: 0.65em;
 	}
 
@@ -860,10 +742,8 @@ hr {
 		font-size: 0.7em;
 	}
 
-	.table\:border thead, 
-	.table\:stripped thead, 
-    .table\:border tbody, 
-	.table\:stripped tbody {
+	.table\:normal thead, 
+	.table\:normal tbody {
 		font-size: 0.65em;
 	}
 
@@ -913,10 +793,8 @@ hr {
 		font-size: 1em;
 	}
 
-	.table\:border thead, 
-	.table\:stripped thead, 
-    .table\:border tbody, 
-	.table\:stripped tbody {
+	.table\:normal thead, 
+	.table\:normal tbody {
 		font-size: 1em;
 	}
 
@@ -960,10 +838,8 @@ hr {
 		font-size: 1.2em;
 	}
 
-	.table\:border thead, 
-	.table\:stripped thead, 
-    .table\:border tbody, 
-	.table\:stripped tbody {
+	.table\:normal thead, 
+	.table\:normal tbody {
 		font-size: 1.2em;
 	}
 
@@ -1007,10 +883,8 @@ hr {
 		font-size: 1.2em;
 	}
 
-	.table\:border thead, 
-	.table\:stripped thead, 
-    .table\:border tbody, 
-	.table\:stripped tbody {
+	.table\:normal thead, 
+	.table\:normal tbody {
 		font-size: 1.2em;
 	}
 
@@ -1054,10 +928,8 @@ hr {
 		font-size: 1em;
 	}
 
-	.table\:border thead, 
-	.table\:stripped thead, 
-    .table\:border tbody, 
-	.table\:stripped tbody {
+	.table\:normal thead, 
+	.table\:normal tbody {
 		font-size: 1em;
 	}
 
@@ -1101,10 +973,8 @@ hr {
 		font-size: 1.5em;
 	}
 
-	.table\:border thead, 
-	.table\:stripped thead, 
-    .table\:border tbody, 
-	.table\:stripped tbody {
+	.table\:normal thead, 
+	.table\:normal tbody {
 		font-size: 1.5em;
 	}
 
@@ -1168,7 +1038,8 @@ hr {
 		background-color: var(--rt-bg-white);
 	}
 
-	.table\:stripped tbody tr:nth-child(even) {
+	.table\:stripped tbody tr:nth-child(even),
+	.list\:stripped .list\:item:nth-child(even) {
 		background-color: var(--rt-bg-grey-light);
 	}
 
@@ -1244,12 +1115,14 @@ hr {
 		background-color: var(--rt-bg-grey);
 	}
 
-	.table\:stripped tbody tr:nth-child(odd) {
+	.table\:stripped tbody tr:nth-child(odd),
+	.list\:stripped .list\:item:nth-child(odd) {
 		color: var(--rt-bg-grey-dark);
 		background-color: var(--rt-bg-grey-light);
 	}
 
-	.table\:stripped tbody tr:nth-child(even) {
+	.table\:stripped tbody tr:nth-child(even),
+	.list\:stripped .list\:item:nth-child(even) {
 		color: var(--rt-bg-black);
 		background-color: var(--rt-bg-white);
 	}
@@ -1906,8 +1779,7 @@ hr {
         background-color: var(--rt-bg-blue-dark);
     }
 
-.table\:border, 
-.table\:stripped { /*TODO: Table's property's*/
+.table\:normal { /*TODO: Table's property's*/
     width: 100%;
     height: auto;
     text-align: center !important;
@@ -1915,22 +1787,17 @@ hr {
     word-break: normal;
 }
 
-    .table\:border thead, 
-    .table\:stripped thead, 
-    .table\:border tbody, 
-    .table\:stripped tbody {
+    .table\:normal thead, 
+    .table\:normal tbody {
         border-radius: 3em;
     }
 
-    .table\:border tbody,
-    .table\:stripped tbody {
+    .table\:normal tbody {
         border-bottom: 0.5px solid var(--rt-bg-grey-light);
     }
 
-        .table\:border thead tr th, 
-        .table\:stripped thead tr th, 
-        .table\:border tbody tr td, 
-        .table\:stripped tbody tr td {
+        .table\:normal thead tr th, 
+        .table\:normal tbody tr td {
             padding: 1.35em;
         }
 
