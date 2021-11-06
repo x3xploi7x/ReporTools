@@ -49,10 +49,8 @@
 		font-size: 0.5em;
 	}
 
-	.table\:border thead, 
-	.table\:stripped thead, 
-    .table\:border tbody, 
-	.table\:stripped tbody {
+	.table\:normal thead, 
+	.table\:normal tbody {
 		font-size: 0.65em;
 	}
 
@@ -101,10 +99,8 @@
 		font-size: 0.7em;
 	}
 
-	.table\:border thead, 
-	.table\:stripped thead, 
-    .table\:border tbody, 
-	.table\:stripped tbody {
+	.table\:normal thead, 
+	.table\:normal tbody {
 		font-size: 0.65em;
 	}
 
@@ -154,10 +150,8 @@
 		font-size: 1em;
 	}
 
-	.table\:border thead, 
-	.table\:stripped thead, 
-    .table\:border tbody, 
-	.table\:stripped tbody {
+	.table\:normal thead, 
+	.table\:normal tbody {
 		font-size: 1em;
 	}
 
@@ -201,10 +195,8 @@
 		font-size: 1.2em;
 	}
 
-	.table\:border thead, 
-	.table\:stripped thead, 
-    .table\:border tbody, 
-	.table\:stripped tbody {
+	.table\:normal thead, 
+	.table\:normal tbody {
 		font-size: 1.2em;
 	}
 
@@ -248,10 +240,8 @@
 		font-size: 1.2em;
 	}
 
-	.table\:border thead, 
-	.table\:stripped thead, 
-    .table\:border tbody, 
-	.table\:stripped tbody {
+	.table\:normal thead, 
+	.table\:normal tbody {
 		font-size: 1.2em;
 	}
 
@@ -295,10 +285,8 @@
 		font-size: 1em;
 	}
 
-	.table\:border thead, 
-	.table\:stripped thead, 
-    .table\:border tbody, 
-	.table\:stripped tbody {
+	.table\:normal thead, 
+	.table\:normal tbody {
 		font-size: 1em;
 	}
 
@@ -342,10 +330,8 @@
 		font-size: 1.5em;
 	}
 
-	.table\:border thead, 
-	.table\:stripped thead, 
-    .table\:border tbody, 
-	.table\:stripped tbody {
+	.table\:normal thead, 
+	.table\:normal tbody {
 		font-size: 1.5em;
 	}
 
