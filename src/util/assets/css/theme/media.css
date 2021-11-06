@@ -409,7 +409,8 @@
 		background-color: var(--rt-bg-white);
 	}
 
-	.table\:stripped tbody tr:nth-child(even) {
+	.table\:stripped tbody tr:nth-child(even),
+	.list\:stripped .list\:item:nth-child(even) {
 		background-color: var(--rt-bg-grey-light);
 	}
 
@@ -485,12 +486,14 @@
 		background-color: var(--rt-bg-grey);
 	}
 
-	.table\:stripped tbody tr:nth-child(odd) {
+	.table\:stripped tbody tr:nth-child(odd),
+	.list\:stripped .list\:item:nth-child(odd) {
 		color: var(--rt-bg-grey-dark);
 		background-color: var(--rt-bg-grey-light);
 	}
 
-	.table\:stripped tbody tr:nth-child(even) {
+	.table\:stripped tbody tr:nth-child(even),
+	.list\:stripped .list\:item:nth-child(even) {
 		color: var(--rt-bg-black);
 		background-color: var(--rt-bg-white);
 	}
