@@ -8,7 +8,7 @@
 		"scripts":
 		{
 			"test": "@echo off run index.js -t",
-			"main": "src/assets/js/index.js"
+			"main": "src/util/assets/js/index.js"
 		},
 		"github": "github.com/x3xploi7x/ReporTools/ReporTools.master"
 	}
