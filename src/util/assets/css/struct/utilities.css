@@ -498,8 +498,7 @@
         background-color: var(--rt-bg-blue-dark);
     }
 
-.table\:border, 
-.table\:stripped { /*TODO: Table's property's*/
+.table\:normal { /*TODO: Table's property's*/
     width: 100%;
     height: auto;
     text-align: center !important;
@@ -507,22 +506,17 @@
     word-break: normal;
 }
 
-    .table\:border thead, 
-    .table\:stripped thead, 
-    .table\:border tbody, 
-    .table\:stripped tbody {
+    .table\:normal thead, 
+    .table\:normal tbody {
         border-radius: 3em;
     }
 
-    .table\:border tbody,
-    .table\:stripped tbody {
+    .table\:normal tbody {
         border-bottom: 0.5px solid var(--rt-bg-grey-light);
     }
 
-        .table\:border thead tr th, 
-        .table\:stripped thead tr th, 
-        .table\:border tbody tr td, 
-        .table\:stripped tbody tr td {
+        .table\:normal thead tr th, 
+        .table\:normal tbody tr td {
             padding: 1.35em;
         }
 
