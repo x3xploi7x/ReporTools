@@ -1695,15 +1695,15 @@ hr {
         align-items: flex-end !important;
     }
 
-.position\:start {
+.direction\:start {
     text-align: start !important;
 }
 
-.position\:center {
+.direction\:center {
     text-align: center !important;
 }
 
-.position\:end {
+.direction\:end {
     text-align: end !important;
 }
 
