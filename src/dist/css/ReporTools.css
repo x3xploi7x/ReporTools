@@ -37,16 +37,66 @@
 @charset    "UTF-8";
 @namespace  url(http://www.w3.org/1999/xhtml);
 @namespace  svg url(http://www.w3.org/2000/svg);
-/******************************?BASE?******************************/
+/******************************?NORMALIZE?******************************/
 *, 
 ::after, 
 ::before { /*!Alter all document!*/
     box-sizing: border-box;
 }
 
-    *::selection {
-        background: var(--rt-bg-blue-light) !important;
-    }
+html {
+    line-height: 1.25;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+}
+
+html, 
+body,
+header,
+footer,
+main,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+ol,
+ul,
+table,
+section { /*!Alter all document!*/
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    margin: 0;
+    padding: 0;
+}
+
+input,
+button,
+table, 
+select,
+ul,
+ol,
+img {
+    box-sizing: content-box !important;
+}
+/******************************?BASE?******************************/
+*::selection {
+    background: var(--rt-bg-blue-light) !important;
+}
 
 html {
     line-height: 1.25;
@@ -68,7 +118,7 @@ h3,
 h4, 
 h5, 
 h6 {
-    font-size: 2em;
+    font-size: 2em !important;
 }
 
 input:-internal-autofill-selected, 
@@ -103,18 +153,6 @@ input[type="text"],
 input[type="password"] {
     text-align: start;
     cursor: text;
-}
-
-input,
-button,
-table, 
-select,
-ul,
-ol,
-img {
-    box-sizing: content-box !important;
-    font-size: 100%;
-    margin: 0;
 }
 
 select {
@@ -155,11 +193,6 @@ video,
 svg {
     display: var(--rt-ds-block);
     overflow: none;
-}
-
-hr {
-    margin: 0;
-    padding: 0;
 }
 
 [visible] { /*TODO: Default config*/
