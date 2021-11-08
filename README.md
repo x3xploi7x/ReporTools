@@ -35,13 +35,11 @@ Use transitions in input's.
 Route Tree Project
 
 ├───.gitignore
-
 ├───build
 
 │   ├───issues
 
 │   └───test
-
 └───src
     
     ├───dist
