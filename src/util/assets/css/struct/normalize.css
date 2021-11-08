@@ -33,8 +33,6 @@ ol,
 ul,
 table,
 section { /*!Alter all document!*/
-    font: inherit;
-    font-size: 100%;
     vertical-align: baseline;
     margin: 0;
     padding: 0;
