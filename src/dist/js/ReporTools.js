@@ -31,11 +31,11 @@
                                         <h1 id="letter__header" class="letter:medium color:grey-dark font:weight-bold font:transform-upper"></h1>
                                     </div>
                                     <div class="divider:x"></div>
-                                    <div class="content:message">
+                                    <div class="content:message padding:100%">
                                         <p id="letter__message" class="color:grey font:weight-bold"></p>
                                     </div>
                                     <div class="content:options">
-                                        <button id="button__notify" class="button:small button:hover background:blue color:white" onclick="return false;">Continuar</button>
+                                        <button id="button__notify" class="button:extra-small button:hover background:blue color:white" onclick="return false;">Continuar</button>
                                     </div>
                                 </div>`;
 
