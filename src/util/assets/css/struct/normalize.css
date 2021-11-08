@@ -1,0 +1,49 @@
+/******************************?NORMALIZE?******************************/
+html {
+    line-height: 1.25;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+}
+
+html, 
+body,
+header,
+footer,
+main,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+ol,
+ul,
+table,
+section { /*!Alter all document!*/
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    margin: 0;
+    padding: 0;
+}
+
+input,
+button, 
+select,
+img {
+    box-sizing: content-box !important;
+    font-size: 100%;
+    margin: 0;
+}
