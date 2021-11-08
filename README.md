@@ -36,37 +36,21 @@ Route Tree Project
 
 ├───.gitignore
 ├───build
-
 │   ├───issues
-
 │   └───test
 └───src
-    
     ├───dist
-    
     │   ├───css
-    
     │   └───js
-    
     ├───env
-    
     └───util
-        
         └───assets
-            
             ├───css
-            
             │   ├───struct
-            
             │   ├───theme
-            
             │   └───typography
-            
             ├───img
-            
             │   └───Things
-            
             └───js
-                
                 └───components
 ####################################################################################################
