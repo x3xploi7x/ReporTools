@@ -47,6 +47,4 @@ ul,
 ol,
 img {
     box-sizing: content-box !important;
-    font-size: 100%;
-    margin: 0;
 }
