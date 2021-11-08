@@ -40,8 +40,11 @@ hr {
 }
 
 input,
-button, 
+button,
+table, 
 select,
+ul,
+ol,
 img {
     box-sizing: content-box !important;
     font-size: 100%;
