@@ -1,4 +1,10 @@
 /******************************?NORMALIZE?******************************/
+*, 
+::after, 
+::before { /*!Alter all document!*/
+    box-sizing: border-box;
+}
+
 html {
     line-height: 1.25;
     -webkit-text-size-adjust: 100%;
