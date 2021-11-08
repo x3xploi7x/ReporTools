@@ -1,13 +1,7 @@
 /******************************?BASE?******************************/
-*, 
-::after, 
-::before { /*!Alter all document!*/
-    box-sizing: border-box;
+*::selection {
+    background: var(--rt-bg-blue-light) !important;
 }
-
-    *::selection {
-        background: var(--rt-bg-blue-light) !important;
-    }
 
 html {
     line-height: 1.25;
