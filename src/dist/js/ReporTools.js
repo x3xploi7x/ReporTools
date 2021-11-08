@@ -35,7 +35,7 @@
                                         <p id="letter__message" class="color:grey font:weight-bold"></p>
                                     </div>
                                     <div class="content:options">
-                                        <button id="button__notify" class="button:extra-small button:hover background:blue color:white" onclick="return false;">Continuar</button>
+                                        <button id="button__notify" class="button:extra-small background:blue color:white" onclick="return false;">Continuar</button>
                                     </div>
                                 </div>`;
 
