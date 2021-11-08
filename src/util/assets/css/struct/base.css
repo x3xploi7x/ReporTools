@@ -29,7 +29,7 @@ h3,
 h4, 
 h5, 
 h6 {
-    font-size: 2em;
+    font-size: 2em !important;
 }
 
 input:-internal-autofill-selected, 
@@ -64,13 +64,6 @@ input[type="text"],
 input[type="password"] {
     text-align: start;
     cursor: text;
-}
-
-input,
-button, 
-select {
-    font-size: 100%;
-    margin: 0;
 }
 
 select {
@@ -111,11 +104,6 @@ video,
 svg {
     display: var(--rt-ds-block);
     overflow: none;
-}
-
-hr {
-    margin: 0;
-    padding: 0;
 }
 
 [visible] { /*TODO: Default config*/
