@@ -35,16 +35,16 @@ ________________________________________________________________________________
         <table class="table:normal table:stripped">
           <thead class="background:blue-light color:white">
             <tr>
-              <th></th>
-              <th></th>
-              <th></th>
+              <th>Name</th>
+              <th>Last Name</th>
+              <th>Age</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>Mark</td>
+              <td>Zuckerberg</td>
+              <td>28 years</td>
             </tr>
           </tbody>
         </table>
