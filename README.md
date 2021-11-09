@@ -16,6 +16,49 @@ ________________________________________________________________________________
   - Don't use *.js, *.css, recommended .min files to fast performance.
   - Use transitions in input's.
 _____________________________________________________________________________________________________________________
+# Basic Struct
+```bash
+  <!--Root element-->
+  <div class="root:container font:family-verdana font:transform-capitalize">
+    <!--Specify header content-->
+    <header class="group:header">
+      <!--Add Rows-->
+      <section class="size:4">
+        <input class="text:small text:hover" type="text" placeholder="User">
+        <input class="text:small text:hover" type="password" placeholder="Pass">
+        <button class="button:extra-small button:hover background:blue-light">Click Me!</button>
+      </section>
+    </header>
+    <!--Specify body content-->
+    <main class="group:body scroll:y-auto">
+      <section class="section:1">
+        <table class="table:normal table:stripped">
+          <thead class="background:blue-light color:white">
+            <tr>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <!--Specify footer content-->
+    <footer class="group:footer">
+      <section class="size:6 position:center">
+        <p class="letter:small color:grey-dark">Copyright 2021 @ExploitNework</p>
+      </section>
+    </footer>
+  </div>
+```
+_____________________________________________________________________________________________________________________
 # Examples
 
 **TEST01_DEMO**
