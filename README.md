@@ -109,5 +109,6 @@ ________________________________________________________________________________
 
 **x3xploitx**
   - Mail : exploitnetworkmx@gmail.com
+  - LinkedId : edgar-gonzalez=06033516a
   - Phone: +528123932144
   - Location: Mexico
