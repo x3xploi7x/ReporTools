@@ -53,7 +53,7 @@ ________________________________________________________________________________
     <!--Specify footer content-->
     <footer class="group:footer">
       <section class="size:6 position:center">
-        <p class="letter:small color:grey-dark">Copyright 2021 @ExploitNework</p>
+        <p class="letter:small color:grey-dark">Copyright 2021 @ExploitNetwork</p>
       </section>
     </footer>
   </div>
