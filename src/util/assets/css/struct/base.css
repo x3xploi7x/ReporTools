@@ -100,6 +100,11 @@ svg {
     overflow: none;
 }
 
+i {
+    font-size: normal;
+    font-style: initial;
+}
+
 [visible] { /*TODO: Default config*/
     visibility: visible;
 }
