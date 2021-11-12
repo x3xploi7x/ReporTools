@@ -14,6 +14,11 @@
     --rt-ps-absolute: absolute;
     --rt-ps-static: static;
     --rt-ps-fixed: fixed;
+
+    --rt-cs-none: default;
+    --rt-cs-pointer: pointer;
+    --rt-cs-cross: crosshair;
+    --rt-cs-hand: grab;
 }
 
 .display { /*TODO: Displayed element in document*/
@@ -675,6 +680,22 @@
     .card\:hover:hover {
         box-shadow: var(--rt-bs-card);
         backdrop-filter: blur(30px);
+    }
+
+.cursor { /*TODO: Cursor's property's*/
+    cursor: var(--rt-cs-none);
+}
+
+    .cursor\:pointer {
+        cursor: var(--rt-cs-pointer);
+    }
+
+    .cursor\:cross {
+        cursor: var(--rt-cs-cross);
+    }
+
+    .cursor\:hand {
+        cursor: var(--rt-cs-hand);
     }
 
 .scroll\:hidden { /*TODO: Scroll's property's*/
