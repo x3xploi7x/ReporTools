@@ -2498,6 +2498,10 @@ i {
         height: 1000px !important;
     }
 
+.border {
+    border: var(--rt-sz-0) !important;
+}
+
 .border\:1, 
 .border\:2, 
 .border\:3,
