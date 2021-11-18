@@ -341,11 +341,7 @@
             transform: scale(0.85);
         }
 
-    .button\:extra-small::after, 
-    .button\:small::after, 
-    .button\:medium::after, 
-    .button\:large::after, 
-    .button\:extra-large::after {
+    .button\:hover::after {
     	content: "";
     	position: var(--rt-ps-absolute);
     	border-right: 50px solid var(--rt-bg-none);
