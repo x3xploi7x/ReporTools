@@ -72,7 +72,7 @@
 
     .group\:mirror .modal\:form { /*TODO: Modal form*/
         display: var(--rt-ds-flex);
-        width: calc(100vw / 2);
+        width: calc(100vw / 3);
         height: auto;
         border: 7.5px solid var(--rt-cm-border);
         border-radius: 1.5em;
