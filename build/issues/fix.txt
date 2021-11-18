@@ -16,3 +16,7 @@
 ### Updates 20211108
 - Component's modify to padding (Pop-Ups)
 - Scrollbar change color to default (Choice background thumb)
+
+### Updates 20211118
+- Remove transition's hoverable in button's (unique button:hover componenent)
+- Add modal form component
