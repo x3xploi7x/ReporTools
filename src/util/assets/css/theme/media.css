@@ -346,12 +346,8 @@
 		background-color: var(--rt-bg-white);
 	}
 
-	.button\:extra-small::after,
-	.button\:small::after, 
-	.button\:medium::after, 
-	.button\:large::after, 
-	.button\:extra-large::after {
-		border-bottom: 25px solid var(--rt-cm-hover-light);
+	.button\:hover::after {
+		border-bottom: 25px solid var(--rt-cm-hover-dark);
 	}
 
 	.button\:hover:hover, 
