@@ -2514,82 +2514,64 @@ i {
     border: var(--rt-sz-0) !important;
 }
 
-.border\:1, 
-.border\:2, 
-.border\:3,
-.border\:left-1, 
-.border\:left-2, 
-.border\:left-3,
-.border\:right-1, 
-.border\:right-2, 
-.border\:right-3
-.border\:top-1, 
-.border\:top-2, 
-.border\:top-3,
-.border\:bottom-1, 
-.border\:bottom-2, 
-.border\:bottom-3 {
-    border-style: groove !important;
-}
-
 .border\:1 { /*TODO: Border element delimited in box*/
-    border: var(--rt-sz-1);
+    border: solid var(--rt-sz-1);
 }
 
 .border\:2 {
-    border: var(--rt-sz-2);
+    border: solid var(--rt-sz-2);
 }
 
 .border\:3 {
-    border: var(--rt-sz-3);
+    border: solid var(--rt-sz-3);
 }
 
     .border\:left-1 {
-        border-left: var(--rt-sz-1);
+        border-left: solid var(--rt-sz-1);
     }
 
     .border\:left-2 {
-        border-left: var(--rt-sz-2);
+        border-left: solid var(--rt-sz-2);
     }
 
     .border\:left-3 {
-        border-left: var(--rt-sz-3);
+        border-left: solid var(--rt-sz-3);
     }
 
     .border\:right-1 {
-        border-right: var(--rt-sz-1);
+        border-right: solid var(--rt-sz-1);
     }
 
     .border\:right-2 {
-        border-right: var(--rt-sz-2);
+        border-right: solid var(--rt-sz-2);
     }
 
     .border\:right-3 {
-        border-right: var(--rt-sz-3);
+        border-right: solid var(--rt-sz-3);
     }
 
     .border\:top-1 {
-        border-top: var(--rt-sz-1);
+        border-top: solid var(--rt-sz-1);
     }
 
     .border\:top-2 {
-        border-top: var(--rt-sz-2);
+        border-top: solid var(--rt-sz-2);
     }
 
     .border\:top-3 {
-        border-top: var(--rt-sz-3);
+        border-top: solid var(--rt-sz-3);
     }
 
     .border\:bottom-1 {
-        border-bottom: var(--rt-sz-1);
+        border-bottom: solid var(--rt-sz-1);
     }
 
-    .border\:top-2 {
-        border-bottom: var(--rt-sz-2);
+    .border\:bottom-2 {
+        border-bottom: solid var(--rt-sz-2);
     }
 
-    .border\:top-3 {
-        border-bottom: var(--rt-sz-3);
+    .border\:bottom-3 {
+        border-bottom: solid var(--rt-sz-3);
     }
 
 .margin { /*TODO: Margin element in box*/
