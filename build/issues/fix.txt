@@ -20,3 +20,6 @@
 ### Updates 20211118
 - Remove transition's hoverable in button's (unique button:hover componenent)
 - Add modal form component
+
+### Updates 20211119
+- Add ToolTip component
