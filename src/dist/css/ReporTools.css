@@ -125,15 +125,6 @@ input:-webkit-autofill {
     -webkit-text-fill-color: var(--rt-bg-black) !important;
 }
 
-input[type="text"], 
-input[type="password"], 
-input[type="submit"], 
-input[type="reset"], 
-textarea, 
-select {
-    background-color: var(--rt-bg-white);
-}
-
 button, 
 input[type="text"], 
 input[type="button"], 
@@ -1162,6 +1153,15 @@ i {
 		background-color: var(--rt-bg-white);
 	}
 
+    input[type="text"], 
+    input[type="password"], 
+    input[type="submit"], 
+    input[type="reset"], 
+    textarea, 
+    select {
+        background-color: var(--rt-bg-white);
+    }
+
 	.button\:extra-small::after,
 	.button\:small::after, 
 	.button\:medium::after, 
@@ -1238,6 +1238,15 @@ i {
 	body {
         background-color: var(--rt-bg-grey-dark);
 	}
+
+    input[type="text"], 
+    input[type="password"], 
+    input[type="submit"], 
+    input[type="reset"], 
+    textarea, 
+    select {
+        background-color: var(--rt-bg-grey);
+    }
 
 	.button\:hover::after {
 		border-bottom: 25px solid var(--rt-cm-hover-dark);
@@ -1448,6 +1457,63 @@ i {
 			-o-transform: scale(1);
 		}
 	}
+
+@keyframes hidden {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.50;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+    @-webkit-keyframes hidden {
+        0% {
+            -webkit-filter: opacity(1);
+        }
+
+        50% {
+            -webkit-filter: opacity(0.50);
+        }
+
+        100% {
+            -webkit-filter: opacity(0);
+        }
+    }
+
+    @-moz-keyframes hidden {
+        0% {
+            -moz-filter: opacity(1);
+        }
+
+        50% {
+            -moz-filter: opacity(0.50);
+        }
+
+        100% {
+            -moz-filter: opacity(0);
+        }
+    }
+
+    @-o-keyframes hidden {
+        0% {
+            -o-filter: opacity(1);
+        }
+
+        50% {
+            -o-filter: opacity(0.50);
+        }
+
+
+        100% {
+            -o-filter: opacity(0);
+        }
+    }
 /******************************?UTILITIES?******************************/
 :root { /*!Only modify with Sass or Less!*/
     --rt-ds-none: none;
@@ -2364,11 +2430,23 @@ i {
     .group\:mirror .modal\:notify { /*TODO: Modal notify*/
         position: var(--rt-ps-relative);
         background-color: var(--rt-bg-white);
-        width: calc(100% / 2);
+        border: 0.25em solid var(--rt-bg-grey-light);
+        border-radius: 1em;
+        width: auto;
         height: calc(100% / 12);
-        top: 0;
-        left: 35%;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: hidden 1.5s;
+        -webkit-animation: hidden 1.5s;
+        -moz-animation: hidden 1.5s;
+        -o-animation: hidden 1.5s;
     }
+
+        .modal\:nofity .content\:message {
+            width: 100%;
+            height: 100%;
+        }
 
     .group\:mirror .spinner\:solid, 
     .group\:mirror .spinner\:dashed, 
