@@ -3,7 +3,7 @@
 /**
  * @param {Class} => ReporTools
  * @param {Descripton} => main class to ReporTools project 
- */
+*/
 
  class ReporTools {
     constructor(parent) {
@@ -27,7 +27,7 @@
     /**
      * @param {Function} => message
      * @param {Description} => create modal popup show information
-     */
+    */
     message(title, content) {
         const parent = document.getElementById("container__modal");
               parent.classList.add("display:block");
@@ -55,8 +55,8 @@
     /**
      * @param {Function} => form
      * @param {Description} => create modal popup add element in parent selector
-     */
-    form(element, reference, options) {
+    */
+    form(element, reference, options={id: "", class: "", type:"", data: ""}) {
         const parent = document.getElementById("container__modal");
               parent.classList.add("display:block");
               parent.innerHTML = `<div id="modal__popup" class="modal:form background:white font:family-lucida">
@@ -71,8 +71,13 @@
         
         for(var i = 0; i <= Object.keys(options).length - 1; i++) {
             child.setAttribute(Object.keys(options)[i], Object.values(options)[i]);
+            
         }
+            
+        let temp = options.id;
+        console.log(temp);
 
+        //document.getElementById(temp).innerHTML = options.data;
         document.getElementById("div__main").appendChild(child);
         document.getElementById("text__reference").innerText = reference;
         document.getElementById("button__notify").addEventListener("click", function(){
@@ -82,9 +87,29 @@
     }
 
     /**
+     * @param {Function} => form
+     * @param {Description} => create modal popup add element in parent selector
+    */
+    notify(content) {
+        const parent = document.getElementById("container__modal");
+              parent.classList.add("display:block");
+              parent.innerHTML = `<div class="modal:notify font:family-monaco>"
+                                    <div class="content:message padding:50%">
+                                        <span id="text__message" class="letter:small color:grey-dark direction:start font:weight-bold"></span>
+                                    </div>
+                                  </div>`;
+
+        document.getElementById("text__message").innerText = content;
+        setTimeout(function() {
+            parent.classList.remove("display:block");
+            parent.innerHTML = '';
+        }, 1500);
+    }
+
+    /**
      * @param {Function} => loader
      * @param {Description} => add spinner to load data or show information
-     */
+    */
     loader(action, color) {
         const parent = document.getElementById("container__modal");
         action = typeof(action) === "string" ? String(action) : Object(action);
@@ -106,7 +131,7 @@
     /**
      * @param {Function} => toogle
      * @param {Description} => change class or id name
-     */
+    */
     toggle(selector, options={}) {
         const parent = document.querySelector(selector);
         options = {}
@@ -115,7 +140,7 @@
     /**
      * @param {Function} => date
      * @param {Description} => add datetime in selector component
-     */
+    */
     date(selector, period) {
         const day = 0;
         const month = [
