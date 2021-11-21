@@ -28,4 +28,12 @@
 
 
 ### Updates 20211119
+- Update notify section with other notifications
+- Change form function, adding {data} to reference with id
 - Add ToolTip component
+
+
+
+### Update 20211121
+- Change principal example demo file(index.html)
+- Add style's to notify component
