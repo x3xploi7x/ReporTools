@@ -3,33 +3,142 @@
 	<head>
 	    <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	    <meta name="keywords" content="reports, framework, ui/ux">
+	    <meta name="author" content="x3xploi7x">
+	    <meta name="description" content="make & easy website's not require other libreries">
+	    <meta name="keywords" content="reports, pages, tools, framework, ui/ux">
 	    <title>ReporTools - Home</title>
-	    <!--------------- Add Style's --------------->
-	    <link type="text/css" rel="stylesheet" href="src/assets/css/main.css" />
+	    <link type="text/css" rel="stylesheet" href="src/dist/css/ReporTools.css"/>
 	</head>
-	<body>
-		<!--------------- Main container this referent root html --------------->
-		<main id="app__container" class="root:container font:family-monaco">
-			<!--------------- Header --------------->
-			<section class="section:header background:grey-light">
-				<div class="group">
-					<div class="size:1">
-						<ul class="list:landscape list:hover">
-							<li>Home</li>
-							<li>Info</li>
-							<li>Exit</li>
-						</ul>
+	<body class="app justify:content-center align:content-middle">
+		<!-- #region root -->
+		<div id="app__container" class="root:container width:75% height:auto font:family-lucida">
+			<!-- #region header -->
+			<header id="container__header" class="group:header">
+				<!-- #region row -->
+				<section class="section">
+					<!-- #region cols -->
+					<div class="size:4 directon:end">
+						<input id="txt__name" class="text:small text:hover" type="text" name="name" placeholder="Enter Name" autocomplete="off" autofocus="true">
+
+						<input id="txt__last" class="text:small text:hover" type="text" name="last" placeholder="Enter Last-Name" autocomplete="off" autofocus="false">
 					</div>
-				</div>
-			</section>
-			<!--------------- Body --------------->
-			<section class="section:body"></section>
-			<!--------------- Footer --------------->
-			<section class="section:footer"></section>
-		</main>
-		<!--------------- Add Script's --------------->
+					
+					<div class="size:10 direction:start">
+						<button id="btn__next" class="button:medium button:hover background:red-light color:white" type="button">Continue</button>
+					</div>
+					<!-- #endregion cols -->
+				</section>
+				<!-- #endregion row -->
+			</header>
+			<!-- #endregion header -->
+
+			<!-- #region main -->
+			<main id="container__main" class="group:body inactive">
+				<!-- #region row -->
+				<section class="section">
+					<!-- #region cols -->
+					<div class="size:1">
+						<table id="tbl__data" class="table:normal table:border">
+							<thead>
+								<tr class="font:transform-uppercase">
+									<th class="background:red-light color:white padding:50%" colspan="2">Informaci&oacute;n del Usuario</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr>
+									<td class="background:red-light color:white font:weight-bold">Name</td>
+									<td class="background:white">Edgar</td>
+								</tr>
+								<tr>
+									<td class="background:red-light color:white font:weight-bold">Last-Name</td>
+									<td class="background:white">Gonzalez</td>
+								</tr>
+								<tr>
+									<td class="background:red-light color:white font:weight-bold">Age</td>
+									<td class="background:white">22 Years</td>
+								</tr>
+								<tr>
+									<td class="background:red-light color:white font:weight-bold">Gender</td>
+									<td class="background:white">Male</td>
+								</tr>
+								<tr>
+									<td class="background:red-light color:white font:weight-bold">Mail</td>
+									<td class="background:white">edgargzz.es99@gmail.com</td>
+								</tr>
+								<tr>
+									<td class="background:red-light color:white font:weight-bold">Phone</td>
+									<td class="background:white">+52 8123932144</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- #endregion cols -->
+				</section>
+				<!-- #endregion row -->
+			</main>
+			<!-- #endregion main -->
+			
+			<!-- #region footer -->
+			<footer id="container__footer" class="group:footer inactive">
+				<!-- #region row -->
+				<section class="section">
+					<!-- #region cols -->
+					<div class="size:1">
+						<button id="btn__accept" class="button:extra-small button:hover background:red-light color:white" type="button">Accept</button>
+					</div>
+					<!-- #endregion cols -->
+				</section>
+				<!-- #endregion row -->
+			</footer>
+			<!-- #endregion footer -->
+		</div>
+		<!-- #endregion root -->
 		<script type="text/javascript" src="src/dist/js/ReporTools.js"></script>
-		<script type="text/javascript"></script>
+		<script type="text/javascript">
+			var g_mod = new ReporTools("app__container");
+
+			const txt_nm = document.getElementById("txt__name");
+			const txt_ls = document.getElementById("txt__last");
+
+			document.getElementById("btn__next").addEventListener("click", function() {
+				
+				if(txt_nm.value == "Edgar" && txt_ls.value == "Gonzalez") {
+					g_mod.loader("on");
+
+					setTimeout(function() {
+						g_mod.loader("off");
+					}, 650);
+
+					document.getElementById("container__main").classList.remove("inactive");
+					document.getElementById("container__footer").classList.remove("inactive");
+				} else {
+					g_mod.message("Error", "Fields not correspond to data");
+					return false;
+				}
+			}, false);
+			document.getElementById("btn__accept").addEventListener("click", function() {
+
+				/*g_mod.form("table", "Dynamic", {
+					id: "tbl__dynamic",
+					class: "table:normal table:stripped",
+					data: `
+						<thead>
+							<tr>
+								<th>Test</th>
+							</tr>
+						<thead>
+						<tbody>
+							<tr>
+								<td>Test 1</td>
+							</tr>
+						<tbody>
+					`
+				});*/
+
+				g_mod.notify("nfsafoisnafiondsioapngudnspgai dfpj gi opfdsvgjifodmpsvjgifmopsgjmbivodpsmgijopd sjgiopfmdjisvopmgjdfims gfijos gifopdjsgiopjfdivsomgfidsvmpogjdsimvpgjdspvg d");
+				return false;
+			}, false);
+		</script>
 	</body>
 </html>
