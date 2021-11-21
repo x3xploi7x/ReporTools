@@ -346,6 +346,15 @@
 		background-color: var(--rt-bg-white);
 	}
 
+	input[type="text"], 
+	input[type="password"], 
+	input[type="submit"], 
+	input[type="reset"], 
+	textarea, 
+	select {
+	    background-color: var(--rt-bg-white);
+	}
+
 	.button\:hover::after {
 		border-bottom: 25px solid var(--rt-cm-hover-dark);
 	}
@@ -417,6 +426,15 @@
 @media (prefers-color-scheme: dark) { /*TODO: Custom in dark mode*/
 	body {
         background-color: var(--rt-bg-grey-dark);
+	}
+
+	input[type="text"], 
+	input[type="password"], 
+	input[type="submit"], 
+	input[type="reset"], 
+	textarea, 
+	select {
+	    background-color: var(--rt-bg-grey);
 	}
 
 	.button\:extra-small::after, 
@@ -630,5 +648,61 @@
 
 		to {
 			-o-transform: scale(1);
+		}
+	}
+
+@keyframes hidden {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.50;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+	@-webkit-keyframes hidden {
+		0% {
+			-webkit-filter: opacity(1);
+		}
+
+		50% {
+			-webkit-filter: opacity(0.50);
+		}
+
+		100% {
+			-webkit-filter: opacity(0);
+		}
+	}
+
+	@-moz-keyframes hidden {
+		0% {
+			-moz-filter: opacity(1);
+		}
+
+		50% {
+			-moz-filter: opacity(0.50);
+		}
+
+		100% {
+			-moz-filter: opacity(0);
+		}
+	}
+
+	@-o-keyframes hidden {
+		0% {
+			-o-filter: opacity(1);
+		}
+
+		50% {
+			-o-filter: opacity(0.50);
+		}
+
+		100% {
+			-o-filter: opacity(0);
 		}
 	}
