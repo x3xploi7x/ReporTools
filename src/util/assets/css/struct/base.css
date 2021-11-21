@@ -32,15 +32,6 @@ input:-webkit-autofill {
     -webkit-text-fill-color: var(--rt-bg-black) !important;
 }
 
-input[type="text"], 
-input[type="password"], 
-input[type="submit"], 
-input[type="reset"], 
-textarea, 
-select {
-    background-color: var(--rt-bg-white);
-}
-
 button, 
 input[type="text"], 
 input[type="button"], 
