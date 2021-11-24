@@ -8,9 +8,11 @@ ________________________________________________________________________________
   - WebComponents [PopUp, Spinner, ToolBars, ToolTips].
   - Increase Performance In Coding.
 
+
 **Usability**
   - Use { element__name } to refers ID in HTML5, most performance & easy research element's in load DOM.
   - Remove var's not use in development.
+
 
 **Recommendations**
   - Don't use *.js, *.css, recommended .min files to fast performance.
@@ -20,6 +22,7 @@ ________________________________________________________________________________
 
 **Design Struct Used**
   ![image](https://user-images.githubusercontent.com/82796954/143270330-22dd5b86-52c0-4e02-aa5c-e258f5152ec8.png)
+
 
 ```bash
   <!--Root element-->
@@ -108,18 +111,21 @@ ________________________________________________________________________________
 **Markdown Guide**
   - https://www.markdownguide.org/basic-syntax/
 
+
 **ITCSS Guide**
   - https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
 
+
 **Developer Mozilla guide**
   - https://developer.mozilla.org/en-US/
+
 
 **Can I Use Guide**
   - https://caniuse.com/
 _____________________________________________________________________________________________________________________
 # Contact 
 
-**x3xploitx**
+**x3xploi7x**
   - Web: https://exploitnetwork.mx/home
   - Mail: exploitnetworkmx@gmail.com
   - LinkedId: edgar-gonzalez-06033516a
