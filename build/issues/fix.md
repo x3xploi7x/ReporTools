@@ -34,6 +34,11 @@
 
 
 
-### Update 20211121
+### Updates 20211121
 - Change principal example demo file(index.html)
 - Add style's to notify component
+
+
+
+### Updates 20211124
+- Add theme ligth or dark choice with user(not automatically)
