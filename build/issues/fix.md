@@ -42,3 +42,4 @@
 
 ### Updates 20211124
 - Add theme ligth or dark choice with user(not automatically)
+- Open toolbar insert special button's export(excel, pdf, txt or csv) files 
