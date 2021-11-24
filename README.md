@@ -17,6 +17,10 @@ ________________________________________________________________________________
   - Use transitions in input's.
 _____________________________________________________________________________________________________________________
 # Basic Struct
+
+**Design Struct Used**
+  ![image](https://user-images.githubusercontent.com/82796954/143270330-22dd5b86-52c0-4e02-aa5c-e258f5152ec8.png)
+
 ```bash
   <!--Root element-->
   <div class="root:container font:family-verdana font:transform-capitalize">
