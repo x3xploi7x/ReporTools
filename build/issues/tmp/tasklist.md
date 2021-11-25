@@ -17,5 +17,12 @@
     - Add { Toolbar - ToolTip's }
     - Add theme schema to change by user theme { Element's, Component's }
 
+
+
 **Performance**
     - Reduce element's reference to don't lost memory in dom
+    
+    
+    
+***Scalabilty***
+    - Adapt to new and most microframework's (SASS, SCSS, TypeScript)
