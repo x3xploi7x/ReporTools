@@ -26,7 +26,7 @@ ________________________________________________________________________________
 
 ```bash
   <!--Root element-->
-  <div class="app theme:light"
+  <div class="app justify:content-center align:items-middle"
     <div class="root:container font:family-verdana font:transform-capitalize">
       <!--Specify header content-->
       <header class="group:header">
