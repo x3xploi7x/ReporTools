@@ -16,6 +16,7 @@
     - View hover in element's, component's.
     - Add { Toolbar - ToolTip's }
     - Add theme schema to change by user theme { Element's, Component's }
+    - Add Paginator to reduce cost memory in dom to load data
 
 
 
