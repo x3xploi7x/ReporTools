@@ -44,10 +44,6 @@ select {
     cursor: pointer;
 }
 
-    input[type="date"]:not(:focus)::before {
-        content: attr(placeholder) ":" !important;
-    }
-
 textarea, 
 input[type="text"], 
 input[type="password"] {
