@@ -1,0 +1,110 @@
+/******************************?BASE?******************************/
+*::selection {
+    background: var(--rt-bg-blue-light) !important;
+}
+
+html {
+    line-height: 1.25;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+}
+
+body {
+    background-color: var(--rt-bg-white);
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    font-size: 2em !important;
+}
+
+input:-internal-autofill-selected, 
+input:-webkit-autofill {
+    background-color: var(--rt-bg-blue-light) !important;
+    -webkit-text-fill-color: var(--rt-bg-black) !important;
+}
+
+button, 
+input[type="text"], 
+input[type="button"], 
+input[type="submit"], 
+input[type="reset"], 
+input[type="check"], 
+input[type="date"], 
+select {
+    text-align: center;
+    cursor: pointer;
+}
+
+textarea, 
+input[type="text"], 
+input[type="password"] {
+    text-align: start;
+    cursor: text;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+select, 
+a {
+    text-decoration: none;
+}
+
+a {
+    background-color: transparent !important;
+}
+
+    a:active, 
+    a:visited {
+        background: none !important;
+    }
+
+ol, 
+ul, 
+dl {
+    list-style: none;
+}
+
+textarea {
+    overflow: auto;
+}
+
+img {
+    border-style: none;
+}
+
+audio, 
+video, 
+svg {
+    display: var(--rt-ds-block);
+    overflow: none;
+}
+
+i {
+    font-size: normal;
+    font-style: initial;
+}
+
+[visible] { /*TODO: Default config*/
+    visibility: visible;
+}
+
+[hidden] { /*TODO: Custom config*/
+    visibility: hidden;
+}
+
+    [visible], 
+    [hidden] {
+        overflow: auto;
+    }

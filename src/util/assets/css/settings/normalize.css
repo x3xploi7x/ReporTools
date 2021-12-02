@@ -1,0 +1,54 @@
+/******************************?NORMALIZE?******************************/
+*, 
+::after, 
+::before { /*!Alter all document!*/
+    box-sizing: border-box;
+}
+
+html {
+    line-height: 1.25;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+}
+
+html, 
+body,
+header,
+footer,
+main,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+ol,
+ul,
+table,
+section { /*!Alter all document!*/
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    margin: 0;
+    padding: 0;
+}
+
+input,
+button,
+table, 
+select,
+ul,
+ol,
+img {
+    box-sizing: content-box !important;
+}
