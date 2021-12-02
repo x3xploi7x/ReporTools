@@ -6,15 +6,14 @@
 /* Default Encoding */
 @charset   "UTF-8";
 
-@namespace url(http://www.w3.org/1999/xhtml);
-@namespace svg url(http://www.w3.org/2000/svg);
-
 /* Setting's */
-@import     "struct/normalize.css";
-@import     "struct/base.css";
+@import     "settings/normalize.css";
+@import     "settings/base.css";
+
+/* Font's */
 @import 	"typography/fonts.css";
 
-/* Tools */
+/* Design */
 @import 	"theme/colors.css";
 @import     "theme/shadows.css";
 @import 	"theme/media.css";
