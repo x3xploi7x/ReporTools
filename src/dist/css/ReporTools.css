@@ -1212,7 +1212,7 @@ i {
 	}
 
 	.table\:stripped tbody tr:nth-child(even),
-    .table\:border tbody tr:nth-child(even),
+        .table\:border tbody tr:nth-child(even),
 	.list\:stripped .list\:item:nth-child(even) {
 		background-color: var(--rt-bg-grey-light);
 	}
@@ -1295,13 +1295,14 @@ i {
 	}
 
 	.table\:stripped tbody tr:nth-child(odd),
-    .table\:border tbody tr:nth-child(odd),
+        .table\:border tbody tr:nth-child(odd),
 	.list\:stripped .list\:item:nth-child(odd) {
 		color: var(--rt-bg-grey-dark);
 		background-color: var(--rt-bg-grey-light);
 	}
 
 	.table\:stripped tbody tr:nth-child(even),
+	.table\:border tbody tr:nth-child(even),
 	.list\:stripped .list\:item:nth-child(even) {
 		color: var(--rt-bg-black);
 		background-color: var(--rt-bg-white);
