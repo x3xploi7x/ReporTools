@@ -1812,6 +1812,14 @@ i {
     text-align: end !important;
 }
 
+.direction\:row {
+     flex-direction: row !important;
+}
+
+.direction\:col {
+     flex-direction: column !important;
+}
+
 .button\:extra-small, 
 .button\:small, 
 .button\:medium, 
