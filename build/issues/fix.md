@@ -46,6 +46,8 @@
 - Add icon's replace, library's to best performance
 
 
+
 ### Updates 20211203
 - Modify scrollbar to show alter (x-y), and automatic visible
 - Add new color's
+- Add documentation for new user's (README.md file)
