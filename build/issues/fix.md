@@ -35,12 +35,17 @@
 
 
 ### Updates 20211121
-- Change principal example demo file(index.html)
+- Change principal example demo file (index.html)
 - Add style's to notify component
 
 
 
 ### Updates 20211124
-- Add theme ligth or dark choice with user(not automatically)
-- Open toolbar insert special button's export(excel, pdf, txt or csv) files
+- Add theme ligth or dark choice with user (not automatically)
+- Open toolbar insert special button's export (excel, pdf, txt or csv) files
 - Add icon's replace, library's to best performance
+
+
+### Updates 20211203
+- Modify scrollbar to show alter (x-y), and automatic visible
+- Add new color's
