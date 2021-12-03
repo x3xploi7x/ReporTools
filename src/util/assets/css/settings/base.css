@@ -3,12 +3,6 @@
     background: var(--rt-bg-blue-light) !important;
 }
 
-html {
-    line-height: 1.25;
-    -webkit-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-}
-
 body {
     background-color: var(--rt-bg-white);
     width: 100vw;
