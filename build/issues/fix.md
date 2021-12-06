@@ -51,3 +51,6 @@
 - Modify scrollbar to show alter (x-y), and automatic visible
 - Add new color's
 - Add documentation for new user's (README.md file)
+
+### Updates 20211206
+- Modify vertical align element's showed (tables, list, etc)
