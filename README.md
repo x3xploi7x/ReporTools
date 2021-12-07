@@ -40,21 +40,21 @@ ________________________________________________________________________________
 			<!-- #endregion title -->
 
 			<!-- #region fields -->
-			<section class="section background:purple-light padding:y-100%">
+			<section class="section background:pink padding:y-100%">
 				<!-- #region nav -->
 				<div class="size:6">
 					<ul class="list:landscape list:hover height:100% color:black font:size-100% font:transform-uppercase">
 						<li class="list:item">
-							<a href="#" target="_self">Home</a>
+							<a class="color:black" href="#" target="_self">Home</a>
 						</li>
 						<li class="list:item">
-							<a href="#" target="_self">Out Team</a>
+							<a class="color:black" href="#" target="_self">Out Team</a>
 						</li>
 						<li class="list:item">
-							<a href="#" target="_self">Projects</a>
+							<a class="color:black" href="#" target="_self">Projects</a>
 						</li>
 						<li class="list:item">
-							<a href="#" target="_self">Contact</a>
+							<a class="color:black" href="#" target="_self">Contact</a>
 						</li>
 					</ul>
 				</div>
@@ -97,7 +97,7 @@ ________________________________________________________________________________
 				<!-- #endregion hero -->
 
 				<!-- #region sidebar -->
-				<div class="size:9 background:purple-light">
+				<div class="size:9 background:pink">
 					<!-- #region sidebar-title -->
 					<h1 class="letter:large">Related</h1>
 					<!-- #endregion sidebar-title -->
