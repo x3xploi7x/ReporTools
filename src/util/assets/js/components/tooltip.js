@@ -1,8 +1,1 @@
-class ToolTip extends HTMLElement {
-    constructor() {
-        
-    }
-
-    //shadowRoot.addElement({
-    //});
-}
+export default class ToolTip { }
