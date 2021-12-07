@@ -70,6 +70,11 @@ dl {
     list-style: none;
 }
 
+    ol li,
+    ul li {
+        vertical-align: -webkit-baseline-middle !important;
+    }
+
 textarea {
     overflow: auto;
 }
