@@ -52,5 +52,13 @@
 - Add new color's
 - Add documentation for new user's (README.md file)
 
+
+
 ### Updates 20211206
 - Modify vertical align element's showed (tables, list, etc)
+
+
+
+### Updates 20211207
+- Dist Js main file (ReporTools.js)
+- Add Cards to easy dynamic data
