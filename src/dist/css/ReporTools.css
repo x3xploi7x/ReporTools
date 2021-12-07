@@ -169,6 +169,11 @@ dl {
     list-style: none;
 }
 
+    ol li,
+    ul li {
+        vertical-align: -webkit-baseline-middle !important;
+    }
+
 textarea {
     overflow: auto;
 }
@@ -835,7 +840,7 @@ i {
 	.button\:medium, 
 	.button\:large, 
 	.button\:extra-large {
-		font-size: 0.35em;
+		font-size: 0.35em !important;
 	}
 
 	.text\:extra-small, 
@@ -853,17 +858,17 @@ i {
 	.date\:medium, 
 	.date\:large, 
 	.date\:extra-large {
-		font-size: 0.5em;
+		font-size: 0.5em !important;
 	}
 
 	.table\:normal thead, 
 	.table\:normal tbody {
-		font-size: 0.65em;
+		font-size: 0.65em !important;
 	}
 
 	.list\:portrait, 
 	.list\:landscape {
-		font-size: 0.45em;
+		font-size: 0.45em !important;
 	}
 }
 
@@ -885,7 +890,7 @@ i {
 	.button\:medium, 
 	.button\:large, 
 	.button\:extra-large {
-		font-size: 0.5em;
+		font-size: 0.5em !important;
 	}
 
 	.text\:extra-small, 
@@ -903,17 +908,17 @@ i {
 	.date\:medium, 
 	.date\:large, 
 	.date\:extra-large {
-		font-size: 0.7em;
+		font-size: 0.7em !important;
 	}
 
 	.table\:normal thead, 
 	.table\:normal tbody {
-		font-size: 0.65em;
+		font-size: 0.65em !important;
 	}
 
 	.list\:portrait, 
 	.list\:landscape {
-		font-size: 0.6em;
+		font-size: 0.6em !important;
 	}
 }
 
@@ -936,7 +941,7 @@ i {
 	.button\:medium, 
 	.button\:large,
 	.button\:extra-large {
-		font-size: 0.75em;
+		font-size: 0.75em !important;
 	}
 
 	.text\:extra-small, 
@@ -954,17 +959,17 @@ i {
 	.date\:medium, 
 	.date\:large, 
 	.date\:extra-large {
-		font-size: 1em;
+		font-size: 1em !important;
 	}
 
 	.table\:normal thead, 
 	.table\:normal tbody {
-		font-size: 1em;
+		font-size: 1em !important;
 	}
 
 	.list\:portrait, 
 	.list\:landscape {
-		font-size: 0.85em;
+		font-size: 0.85em !important;
 	}
 }
 
@@ -981,7 +986,7 @@ i {
 	.button\:medium, 
 	.button\:large, 
 	.button\:extra-large {
-		font-size: 1em;
+		font-size: 1em !important;
 	}
 
 	.text\:extra-small, 
@@ -999,17 +1004,17 @@ i {
 	.date\:medium, 
 	.date\:large, 
 	.date\:extra-large {
-		font-size: 1.2em;
+		font-size: 1.2em !important;
 	}
 
 	.table\:normal thead, 
 	.table\:normal tbody {
-		font-size: 1.2em;
+		font-size: 1.2em !important;
 	}
 
 	.list\:portrait, 
 	.list\:landscape {
-		font-size: 1em;
+		font-size: 1em !important;
 	}
 }
 
@@ -1026,7 +1031,7 @@ i {
 	.button\:medium, 
 	.button\:large, 
 	.button\:extra-large {
-		font-size: 1em;
+		font-size: 1em !important;
 	}
 
 	.text\:extra-small, 
@@ -1044,17 +1049,17 @@ i {
 	.date\:medium, 
 	.date\:large, 
 	.date\:extra-large {
-		font-size: 1.2em;
+		font-size: 1.2em !important;
 	}
 
 	.table\:normal thead, 
 	.table\:normal tbody {
-		font-size: 1.2em;
+		font-size: 1.2em !important;
 	}
 
 	.list\:portrait, 
 	.list\:landscape {
-		font-size: 1em;
+		font-size: 1em !important;
 	}
 }
 
@@ -1071,7 +1076,7 @@ i {
 	.button\:medium, 
 	.button\:large, 
 	.button\:extra-large {
-		font-size: 0.8em;
+		font-size: 0.8em !important;
 	}
 
 	.text\:extra-small, 
@@ -1089,17 +1094,17 @@ i {
 	.date\:medium, 
 	.date\:large, 
 	.date\:extra-large {
-		font-size: 1em;
+		font-size: 1em !important;
 	}
 
 	.table\:normal thead, 
 	.table\:normal tbody {
-		font-size: 1em;
+		font-size: 1em !important;
 	}
 
 	.list\:portrait, 
 	.list\:landscape {
-		font-size: 0.85em;
+		font-size: 0.85em !important;
 	}
 }
 
@@ -1116,7 +1121,7 @@ i {
 	.button\:medium, 
 	.button\:large, 
 	.button\:extra-large {
-		font-size: 1.2em;
+		font-size: 1.2em !important;
 	}
 
 	.text\:extra-small, 
@@ -1134,17 +1139,17 @@ i {
 	.date\:medium, 
 	.date\:large, 
 	.date\:extra-large {
-		font-size: 1.5em;
+		font-size: 1.5em !important;
 	}
 
 	.table\:normal thead, 
 	.table\:normal tbody {
-		font-size: 1.5em;
+		font-size: 1.5em !important;
 	}
 
 	.list\:portrait, 
 	.list\:landscape {
-		font-size: 1.35em;
+		font-size: 1.35em !important;
 	}
 }
 
@@ -1153,21 +1158,17 @@ i {
 		background-color: var(--rt-bg-white);
 	}
 
-    input[type="text"], 
-    input[type="password"], 
-    input[type="submit"], 
-    input[type="reset"], 
-    textarea, 
-    select {
-        background-color: var(--rt-bg-white);
-    }
+	input[type="text"], 
+	input[type="password"], 
+	input[type="submit"], 
+	input[type="reset"], 
+	textarea, 
+	select {
+	    background-color: var(--rt-bg-white);
+	}
 
-	.button\:extra-small::after,
-	.button\:small::after, 
-	.button\:medium::after, 
-	.button\:large::after, 
-	.button\:extra-large::after {
-		border-bottom: 25px solid var(--rt-cm-hover-light);
+	.button\:hover::after {
+		border-bottom: 25px solid var(--rt-cm-hover-dark);
 	}
 
 	.button\:hover:hover, 
@@ -1212,7 +1213,7 @@ i {
 	}
 
 	.table\:stripped tbody tr:nth-child(even),
-        .table\:border tbody tr:nth-child(even),
+	.table\:border tbody tr:nth-child(even),
 	.list\:stripped .list\:item:nth-child(even) {
 		background-color: var(--rt-bg-grey-light);
 	}
@@ -1240,16 +1241,20 @@ i {
         background-color: var(--rt-bg-grey-dark);
 	}
 
-    input[type="text"], 
-    input[type="password"], 
-    input[type="submit"], 
-    input[type="reset"], 
-    textarea, 
-    select {
-        background-color: var(--rt-bg-grey);
-    }
+	input[type="text"], 
+	input[type="password"], 
+	input[type="submit"], 
+	input[type="reset"], 
+	textarea, 
+	select {
+	    background-color: var(--rt-bg-grey);
+	}
 
-	.button\:hover::after {
+	.button\:extra-small::after, 
+	.button\:small::after, 
+	.button\:medium::after, 
+	.button\:large::after, 
+	.button\:extra-large::after {
 		border-bottom: 25px solid var(--rt-cm-hover-dark);
 	}
 
@@ -1462,60 +1467,60 @@ i {
 	}
 
 @keyframes hidden {
-    0% {
-        opacity: 1;
-    }
+	0% {
+		opacity: 1;
+	}
 
-    50% {
-        opacity: 0.50;
-    }
+	50% {
+		opacity: 0.50;
+	}
 
-    100% {
-        opacity: 0;
-    }
+	100% {
+		opacity: 0;
+	}
 }
 
-    @-webkit-keyframes hidden {
-        0% {
-            -webkit-filter: opacity(1);
-        }
+	@-webkit-keyframes hidden {
+		0% {
+			-webkit-filter: opacity(1);
+		}
 
-        50% {
-            -webkit-filter: opacity(0.50);
-        }
+		50% {
+			-webkit-filter: opacity(0.50);
+		}
 
-        100% {
-            -webkit-filter: opacity(0);
-        }
-    }
+		100% {
+			-webkit-filter: opacity(0);
+		}
+	}
 
-    @-moz-keyframes hidden {
-        0% {
-            -moz-filter: opacity(1);
-        }
+	@-moz-keyframes hidden {
+		0% {
+			-moz-filter: opacity(1);
+		}
 
-        50% {
-            -moz-filter: opacity(0.50);
-        }
+		50% {
+			-moz-filter: opacity(0.50);
+		}
 
-        100% {
-            -moz-filter: opacity(0);
-        }
-    }
+		100% {
+			-moz-filter: opacity(0);
+		}
+	}
 
-    @-o-keyframes hidden {
-        0% {
-            -o-filter: opacity(1);
-        }
+	@-o-keyframes hidden {
+		0% {
+			-o-filter: opacity(1);
+		}
 
-        50% {
-            -o-filter: opacity(0.50);
-        }
+		50% {
+			-o-filter: opacity(0.50);
+		}
 
-        100% {
-            -o-filter: opacity(0);
-        }
-    }
+		100% {
+			-o-filter: opacity(0);
+		}
+	}
 /******************************?UTILITIES?******************************/
 :root { /*!Only modify with Sass or Less!*/
     --rt-ds-none: none;
@@ -1813,11 +1818,12 @@ i {
 }
 
 .direction\:row {
-     flex-direction: row !important;
+	flex-direction: row !important;
 }
 
+
 .direction\:col {
-     flex-direction: column !important;
+	flex-direction: column !important;
 }
 
 .button\:extra-small, 
@@ -2097,7 +2103,7 @@ i {
 
         .list\:portrait .list\:item {
             display: var(--rt-ds-flex);
-            height: 7.5em;					
+            height: auto;					
             flex-direction: row
         }
 
@@ -2167,6 +2173,7 @@ i {
     display: var(--rt-ds-block);
     width: auto;
     height: auto;
+    word-break: break-word;
 }
 
     .letter\:extra-small {
@@ -2311,7 +2318,15 @@ i {
     overflow: scroll !important;
 }
 
-   .scroll\:x-visible {
+    .scroll\:x-hidden {
+        overflow-x: hidden !important;
+    }
+
+    .scroll\:x-auto {
+        overflow-x: auto !important;
+    }
+
+    .scroll\:x-visible {
         width: 100%;
         overflow-x: scroll;
         overflow-y: hidden !important;
