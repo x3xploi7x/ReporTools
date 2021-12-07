@@ -284,14 +284,17 @@
 
 .direction\:start {
     text-align: start !important;
+    text-align: -webkit-left !important;
 }
 
 .direction\:center {
     text-align: center !important;
+    text-align: -webkit-center !important;
 }
 
 .direction\:end {
     text-align: end !important;
+    text-align: -webkit-right !important;
 }
 
 .direction\:row {
@@ -607,30 +610,29 @@
 .image\:large, 
 .image\:extra-large { /*TODO: Image's or Icon's property's*/
     display: var(--rt-ds-block);   
-    width: 50%;
+    width: 100%;
     height: auto;
-    margin: 1.5em;
     border-radius: 1.5em;
 }
 
     .image\:extra-small {
-        max-width: 10%;
-    }
-
-    .image\:small {
         max-width: 20%;
     }
 
-    .image\:medium {
-        max-width: 30%;
-    }
-
-    .image\:large {
+    .image\:small {
         max-width: 40%;
     }
 
+    .image\:medium {
+        max-width: 60%;
+    }
+
+    .image\:large {
+        max-width: 80%;
+    }
+
     .image\:extra-large {
-        max-width: 50%;
+        max-width: 100%;
     }
 
     .image\:hover:hover, 
@@ -752,12 +754,13 @@
 .card\:expand,
 .card\:cover {
     display: var(--rt-ds-flex);
-    width: 250px;
+    width: calc(100% / 2);
     height: auto;
-    border-radius: 3em;
-    justify-items: center;
-    align-items: center;
+    border-radius: 1.5em;
+    justify-content: center;
+    align-content: center;
     flex-direction: column;
+    backdrop-filter: blur(10px);
 }
 
     .card\:hover:hover {
