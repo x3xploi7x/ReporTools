@@ -580,7 +580,7 @@
 
         .list\:portrait .list\:item {
             display: var(--rt-ds-flex);
-            height: 7.5em;					
+            height: auto;					
             flex-direction: row
         }
 
@@ -650,6 +650,7 @@
     display: var(--rt-ds-block);
     width: auto;
     height: auto;
+    word-break: break-word;
 }
 
     .letter\:extra-small {
