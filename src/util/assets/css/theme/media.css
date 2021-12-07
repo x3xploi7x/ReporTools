@@ -28,7 +28,7 @@
 	.button\:medium, 
 	.button\:large, 
 	.button\:extra-large {
-		font-size: 0.35em;
+		font-size: 0.35em !important;
 	}
 
 	.text\:extra-small, 
@@ -46,17 +46,17 @@
 	.date\:medium, 
 	.date\:large, 
 	.date\:extra-large {
-		font-size: 0.5em;
+		font-size: 0.5em !important;
 	}
 
 	.table\:normal thead, 
 	.table\:normal tbody {
-		font-size: 0.65em;
+		font-size: 0.65em !important;
 	}
 
 	.list\:portrait, 
 	.list\:landscape {
-		font-size: 0.45em;
+		font-size: 0.45em !important;
 	}
 }
 
@@ -78,7 +78,7 @@
 	.button\:medium, 
 	.button\:large, 
 	.button\:extra-large {
-		font-size: 0.5em;
+		font-size: 0.5em !important;
 	}
 
 	.text\:extra-small, 
@@ -96,17 +96,17 @@
 	.date\:medium, 
 	.date\:large, 
 	.date\:extra-large {
-		font-size: 0.7em;
+		font-size: 0.7em !important;
 	}
 
 	.table\:normal thead, 
 	.table\:normal tbody {
-		font-size: 0.65em;
+		font-size: 0.65em !important;
 	}
 
 	.list\:portrait, 
 	.list\:landscape {
-		font-size: 0.6em;
+		font-size: 0.6em !important;
 	}
 }
 
@@ -129,7 +129,7 @@
 	.button\:medium, 
 	.button\:large,
 	.button\:extra-large {
-		font-size: 0.75em;
+		font-size: 0.75em !important;
 	}
 
 	.text\:extra-small, 
@@ -147,17 +147,17 @@
 	.date\:medium, 
 	.date\:large, 
 	.date\:extra-large {
-		font-size: 1em;
+		font-size: 1em !important;
 	}
 
 	.table\:normal thead, 
 	.table\:normal tbody {
-		font-size: 1em;
+		font-size: 1em !important;
 	}
 
 	.list\:portrait, 
 	.list\:landscape {
-		font-size: 0.85em;
+		font-size: 0.85em !important;
 	}
 }
 
@@ -174,7 +174,7 @@
 	.button\:medium, 
 	.button\:large, 
 	.button\:extra-large {
-		font-size: 1em;
+		font-size: 1em !important;
 	}
 
 	.text\:extra-small, 
@@ -192,17 +192,17 @@
 	.date\:medium, 
 	.date\:large, 
 	.date\:extra-large {
-		font-size: 1.2em;
+		font-size: 1.2em !important;
 	}
 
 	.table\:normal thead, 
 	.table\:normal tbody {
-		font-size: 1.2em;
+		font-size: 1.2em !important;
 	}
 
 	.list\:portrait, 
 	.list\:landscape {
-		font-size: 1em;
+		font-size: 1em !important;
 	}
 }
 
@@ -219,7 +219,7 @@
 	.button\:medium, 
 	.button\:large, 
 	.button\:extra-large {
-		font-size: 1em;
+		font-size: 1em !important;
 	}
 
 	.text\:extra-small, 
@@ -237,17 +237,17 @@
 	.date\:medium, 
 	.date\:large, 
 	.date\:extra-large {
-		font-size: 1.2em;
+		font-size: 1.2em !important;
 	}
 
 	.table\:normal thead, 
 	.table\:normal tbody {
-		font-size: 1.2em;
+		font-size: 1.2em !important;
 	}
 
 	.list\:portrait, 
 	.list\:landscape {
-		font-size: 1em;
+		font-size: 1em !important;
 	}
 }
 
@@ -264,7 +264,7 @@
 	.button\:medium, 
 	.button\:large, 
 	.button\:extra-large {
-		font-size: 0.8em;
+		font-size: 0.8em !important;
 	}
 
 	.text\:extra-small, 
@@ -282,17 +282,17 @@
 	.date\:medium, 
 	.date\:large, 
 	.date\:extra-large {
-		font-size: 1em;
+		font-size: 1em !important;
 	}
 
 	.table\:normal thead, 
 	.table\:normal tbody {
-		font-size: 1em;
+		font-size: 1em !important;
 	}
 
 	.list\:portrait, 
 	.list\:landscape {
-		font-size: 0.85em;
+		font-size: 0.85em !important;
 	}
 }
 
@@ -309,7 +309,7 @@
 	.button\:medium, 
 	.button\:large, 
 	.button\:extra-large {
-		font-size: 1.2em;
+		font-size: 1.2em !important;
 	}
 
 	.text\:extra-small, 
@@ -327,17 +327,17 @@
 	.date\:medium, 
 	.date\:large, 
 	.date\:extra-large {
-		font-size: 1.5em;
+		font-size: 1.5em !important;
 	}
 
 	.table\:normal thead, 
 	.table\:normal tbody {
-		font-size: 1.5em;
+		font-size: 1.5em !important;
 	}
 
 	.list\:portrait, 
 	.list\:landscape {
-		font-size: 1.35em;
+		font-size: 1.35em !important;
 	}
 }
 
