@@ -4,67 +4,13 @@
  * @parameter <string> Name
  */
 
- class ReporTools {
-    constructor(parent) {
-        this.child;
+import Card from './components/card.js';
+import PopUp from './components/popup.js';
+import Spinner from './components/spinner.js';
+import ToolTip from './components/tooltip.js';
 
-        if(!document.getElementById(parent).length) {
-            this.modal = document.createElement("div");
-            this.modal.setAttribute("id", "container__modal");
-            this.modal.setAttribute("class", "group:mirror");
-            this.child = this.modal;
-        } else {
-            this.modal = document.querySelector("group:mirror");
-            this.child = this.modal;
-        }
-        
-        this.parent = parent;
-
-        document.getElementById(this.parent).appendChild(this.child);
-    }
-
-    message(title, content) {
-        const parent = document.getElementById("container__modal");
-              parent.classList.add("display:block");
-              parent.innerHTML = `<div id="modal__popup" class="modal:alert background:white font:family-lucida">
-                                    <div class="content:title">
-                                        <h1 id="letter__header" class="letter:medium color:grey-dark font:weight-bold font:transform-upper"></h1>
-                                    </div>
-                                    <div class="divider:x"></div>
-                                    <div class="content:message padding:100%">
-                                        <p id="letter__message" class="color:grey font:weight-bold"></p>
-                                    </div>
-                                    <div class="content:options">
-                                        <button id="button__notify" class="button:extra-small background:blue color:white" onclick="return false;">Continuar</button>
-                                    </div>
-                                </div>`;
-
-        document.getElementById("letter__header").innerText = title;
-        document.getElementById("letter__message").innerText = content;
-        document.getElementById("button__notify").addEventListener("click", function(){
-            parent.classList.remove("display:block");
-            parent.innerHTML = '';
-        }, false);
-    }
-
-    loader(action, color) {
-        const parent = document.getElementById("container__modal");
-        action = typeof(action) === "string" ? String(action) : Object(action);
-
-        switch(action) {
-            case "on":
-                parent.classList.add("display:block");
-                parent.innerHTML = `<div id="modal__loader" class="spinner:dotted spinner:red"></div>`;
-                break;
-            
-            case "off":
-                color = undefined;
-                parent.classList.remove("display:block");
-                parent.innerHTML = '';
-                break;
-        }
-    }
-
+class ReporTools {
+    
     toggle(selector, options={}) {
         const parent = document.querySelector(selector);
         options = {}
