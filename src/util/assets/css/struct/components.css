@@ -102,7 +102,7 @@
         background-color: var(--rt-bg-white);
         border: 0.25em solid var(--rt-bg-grey-light);
         border-radius: 1em;
-        width: auto;
+        width: calc(100% / 2);
         height: calc(100% / 12);
         top: 5%;
         left: 50%;
