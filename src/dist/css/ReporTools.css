@@ -1,39 +1,8 @@
-/** 
-    ReporTools/LICENSE
-
-    x3xploi7x/ReporTools is licensed under the
-    GNU General Public License v3.0
-
-    Permissions of this strong copyleft license are conditioned on making available 
-    complete source code of licensed works and modifications, 
-    which include larger works using a licensed work, under the same license. 
-    Copyright and license notices must be preserved. 
-    Contributors provide an express grant of patent rights.
-    Permissions
-
-    Commercial use
-    Modification
-    Distribution
-    Patent use
-
-    Private use
-
-    Limitations
-
-    Liability
-
-    Warranty
-
-    Conditions
-
-    License and copyright notice
-    State changes
-    Disclose source
-
-    Same license
-
-    This is not legal advice. Learn more about repository licenses.
-**/
+/*----------------------------------------------------------------------------------------------------//
+//                                      Name : ReporTools 
+//                                      Version : 1.3
+//                                      Author : x3ploi7x 
+//----------------------------------------------------------------------------------------------------*/
 @charset    "UTF-8";
 @namespace  url(http://www.w3.org/1999/xhtml);
 @namespace  svg url(http://www.w3.org/2000/svg);
@@ -1471,10 +1440,6 @@ i {
 		opacity: 1;
 	}
 
-	50% {
-		opacity: 0.50;
-	}
-
 	100% {
 		opacity: 0;
 	}
@@ -1483,10 +1448,6 @@ i {
 	@-webkit-keyframes hidden {
 		0% {
 			-webkit-filter: opacity(1);
-		}
-
-		50% {
-			-webkit-filter: opacity(0.50);
 		}
 
 		100% {
@@ -1499,10 +1460,6 @@ i {
 			-moz-filter: opacity(1);
 		}
 
-		50% {
-			-moz-filter: opacity(0.50);
-		}
-
 		100% {
 			-moz-filter: opacity(0);
 		}
@@ -1511,10 +1468,6 @@ i {
 	@-o-keyframes hidden {
 		0% {
 			-o-filter: opacity(1);
-		}
-
-		50% {
-			-o-filter: opacity(0.50);
 		}
 
 		100% {
@@ -2533,15 +2486,15 @@ i {
         background-color: var(--rt-bg-white);
         border: 0.25em solid var(--rt-bg-grey-light);
         border-radius: 1em;
-        width: auto;
+        width: calc(100% / 2);
         height: calc(100% / 12);
         top: 5%;
         left: 50%;
         transform: translate(-50%, -50%);
-        animation: hidden 1.5s;
-        -webkit-animation: hidden 1.5s;
-        -moz-animation: hidden 1.5s;
-        -o-animation: hidden 1.5s;
+        animation: hidden 1s;
+        -webkit-animation: hidden 1s;
+        -moz-animation: hidden 1s;
+        -o-animation: hidden 1s;
     }
 
         .modal\:nofity .content\:message {
