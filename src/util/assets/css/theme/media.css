@@ -659,10 +659,6 @@
 		opacity: 1;
 	}
 
-	50% {
-		opacity: 0.50;
-	}
-
 	100% {
 		opacity: 0;
 	}
@@ -671,10 +667,6 @@
 	@-webkit-keyframes hidden {
 		0% {
 			-webkit-filter: opacity(1);
-		}
-
-		50% {
-			-webkit-filter: opacity(0.50);
 		}
 
 		100% {
@@ -687,10 +679,6 @@
 			-moz-filter: opacity(1);
 		}
 
-		50% {
-			-moz-filter: opacity(0.50);
-		}
-
 		100% {
 			-moz-filter: opacity(0);
 		}
@@ -699,10 +687,6 @@
 	@-o-keyframes hidden {
 		0% {
 			-o-filter: opacity(1);
-		}
-
-		50% {
-			-o-filter: opacity(0.50);
 		}
 
 		100% {
