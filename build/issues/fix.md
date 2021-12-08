@@ -62,3 +62,9 @@
 ### Updates 20211207
 - Dist Js main file (ReporTools.js)
 - Add Cards to easy dynamic data
+
+
+
+### Update 20211208
+- Add new functionality's to most best performance
+- Importan's change's to documentation tool (README.md file)
