@@ -7,138 +7,148 @@
 	    <meta name="description" content="make & easy website's not require other libreries">
 	    <meta name="keywords" content="reports, pages, tools, framework, ui/ux">
 	    <title>ReporTools - Home</title>
-	    <link type="text/css" rel="stylesheet" href="src/dist/css/ReporTools.css"/>
+	    <link type="text/css" rel="stylesheet" href="src/dist/css/ReporTools.min.css">
 	</head>
-	<body class="app justify:content-center align:content-middle">
+	<!-- #region app-container -->
+	<body class="app background:grey font:family-lucida justify:content-center align:items-middle">
 		<!-- #region root -->
-		<div id="app__container" class="root:container width:75% height:auto font:family-lucida">
+		<div id="container" class="root:container width:1000px height:600px scroll:auto">
 			<!-- #region header -->
 			<header id="container__header" class="group:header">
-				<!-- #region row -->
-				<section class="section">
-					<!-- #region cols -->
-					<div class="size:4 directon:end">
-						<input id="txt__name" class="text:small text:hover" type="text" name="name" placeholder="Enter Name" autocomplete="off" autofocus="true">
-
-						<input id="txt__last" class="text:small text:hover" type="text" name="last" placeholder="Enter Last-Name" autocomplete="off" autofocus="false">
+				<!-- #region title -->
+				<section class="section padding:y-100%">
+					<div class="size:1">
+						<h1 class="letter:extra-large color:white font:weight-bold direction:center">Header</h1>
 					</div>
-					
-					<div class="size:10 direction:start">
-						<button id="btn__next" class="button:medium button:hover background:red-light color:white" type="button">Continue</button>
-					</div>
-					<!-- #endregion cols -->
 				</section>
-				<!-- #endregion row -->
+				<!-- #endregion title -->
+
+				<!-- #region fields -->
+				<section class="section background:pink padding:y-100%">
+					<!-- #region nav -->
+					<div class="size:5">
+						<ul class="list:landscape list:hover height:100% color:black font:size-100% font:transform-uppercase">
+							<li class="list:item">
+								<a class="color:black" href="#" target="_self">Home</a>
+							</li>
+							<li class="list:item">
+								<a class="color:black" href="#" target="_self">Out Team</a>
+							</li>
+							<li class="list:item">
+								<a class="color:black" href="#" target="_self">Projects</a>
+							</li>
+							<li class="list:item">
+								<a class="color:black" href="#" target="_self">Contact</a>
+							</li>
+						</ul>
+					</div>
+					<!-- #endregion nav -->
+
+					<!-- #region search -->
+					<div class="size:10 direction:end">
+						<input class="text:large text:hover" type="text" placeholder="Search query" autocomplete="off">
+					</div>
+
+					<div class="size:12 direction:start">
+						<button id="button__continue" class="button:small button:hover background:black color:white">Go!</button>
+					</div>
+					<!-- #region search -->
+				</section>
+				<!-- #endregion fields -->
 			</header>
-			<!-- #endregion header -->
+			<!-- #region header -->
 
 			<!-- #region main -->
-			<main id="container__main" class="group:body inactive">
-				<!-- #region row -->
+			<main id="container__body" class="group:body">
+				<!-- #region hero -->
 				<section class="section">
-					<!-- #region cols -->
-					<div class="size:1">
-						<table id="tbl__data" class="table:normal table:border">
-							<thead>
-								<tr class="font:transform-uppercase">
-									<th class="background:red-light color:white padding:50%" colspan="2">Informaci&oacute;n del Usuario</th>
-								</tr>
-							</thead>
-
-							<tbody>
-								<tr>
-									<td class="background:red-light color:white font:weight-bold">Name</td>
-									<td class="background:white">Edgar</td>
-								</tr>
-								<tr>
-									<td class="background:red-light color:white font:weight-bold">Last-Name</td>
-									<td class="background:white">Gonzalez</td>
-								</tr>
-								<tr>
-									<td class="background:red-light color:white font:weight-bold">Age</td>
-									<td class="background:white">22 Years</td>
-								</tr>
-								<tr>
-									<td class="background:red-light color:white font:weight-bold">Gender</td>
-									<td class="background:white">Male</td>
-								</tr>
-								<tr>
-									<td class="background:red-light color:white font:weight-bold">Mail</td>
-									<td class="background:white">edgargzz.es99@gmail.com</td>
-								</tr>
-								<tr>
-									<td class="background:red-light color:white font:weight-bold">Phone</td>
-									<td class="background:white">+52 8123932144</td>
-								</tr>
-							</tbody>
-						</table>
+					<div class="size:5 background:white">
+						<ul class="list:portrait">
+							<li class="list:item direction:col">
+								<h1 class="letter:large font:weight-bold">Article Heading</h1>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam aliquid consequuntur</p>
+							</li>
+							<li class="list:item direction:col">
+								<h2 class="letter:large font:weight-bold">Subsection</h2>
+								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet blanditiis perferendis, consequuntur cum delectus quae. Debitis impedit dolorum illum pariatur laudantium, ad accusamus deserunt quod at rerum doloremque minima facilis.</p>
+							</li>
+							<li class="list:item direction:col">
+								<h2 class="letter:large font:weight-bold">Another subsection</h2>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia hic voluptas vitae aspernatur qui error, tempora quod in aliquid quae provident suscipit reiciendis ipsum enim, nesciunt amet. Sequi, deserunt quisquam?</p>
+							</li>
+						</ul>
 					</div>
-					<!-- #endregion cols -->
+					<!-- #endregion hero -->
+
+					<!-- #region sidebar -->
+					<div class="size:9 background:pink">
+						<!-- #region sidebar-title -->
+						<h1 class="letter:large">Related</h1>
+						<!-- #endregion sidebar-title -->
+
+						<!-- #region sidebar-menu -->
+						<ul class="list:portrait list:hover">
+							<li class="list:item">Oh i do like yo beside the seaside</li>
+							<li class="list:item">Oh i do like yo beside the sea</li>
+							<li class="list:item">Although in the North of England</li>
+							<li class="list:item">It never stops raining</li>
+							<li class="list:item">Oh well...</li>
+						</ul>
+						<!-- #region sidebar-menu -->
+					</div>
+					<!-- #endregion sidebar -->
 				</section>
-				<!-- #endregion row -->
 			</main>
 			<!-- #endregion main -->
-			
+
 			<!-- #region footer -->
-			<footer id="container__footer" class="group:footer inactive">
-				<!-- #region row -->
-				<section class="section">
-					<!-- #region cols -->
-					<div class="size:1">
-						<button id="btn__accept" class="button:extra-small button:hover background:red-light color:white" type="button">Accept</button>
+			<footer id="container__footer" class="group:footer">
+				<section class="section background:white padding:100%">
+					<div class="size:6">
+						<span class="letter:small font:weight-bold direction:start">©Copyright 2050 by nobody. All rights reserved</span>
 					</div>
-					<!-- #endregion cols -->
 				</section>
-				<!-- #endregion row -->
 			</footer>
 			<!-- #endregion footer -->
 		</div>
 		<!-- #endregion root -->
-		<script type="text/javascript" src="src/dist/js/ReporTools.js"></script>
+		<script type="text/javascript" src="src/dist/js/ReporTools.min.js"></script>
 		<script type="text/javascript">
-			var g_mod = new ReporTools("app__container");
+			/*$.onCreateElement({
+				parent: '#container',
+				target: 'div',
+				id: 'test',
+				classes: 'display:block width:800px height:800px background:red color:white'
+			});*/
 
-			const txt_nm = document.getElementById("txt__name");
-			const txt_ls = document.getElementById("txt__last");
-
-			document.getElementById("btn__next").addEventListener("click", function() {
-				
-				if(txt_nm.value == "Edgar" && txt_ls.value == "Gonzalez") {
-					g_mod.loader("on");
-
-					setTimeout(function() {
-						g_mod.loader("off");
-					}, 650);
-
-					document.getElementById("container__main").classList.remove("inactive");
-					document.getElementById("container__footer").classList.remove("inactive");
-				} else {
-					g_mod.message("Error", "Fields not correspond to data");
-					return false;
-				}
-			}, false);
-			document.getElementById("btn__accept").addEventListener("click", function() {
-
-				/*g_mod.form("table", "Dynamic", {
-					id: "tbl__dynamic",
-					class: "table:normal table:stripped",
-					data: `
-						<thead>
-							<tr>
-								<th>Test</th>
-							</tr>
-						<thead>
-						<tbody>
-							<tr>
-								<td>Test 1</td>
-							</tr>
-						<tbody>
-					`
+			document.getElementById('button__continue').addEventListener('click', function() {
+				// PopUp - Message //
+				/*$.showMessage({
+					title: 'Atention',
+					content: 'Say Hello'
 				});*/
 
-				g_mod.notify("nfsafoisnafiondsioapngudnspgai dfpj gi opfdsvgjifodmpsvjgifmopsgjmbivodpsmgijopd sjgiopfmdjisvopmgjdfims gfijos gifopdjsgiopjfdivsomgfidsvmpogjdsimvpgjdspvg d");
-				return false;
+				// PopUp - Form //
+				/*$.showForm('Say Hello', {
+					id: 'test',
+					classes: 'background:red width:600px height:600px',
+					data: 	`<ul class='list:portrait'>
+								<li class='list:item'>
+									<a href='https://github.com/x3xploi7x/ReporTools'>Click Me!</a>
+								</li>
+							</ul>`
+				});*/
+
+				// PopUp - Notify //
+				/*$.showNotify('Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam aliquid consequuntur');*/
+				
+				// Spinner - Loader //
+				/*$.showLoader('on', {
+					color: 'red',
+					time: 1000
+				});*/
 			}, false);
 		</script>
 	</body>
+	<!-- #endregion app-container -->
 </html>
