@@ -20,11 +20,8 @@ ________________________________________________________________________________
 _____________________________________________________________________________________________________________________
 # Basic Struct
 
-**Design Struct Used**
-  ![image](https://user-images.githubusercontent.com/82796954/143270330-22dd5b86-52c0-4e02-aa5c-e258f5152ec8.png)
-  
 **Test Used ReporTools**
-```bash
+```sh
 <!-- #region app-container -->
 <body class="app background:grey font:family-lucida justify:content-center align:items-middle">
 	<!-- #region root -->
