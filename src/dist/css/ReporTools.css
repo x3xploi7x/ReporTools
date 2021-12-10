@@ -1790,13 +1790,11 @@ i {
     display: var(--rt-ds-inline-block);
     position: var(--rt-ps-relative);
     width: 100%;
-    height: auto;
-    min-height: 50%;
+    height: 60%;
     border-color: var(--rt-bg-none);
     border-style:solid;
-    border-width: 0.3em;
     border-radius: 0.45em;
-    padding: 3.5px;
+    padding: 0.25em;
     font-weight: 400;
     word-break: break-word;
     overflow: hidden !important;
@@ -1830,7 +1828,7 @@ i {
             transform: scale(0.85);
         }
 
-    .button\:hover::after {
+    /*.button\:hover {
     	content: "";
     	position: var(--rt-ps-absolute);
     	border-right: 50px solid var(--rt-bg-none);
@@ -1840,11 +1838,7 @@ i {
     	left: calc(-100% - 50%);
     	transition: 0.75s ease all;
     	z-index: 1;
-    }
-
-    .button\:hover:hover::after {
-    	left: 0;
-    }
+    }*/
 
         .button\:hover-scale:hover {
             animation: 1.5s var(--rt-a-fadeOut);
@@ -1860,10 +1854,10 @@ i {
 .text\:large, 
 .text\:extra-large { /*TODO: Text field's property's*/
     width: 100%;
-    height: auto;
+    height: 60%;
     border: 1.5px solid rgba(10, 10, 10, 0.45);
     border-radius: 0.5em;
-    padding: 3.5px;
+    padding: 0.25em;
     font-weight: 450;
     text-align: center !important;
     text-transform: capitalize;
@@ -1926,7 +1920,7 @@ i {
     .date\:extra-large .date\:modal {
         position: var(--rt-ps-absolute);
         width: calc(100% / 2);
-        height: auto;
+        height: 60%;
         left: 25%;
         padding-bottom: 0.25em;
     }
@@ -1937,7 +1931,7 @@ i {
 .select\:large, 
 .select\:extra-large { /*TODO: Combo's property's*/
     width: 100%;
-    height: auto;
+    height: 60%;
     background-position: right center !important;
     background-size: 1.6em;
     background-repeat: no-repeat;
@@ -1945,7 +1939,7 @@ i {
     border-radius: 0.5em;
     text-align: left;
     text-overflow: ellipsis;
-    padding: 3.5px;
+    padding: 0.25em;
     outline: none !important;
     appearance: menulist-button;
     -webkit-appearance: menulist-button;
@@ -2187,7 +2181,7 @@ i {
         font-size: 3.50em;
     }
 
-    .icon\:center {
+    /*.icon\:center {
         background-image: url('data:image/svg+xml;utf-8, <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="512" height="512"><path d="M1,6H23a1,1,0,0,0,0-2H1A1,1,0,0,0,1,6Z"/><path d="M23,9H1a1,1,0,0,0,0,2H23a1,1,0,0,0,0-2Z"/><path d="M23,19H1a1,1,0,0,0,0,2H23a1,1,0,0,0,0-2Z"/><path d="M23,14H1a1,1,0,0,0,0,2H23a1,1,0,0,0,0-2Z"/></svg>');
     }
 
@@ -2225,7 +2219,7 @@ i {
 
     .icon\:calendar {
         background-image: url('data:image/svg+xml;utf-8, <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="512" height="512"><path d="M19,2H18V1a1,1,0,0,0-2,0V2H8V1A1,1,0,0,0,6,1V2H5A5.006,5.006,0,0,0,0,7V19a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V7A5.006,5.006,0,0,0,19,2ZM2,7A3,3,0,0,1,5,4H19a3,3,0,0,1,3,3V8H2ZM19,22H5a3,3,0,0,1-3-3V10H22v9A3,3,0,0,1,19,22Z"/><circle cx="12" cy="15" r="1.5"/><circle cx="7" cy="15" r="1.5"/><circle cx="17" cy="15" r="1.5"/></svg>');
-    }
+    }*/
 
 .card\:expand,
 .card\:cover {
