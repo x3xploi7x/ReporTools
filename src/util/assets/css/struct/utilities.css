@@ -314,13 +314,11 @@
     display: var(--rt-ds-inline-block);
     position: var(--rt-ps-relative);
     width: 100%;
-    height: auto;
-    min-height: 50%;
+    height: 60%;
     border-color: var(--rt-bg-none);
     border-style:solid;
-    border-width: 0.3em;
     border-radius: 0.45em;
-    padding: 3.5px;
+    padding: 0.25em;
     font-weight: 400;
     word-break: break-word;
     overflow: hidden !important;
@@ -354,7 +352,7 @@
             transform: scale(0.85);
         }
 
-    .button\:hover::after {
+    /*.button\:hover {
     	content: "";
     	position: var(--rt-ps-absolute);
     	border-right: 50px solid var(--rt-bg-none);
@@ -364,11 +362,7 @@
     	left: calc(-100% - 50%);
     	transition: 0.75s ease all;
     	z-index: 1;
-    }
-
-    .button\:hover:hover::after {
-    	left: 0;
-    }
+    }*/
 
         .button\:hover-scale:hover {
             animation: 1.5s var(--rt-a-fadeOut);
@@ -384,10 +378,10 @@
 .text\:large, 
 .text\:extra-large { /*TODO: Text field's property's*/
     width: 100%;
-    height: auto;
+    height: 60%;
     border: 1.5px solid rgba(10, 10, 10, 0.45);
     border-radius: 0.5em;
-    padding: 3.5px;
+    padding: 0.25em;
     font-weight: 450;
     text-align: center !important;
     text-transform: capitalize;
@@ -450,7 +444,7 @@
     .date\:extra-large .date\:modal {
         position: var(--rt-ps-absolute);
         width: calc(100% / 2);
-        height: auto;
+        height: 60%;
         left: 25%;
         padding-bottom: 0.25em;
     }
@@ -461,7 +455,7 @@
 .select\:large, 
 .select\:extra-large { /*TODO: Combo's property's*/
     width: 100%;
-    height: auto;
+    height: 60%;
     background-position: right center !important;
     background-size: 1.6em;
     background-repeat: no-repeat;
@@ -469,7 +463,7 @@
     border-radius: 0.5em;
     text-align: left;
     text-overflow: ellipsis;
-    padding: 3.5px;
+    padding: 0.25em;
     outline: none !important;
     appearance: menulist-button;
     -webkit-appearance: menulist-button;
