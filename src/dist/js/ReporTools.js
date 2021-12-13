@@ -47,10 +47,10 @@
             */
             removeClass: function(selector, classes) {
                 const temp = doc.querySelector(selector);
-                temp.classList.remove(classes);
+                //temp.classList.remove(classes);
 
                 for(var i = 0; i <= temp.classList.length - 1; i++) {
-                    if(temp.className[i] === classes) temp.classList.remove(classes);
+                    if(temp.classList[i] === classes) temp.classList.remove(classes);
                 }
                 //console.log(temp.classList);
             },
