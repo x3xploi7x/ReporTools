@@ -7,7 +7,6 @@
     if(typeof exports === 'object' && typeof module !== 'object') module.exports = factory();
     else if(typeof define === 'function' && define.amd) define(factory);
     else (global = global || self, global._ = factory())
-
 }(this, (function(_){
     'use strict';
     
@@ -31,7 +30,8 @@
             * @param {Description} -> Add Class In Element's Refered 
             */
             addClass: function(element, classes=[]) {
-                var temp = doc.querySelector(element);
+                const temp = doc.querySelector(element);
+                
                 var aux = [];
                 var str = '';
 
@@ -39,6 +39,20 @@
 
                 str += aux.toString().replaceAll(',', ' ');
                 temp.classList.add(str); // Remove Space's In DOM
+            },
+
+            /**
+            * @param {Function} -> addClass 
+            * @param {Description} -> Add Class In Element's Refered 
+            */
+            removeClass: function(selector, classes) {
+                const temp = doc.querySelector(selector);
+                temp.classList.remove(classes);
+
+                for(var i = 0; i <= temp.classList.length - 1; i++) {
+                    if(temp.className[i] === classes) temp.classList.remove(classes);
+                }
+                //console.log(temp.classList);
             },
 
             /**
