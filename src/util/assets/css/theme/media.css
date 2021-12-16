@@ -1,21 +1,4 @@
 /******************************?MEDIA?******************************/
-:root { /*!Only modify with Sass or Less!*/
-	--rt-bp-extra-small: 480px;
-	--rt-bp-small: 600px;
-	--rt-bp-medium: 768px;
-	--rt-bp-large: 992px;
-	--rt-bp-extra-large: 1200px;
-	--rt-bp-grant: 1820px;
-
-	--rt-md-extra-small: 240px;
-	--rt-md-small: 480px;
-	--rt-md-medium: 600px;
-
-	--rt-a-loader: loader;
-	--rt-a-fadeIn: fadeIn;
-	--rt-a-fadeOut: fadeOut;
-}
-
 @media screen and (min-width: 240px) { 
 	.modal\:container .group\:header, 
 	.modal\:container .group\:body, 
