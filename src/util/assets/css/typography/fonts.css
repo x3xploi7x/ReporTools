@@ -1,19 +1,4 @@
 /******************************?FONTS?******************************/
-:root { /*!Only modify with Sass or Less!*/
-	--rt-fn-arial: 'Arial';
-
-	--rt-fn-georigia: 'Georigia', serif;
-
-	--rt-fn-verdana: 'Verdana', sans-serif;
-	--rt-fn-lucida: 'Lucida Sans', sans-serif;
-	--rt-fn-helveltica: 'Helveltica', sans-serif;
-
-	--rt-fn-monaco: 'Monaco', monospace;
-	--rt-fn-courier: 'Courier New', monospace;
-
-	--rt-fn-apple: -apple-system, BlinkMacSystemFont;
-}
-
 .font\:family-arial, 
 .font\:family-georgia, 
 .font\:family-verdana, 
