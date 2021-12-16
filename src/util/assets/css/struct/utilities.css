@@ -1,26 +1,4 @@
 /******************************?UTILITIES?******************************/
-:root { /*!Only modify with Sass or Less!*/
-    --rt-ds-none: none;
-    --rt-ds-inline: inline;
-    --rt-ds-block: block;
-    --rt-ds-inline-block: inline-block;
-    --rt-ds-table: table;
-    --rt-ds-flex: flex;
-    --rt-ds-inline-flex: inline-flex;
-    --rt-ds-grid: grid;
-
-    --rt-ps-none: none;
-    --rt-ps-relative: relative;
-    --rt-ps-absolute: absolute;
-    --rt-ps-static: static;
-    --rt-ps-fixed: fixed;
-
-    --rt-cs-none: default;
-    --rt-cs-pointer: pointer;
-    --rt-cs-cross: crosshair;
-    --rt-cs-hand: grab;
-}
-
 .display { /*TODO: Displayed element in document*/
     display: var(--rt-ds-none) !important;
 }
@@ -407,11 +385,11 @@
         max-width: 100%;
     }
 
-.date\:extra-small, 
+/*.date\:extra-small, 
 .date\:small, 
 .date\:medium, 
 .date\:large, 
-.date\:extra-large { /*TODO: Date field's property's*/
+.date\:extra-large { /TODO: Date field's property's/
     width: 100%;
     outline-style: double;
     border: none;
@@ -447,7 +425,7 @@
         height: 60%;
         left: 25%;
         padding-bottom: 0.25em;
-    }
+    }*/
 
 .select\:extra-small, 
 .select\:small, 
@@ -550,6 +528,19 @@
             -moz-animation: 1.5s var(--rt-a-fadeIn);
             -o-animation: 1.5s var(--rt-a-fadeIn);
         }
+
+.data\:normal { /*TODO: DataInformation property's*/
+    width: 100%;
+    vertical-align: middle;
+}
+
+    .data\:normal dt,
+    .data\:normal dd {
+        display: var(--rt-ds-inline-block);
+        width: 50%;
+        padding: 1em;
+        word-break: break-all !important;
+    }
 
 .list\:landscape, 
 .list\:portrait { /*TODO: List's property's*/
@@ -669,7 +660,7 @@
         font-size: 3.50em;
     }
 
-.icon\:normal {
+/*.icon\:normal {
     position: var(--rt-ps-absolute);
     background: var(--rt-bg-none);
     color: var(--rt-bg-none);
@@ -743,7 +734,7 @@
 
     .icon\:calendar {
         background-image: url('data:image/svg+xml;utf-8, <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="512" height="512"><path d="M19,2H18V1a1,1,0,0,0-2,0V2H8V1A1,1,0,0,0,6,1V2H5A5.006,5.006,0,0,0,0,7V19a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V7A5.006,5.006,0,0,0,19,2ZM2,7A3,3,0,0,1,5,4H19a3,3,0,0,1,3,3V8H2ZM19,22H5a3,3,0,0,1-3-3V10H22v9A3,3,0,0,1,19,22Z"/><circle cx="12" cy="15" r="1.5"/><circle cx="7" cy="15" r="1.5"/><circle cx="17" cy="15" r="1.5"/></svg>');
-    }
+    }*/
 
 .card\:expand,
 .card\:cover {
