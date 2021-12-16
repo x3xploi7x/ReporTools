@@ -38,6 +38,10 @@ input[type="password"] {
     text-align: start;
     cursor: text;
 }
+    
+    /*input[type="date"]:not(:focus)::before {
+        content: ":" + attr("placeholder");
+    }*/
 
     input:-internal-autofill-selected, 
     input:-webkit-autofill {
