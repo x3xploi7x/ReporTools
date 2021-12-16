@@ -111,11 +111,11 @@ i {
     font-style: initial;
 }
 
-[visible] { /*TODO: Default config*/
+/*[visible] { /TODO: Default config/
     visibility: visible;
 }
 
-/*[hidden] { /TODO: Custom config/
+[hidden] { /TODO: Custom config/
     visibility: hidden;
 }
 
