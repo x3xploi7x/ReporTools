@@ -20,12 +20,6 @@ h6 {
     font-size: 2em;
 }
 
-input:-internal-autofill-selected, 
-input:-webkit-autofill {
-    background-color: var(--rt-bg-blue-light) !important;
-    -webkit-text-fill-color: var(--rt-bg-black) !important;
-}
-
 button, 
 input[type="text"], 
 input[type="button"], 
@@ -44,6 +38,24 @@ input[type="password"] {
     text-align: start;
     cursor: text;
 }
+
+    input:-internal-autofill-selected, 
+    input:-webkit-autofill {
+        background-color: var(--rt-bg-blue-light) !important;
+        -webkit-text-fill-color: var(--rt-bg-black) !important;
+    }
+
+    input[type="text"]:disabled, 
+    input[type="password"]:disabled,
+    input[type="date"]:disabled {
+        background-color: var(--rt-bg-grey-dark);
+    }
+
+    input[type="text"]:not(:focus),
+    input[type="password"]:not(:focus),
+    input[type="date"]:not(:focus) {
+        background-color: var(--rt-bg-grey-light);
+    }
 
 select {
     appearance: none;
@@ -99,11 +111,11 @@ i {
     visibility: visible;
 }
 
-[hidden] { /*TODO: Custom config*/
+/*[hidden] { /TODO: Custom config/
     visibility: hidden;
 }
 
     [visible], 
     [hidden] {
         overflow: auto;
-    }
+    }*/
