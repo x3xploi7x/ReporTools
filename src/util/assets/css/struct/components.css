@@ -1,14 +1,4 @@
 /******************************?COMPONENTS?******************************/
-:root { /*!Only modify with Sass or Less!*/
-    --rt-cm-mirror: rgba(255, 255, 255, 0.5);
-    --rt-cm-wrapper: rgba(10, 10, 10, 0.75);
-    --rt-cm-border: rgba(100, 100, 100, 0.20);
-    --rt-cm-hover-light: rgba(40, 30, 15, 0.65);
-    --rt-cm-hover-dark: rgba(80, 60, 30, 0.35);
-
-    --rt-bd-blur: blur(5px);
-}
-
 .group\:mirror { /*TODO: Modal*/
     display: var(--rt-ds-none);
     position: var(--rt-ps-absolute);
