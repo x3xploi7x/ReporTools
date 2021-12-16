@@ -3,12 +3,11 @@
     Everyone is permitted to copy and distribute
     verbatim copies of this license document, but changing it is not allowed. 
 **/
-/* Default Encoding */
-@charset   "UTF-8";
 
 /* Setting's */
 @import     "settings/normalize.css";
 @import     "settings/base.css";
+@import     "settings/env.css";
 
 /* Font's */
 @import 	"typography/fonts.css";
