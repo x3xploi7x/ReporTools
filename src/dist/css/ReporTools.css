@@ -3,9 +3,6 @@
 //                                      Version : 1.3                                                 //
 //                                      Author : x3ploi7x                                             //
 //----------------------------------------------------------------------------------------------------*/
-@charset    "UTF-8";
-@namespace  url(http://www.w3.org/1999/xhtml);
-@namespace  svg url(http://www.w3.org/2000/svg);
 /******************************?NORMALIZE?******************************/
 *, 
 ::after, 
@@ -65,12 +62,6 @@ img {
     background: var(--rt-bg-blue-light) !important;
 }
 
-html {
-    line-height: 1.25;
-    -webkit-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-}
-
 body {
     background-color: var(--rt-bg-white);
     width: 100vw;
@@ -86,12 +77,6 @@ h4,
 h5, 
 h6 {
     font-size: 2em;
-}
-
-input:-internal-autofill-selected, 
-input:-webkit-autofill {
-    background-color: var(--rt-bg-blue-light) !important;
-    -webkit-text-fill-color: var(--rt-bg-black) !important;
 }
 
 button, 
@@ -112,6 +97,24 @@ input[type="password"] {
     text-align: start;
     cursor: text;
 }
+
+    input:-internal-autofill-selected, 
+    input:-webkit-autofill {
+        background-color: var(--rt-bg-blue-light) !important;
+        -webkit-text-fill-color: var(--rt-bg-black) !important;
+    }
+
+    input[type="text"]:disabled, 
+    input[type="password"]:disabled,
+    input[type="date"]:disabled {
+        background-color: var(--rt-bg-grey-dark);
+    }
+
+    input[type="text"]:not(:focus),
+    input[type="password"]:not(:focus),
+    input[type="date"]:not(:focus) {
+        background-color: var(--rt-bg-grey-light);
+    }
 
 select {
     appearance: none;
@@ -162,20 +165,7 @@ i {
     font-size: normal;
     font-style: initial;
 }
-
-[visible] { /*TODO: Default config*/
-    visibility: visible;
-}
-
-[hidden] { /*TODO: Custom config*/
-    visibility: hidden;
-}
-
-    [visible], 
-    [hidden] {
-        overflow: auto;
-    }
-/******************************?FONTS?******************************/
+/******************************?ENV?******************************/
 :root { /*!Only modify with Sass or Less!*/
 	--rt-fn-arial: 'Arial';
 
@@ -191,6 +181,129 @@ i {
 	--rt-fn-apple: -apple-system, BlinkMacSystemFont;
 }
 
+:root { /*!Only modify with Sass or Less!*/
+    --rt-bg-none: transparent;
+
+	--rt-bg-white: #fff;
+	--rt-bg-black: #000;
+
+	--rt-bg-grey: #757a79;
+	--rt-bg-grey-light: #ececec;
+    --rt-bg-grey-dark: #393e46;
+
+	--rt-bg-red: #dc2f2f;
+	--rt-bg-red-light: #f83e4b;
+	--rt-bg-red-dark: #9d0b28;
+	
+	--rt-bg-green: #347474;
+	--rt-bg-green-light: #4c9173;
+	--rt-bg-green-dark: #283739;
+	
+	--rt-bg-blue: #007cb9;
+	--rt-bg-blue-light: #4f81c7;
+	--rt-bg-blue-dark: #142d4c;
+	
+	--rt-bg-yellow: #facc2e;
+	--rt-bg-yellow-light: #f8ed86;
+	--rt-bg-yellow-dark: #f3a333;
+	
+	--rt-bg-orange: #e8630a;
+	--rt-bg-orange-light: #ff895d;
+	--rt-bg-orange-dark: #d34c26;
+	
+	--rt-bg-pink: #ff9de2;
+	--rt-bg-pink-light: #ff5d9e;
+	--rt-bg-pink-dark: #680747;
+	
+	--rt-bg-purple: #5e63b6;
+	--rt-bg-purple-light: #b693fe;
+	--rt-bg-purple-dark: #27296d;
+	
+	--rt-bg-brown: #915b4a;
+	--rt-bg-brown-light: #b85b3f;
+	--rt-bg-brown-dark: #522e24;
+
+    --rt-bg-turquoise: #53a8b6; 
+    --rt-bg-turquoise-light: #72e8e1;
+    --rt-bg-turquoise-dark: #137083;
+}
+
+:root { /*!Only modify with Sass or Less!*/
+	--rt-bs-regular: 5px 0 15px 5px rgba(15, 15, 15, 0.35);
+	--rt-bs-form-light: 2.5px 2.5px 2.5px 2.5px rgba(0, 0, 0, 0.50);
+	--rt-bs-form-dark: 2.5px 2.5px 2.5px 2.5px rgba(255, 255, 255, 0.50);
+	
+	--rt-bs-react: 1px ​3px 15px 1px rgb(255, 255, 255);
+	--rt-bs-components: 5px 10px 2px rgba(5, 5, 5, 0.50);
+	
+	--rt-bs-hover: inset 0 0 0 100px rgba(0, 0, 0, 0.25);
+	--rt-bs-hover-combine: inset 0 0 0 100px rgba(0, 0, 0, 0.25), 1.5px 1.5px 2px 0 rgba(255, 255, 255, 0.85);
+
+	--rt-bs-card: 10px 5px 2px 2px rgb(10, 10, 10), 1px 5px 10px 10px rgb(100, 100, 100);
+}
+
+:root { /*!Only modify with Sass or Less!*/
+	--rt-bp-extra-small: 480px;
+	--rt-bp-small: 600px;
+	--rt-bp-medium: 768px;
+	--rt-bp-large: 992px;
+	--rt-bp-extra-large: 1200px;
+	--rt-bp-grant: 1820px;
+
+	--rt-md-extra-small: 240px;
+	--rt-md-small: 480px;
+	--rt-md-medium: 600px;
+
+	--rt-a-loader: loader;
+	--rt-a-fadeIn: fadeIn;
+	--rt-a-fadeOut: fadeOut;
+}
+
+:root { /*!Only modify with Sass or Less!*/
+    --rt-ds-none: none;
+    --rt-ds-inline: inline;
+    --rt-ds-block: block;
+    --rt-ds-inline-block: inline-block;
+    --rt-ds-table: table;
+    --rt-ds-flex: flex;
+    --rt-ds-inline-flex: inline-flex;
+    --rt-ds-grid: grid;
+
+    --rt-ps-none: none;
+    --rt-ps-relative: relative;
+    --rt-ps-absolute: absolute;
+    --rt-ps-static: static;
+    --rt-ps-fixed: fixed;
+
+    --rt-cs-none: default;
+    --rt-cs-pointer: pointer;
+    --rt-cs-cross: crosshair;
+    --rt-cs-hand: grab;
+}
+
+:root { /*!Only modify with Sass or Less!*/
+    --rt-cm-mirror: rgba(255, 255, 255, 0.5);
+    --rt-cm-wrapper: rgba(10, 10, 10, 0.75);
+    --rt-cm-border: rgba(100, 100, 100, 0.20);
+    --rt-cm-hover-light: rgba(40, 30, 15, 0.65);
+    --rt-cm-hover-dark: rgba(80, 60, 30, 0.35);
+
+    --rt-bd-blur: blur(5px);
+}
+
+:root { /*!Only modify with Sass or Less!*/
+    --rt-sz-0: 0;
+    --rt-sz-1: 0.25em;
+    --rt-sz-2: 0.50em;
+    --rt-sz-3: 0.75em;
+    --rt-sz-4: 1em;
+
+    --rt-dg-90: 90deg;
+    --rt-dg-180: 180deg;
+    --rt-dg-270: 270deg;
+    --rt-dg-360: 360deg;
+}
+/******************************?FONTS?******************************/
 .font\:family-arial, 
 .font\:family-georgia, 
 .font\:family-verdana, 
@@ -271,53 +384,6 @@ i {
 	text-transform: capitalize !important;
 }
 /******************************?COLORS?******************************/
-:root { /*!Only modify with Sass or Less!*/
-    --rt-bg-none: transparent;
-
-	--rt-bg-white: #fff;
-	--rt-bg-black: #000;
-
-	--rt-bg-grey: #757a79;
-	--rt-bg-grey-light: #ececec;
-    --rt-bg-grey-dark: #393e46;
-
-	--rt-bg-red: #dc2f2f;
-	--rt-bg-red-light: #f83e4b;
-	--rt-bg-red-dark: #9d0b28;
-	
-	--rt-bg-green: #347474;
-	--rt-bg-green-light: #4c9173;
-	--rt-bg-green-dark: #283739;
-	
-	--rt-bg-blue: #007cb9;
-	--rt-bg-blue-light: #4f81c7;
-	--rt-bg-blue-dark: #142d4c;
-	
-	--rt-bg-yellow: #facc2e;
-	--rt-bg-yellow-light: #f8ed86;
-	--rt-bg-yellow-dark: #f3a333;
-	
-	--rt-bg-orange: #e8630a;
-	--rt-bg-orange-light: #ff895d;
-	--rt-bg-orange-dark: #d34c26;
-	
-	--rt-bg-pink: #ff9de2;
-	--rt-bg-pink-light: #ff5d9e;
-	--rt-bg-pink-dark: #680747;
-	
-	--rt-bg-purple: #5e63b6;
-	--rt-bg-purple-light: #b693fe;
-	--rt-bg-purple-dark: #27296d;
-	
-	--rt-bg-brown: #915b4a;
-	--rt-bg-brown-light: #b85b3f;
-	--rt-bg-brown-dark: #522e24;
-
-    --rt-bg-turquoise: #53a8b6; 
-    --rt-bg-turquoise-light: #72e8e1;
-    --rt-bg-turquoise-dark: #137083;
-}
-
 .color { /*TODO: Text color in box-content*/
     color: var(--rt-bg-transparent) !important;
 }
@@ -746,20 +812,6 @@ i {
         border-color: var(--rt-bg-turquoise-dark) !important;
     }
 /******************************?SHADOWS?******************************/
-:root { /*!Only modify with Sass or Less!*/
-	--rt-bs-regular: 5px 0 15px 5px rgba(15, 15, 15, 0.35);
-	--rt-bs-form-light: 2.5px 2.5px 2.5px 2.5px rgba(0, 0, 0, 0.50);
-	--rt-bs-form-dark: 2.5px 2.5px 2.5px 2.5px rgba(255, 255, 255, 0.50);
-	
-	--rt-bs-react: 1px ​3px 15px 1px rgb(255, 255, 255);
-	--rt-bs-components: 5px 10px 2px rgba(5, 5, 5, 0.50);
-	
-	--rt-bs-hover: inset 0 0 0 100px rgba(0, 0, 0, 0.25);
-	--rt-bs-hover-combine: inset 0 0 0 100px rgba(0, 0, 0, 0.25), 1.5px 1.5px 2px 0 rgba(255, 255, 255, 0.85);
-
-	--rt-bs-card: 10px 5px 2px 2px rgb(10, 10, 10), 1px 5px 10px 10px rgb(100, 100, 100);
-}
-
 .shadow\:normal {
     box-shadow: var(--rt-bs-regular) !important;
 }
@@ -780,23 +832,6 @@ i {
 		box-shadow: var(--rt-bs-hover-combine) !important;
 	}
 /******************************?MEDIA?******************************/
-:root { /*!Only modify with Sass or Less!*/
-	--rt-bp-extra-small: 480px;
-	--rt-bp-small: 600px;
-	--rt-bp-medium: 768px;
-	--rt-bp-large: 992px;
-	--rt-bp-extra-large: 1200px;
-	--rt-bp-grant: 1820px;
-
-	--rt-md-extra-small: 240px;
-	--rt-md-small: 480px;
-	--rt-md-medium: 600px;
-
-	--rt-a-loader: loader;
-	--rt-a-fadeIn: fadeIn;
-	--rt-a-fadeOut: fadeOut;
-}
-
 @media screen and (min-width: 240px) { 
 	.modal\:container .group\:header, 
 	.modal\:container .group\:body, 
@@ -1475,28 +1510,6 @@ i {
 		}
 	}
 /******************************?UTILITIES?******************************/
-:root { /*!Only modify with Sass or Less!*/
-    --rt-ds-none: none;
-    --rt-ds-inline: inline;
-    --rt-ds-block: block;
-    --rt-ds-inline-block: inline-block;
-    --rt-ds-table: table;
-    --rt-ds-flex: flex;
-    --rt-ds-inline-flex: inline-flex;
-    --rt-ds-grid: grid;
-
-    --rt-ps-none: none;
-    --rt-ps-relative: relative;
-    --rt-ps-absolute: absolute;
-    --rt-ps-static: static;
-    --rt-ps-fixed: fixed;
-
-    --rt-cs-none: default;
-    --rt-cs-pointer: pointer;
-    --rt-cs-cross: crosshair;
-    --rt-cs-hand: grab;
-}
-
 .display { /*TODO: Displayed element in document*/
     display: var(--rt-ds-none) !important;
 }
@@ -1828,18 +1841,6 @@ i {
             transform: scale(0.85);
         }
 
-    /*.button\:hover {
-    	content: "";
-    	position: var(--rt-ps-absolute);
-    	border-right: 50px solid var(--rt-bg-none);
-    	width: 150%;
-    	height: 100%;
-    	top: 0;
-    	left: calc(-100% - 50%);
-    	transition: 0.75s ease all;
-    	z-index: 1;
-    }*/
-
         .button\:hover-scale:hover {
             animation: 1.5s var(--rt-a-fadeOut);
             -webkit-animation: 1.5s var(--rt-a-fadeOut);
@@ -1881,48 +1882,6 @@ i {
 
     .text\:extra-large {
         max-width: 100%;
-    }
-
-.date\:extra-small, 
-.date\:small, 
-.date\:medium, 
-.date\:large, 
-.date\:extra-large { /*TODO: Date field's property's*/
-    width: 100%;
-    outline-style: double;
-    border: none;
-}
-
-    .date\:extra-small {
-        max-width: 20%;
-    }
-
-    .date\:small {
-        max-width: 40%;
-    }
-
-    .date\:medium {
-        max-width: 60%;
-    }
-
-    .date\:large {
-        max-width: 80%;
-    }
-
-    .date\:extra-large {
-        max-width: 100%;
-    }
-
-    .date\:extra-small .date\:modal, 
-    .date\:small .date\:modal, 
-    .date\:medium .date\:modal, 
-    .date\:large .date\:modal, 
-    .date\:extra-large .date\:modal {
-        position: var(--rt-ps-absolute);
-        width: calc(100% / 2);
-        height: 60%;
-        left: 25%;
-        padding-bottom: 0.25em;
     }
 
 .select\:extra-small, 
@@ -2026,6 +1985,19 @@ i {
             -moz-animation: 1.5s var(--rt-a-fadeIn);
             -o-animation: 1.5s var(--rt-a-fadeIn);
         }
+
+.data\:normal { /*TODO: DataInformation property's*/
+    width: 100%;
+    vertical-align: middle;
+}
+
+    .data\:normal dt,
+    .data\:normal dd {
+        display: var(--rt-ds-inline-block);
+        width: 50%;
+        padding: 1em;
+        word-break: break-all !important;
+    }
 
 .list\:landscape, 
 .list\:portrait { /*TODO: List's property's*/
@@ -2144,82 +2116,6 @@ i {
     .letter\:extra-large {
         font-size: 3.50em;
     }
-
-.icon\:normal {
-    position: var(--rt-ps-absolute);
-    background: var(--rt-bg-none);
-    color: var(--rt-bg-none);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    -webkit-background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    backdrop-filter: invert(1);
-    filter: invert(1);
-}
-
-    .icon\:extra-small {
-        font-size: 0.75em;
-    }
-
-    .icon\:small {
-        font-size: 1em;
-    }
-    
-    .icon\:medium {
-        font-size: 1.75em;
-    }
-    
-    .icon\:large {
-        font-size: 2.20em;
-    }
-    
-    .icon\:extra-large {
-        font-size: 3.50em;
-    }
-
-    /*.icon\:center {
-        background-image: url('data:image/svg+xml;utf-8, <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="512" height="512"><path d="M1,6H23a1,1,0,0,0,0-2H1A1,1,0,0,0,1,6Z"/><path d="M23,9H1a1,1,0,0,0,0,2H23a1,1,0,0,0,0-2Z"/><path d="M23,19H1a1,1,0,0,0,0,2H23a1,1,0,0,0,0-2Z"/><path d="M23,14H1a1,1,0,0,0,0,2H23a1,1,0,0,0,0-2Z"/></svg>');
-    }
-
-    .icon\:left {
-        background-image: url('data:image/svg+xml;utf-8, <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="512" height="512"><path d="M10.6,12.71a1,1,0,0,1,0-1.42l4.59-4.58a1,1,0,0,0,0-1.42,1,1,0,0,0-1.41,0L9.19,9.88a3,3,0,0,0,0,4.24l4.59,4.59a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.42Z"/></svg>');
-    }
-
-    .icon\:right {
-        background-image: url('data:image/svg+xml;utf-8, <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="512" height="512"><path d="M15.4,9.88,10.81,5.29a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42L14,11.29a1,1,0,0,1,0,1.42L9.4,17.29a1,1,0,0,0,1.41,1.42l4.59-4.59A3,3,0,0,0,15.4,9.88Z"/></svg>');
-    }
-
-    .icon\:top {
-        background-image: url('data:image/svg+xml; <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="512" height="512"><path d="M18,15.5a1,1,0,0,1-.71-.29l-4.58-4.59a1,1,0,0,0-1.42,0L6.71,15.21a1,1,0,0,1-1.42-1.42L9.88,9.21a3.06,3.06,0,0,1,4.24,0l4.59,4.58a1,1,0,0,1,0,1.42A1,1,0,0,1,18,15.5Z"/></svg>');
-    }
-
-    .icon\:bottom {
-        background-image: url('data:image/svg+xml;utf-8, <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="512" height="512"><path d="M18,15.5a1,1,0,0,1-.71-.29l-4.58-4.59a1,1,0,0,0-1.42,0L6.71,15.21a1,1,0,0,1-1.42-1.42L9.88,9.21a3.06,3.06,0,0,1,4.24,0l4.59,4.58a1,1,0,0,1,0,1.42A1,1,0,0,1,18,15.5Z"/></svg>');
-    }
-
-    .icon\:check {
-        background-image: url('data:image/svg+xml;utf-8, <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="512" height="512"><path d="M22.319,4.431,8.5,18.249a1,1,0,0,1-1.417,0L1.739,12.9a1,1,0,0,0-1.417,0h0a1,1,0,0,0,0,1.417l5.346,5.345a3.008,3.008,0,0,0,4.25,0L23.736,5.847a1,1,0,0,0,0-1.416h0A1,1,0,0,0,22.319,4.431Z"/></svg>');
-    }
-
-    .icon\:cross {
-        background-image: url('data:image/svg+xml;utf-8, <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="512" height="512"><path d="M18,6h0a1,1,0,0,0-1.414,0L12,10.586,7.414,6A1,1,0,0,0,6,6H6A1,1,0,0,0,6,7.414L10.586,12,6,16.586A1,1,0,0,0,6,18H6a1,1,0,0,0,1.414,0L12,13.414,16.586,18A1,1,0,0,0,18,18h0a1,1,0,0,0,0-1.414L13.414,12,18,7.414A1,1,0,0,0,18,6Z"/></svg>');
-    }
-
-    .icon\:save {
-        background-image: url('data:image/svg+xml;utf-8, <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="512" height="512"><path d="M9.878,18.122a3,3,0,0,0,4.244,0l3.211-3.211A1,1,0,0,0,15.919,13.5l-2.926,2.927L13,1a1,1,0,0,0-1-1h0a1,1,0,0,0-1,1l-.009,15.408L8.081,13.5a1,1,0,0,0-1.414,1.415Z"/><path d="M23,16h0a1,1,0,0,0-1,1v4a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V17a1,1,0,0,0-1-1H1a1,1,0,0,0-1,1v4a3,3,0,0,0,3,3H21a3,3,0,0,0,3-3V17A1,1,0,0,0,23,16Z"/></svg>');
-    }
-
-    .icon\:mark {
-        background-image: url('data:image/svg+xml;utf-8, <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="512" height="512"><path d="M20.137,24a2.8,2.8,0,0,1-1.987-.835L12,17.051,5.85,23.169a2.8,2.8,0,0,1-3.095.609A2.8,2.8,0,0,1,1,21.154V5A5,5,0,0,1,6,0H18a5,5,0,0,1,5,5V21.154a2.8,2.8,0,0,1-1.751,2.624A2.867,2.867,0,0,1,20.137,24ZM6,2A3,3,0,0,0,3,5V21.154a.843.843,0,0,0,1.437.6h0L11.3,14.933a1,1,0,0,1,1.41,0l6.855,6.819a.843.843,0,0,0,1.437-.6V5a3,3,0,0,0-3-3Z"/></svg>');
-    }
-
-    .icon\:calendar {
-        background-image: url('data:image/svg+xml;utf-8, <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="512" height="512"><path d="M19,2H18V1a1,1,0,0,0-2,0V2H8V1A1,1,0,0,0,6,1V2H5A5.006,5.006,0,0,0,0,7V19a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V7A5.006,5.006,0,0,0,19,2ZM2,7A3,3,0,0,1,5,4H19a3,3,0,0,1,3,3V8H2ZM19,22H5a3,3,0,0,1-3-3V10H22v9A3,3,0,0,1,19,22Z"/><circle cx="12" cy="15" r="1.5"/><circle cx="7" cy="15" r="1.5"/><circle cx="17" cy="15" r="1.5"/></svg>');
-    }*/
 
 .card\:expand,
 .card\:cover {
@@ -2377,16 +2273,6 @@ i {
 	visibility: hidden !important;
 }
 /******************************?COMPONENTS?******************************/
-:root { /*!Only modify with Sass or Less!*/
-    --rt-cm-mirror: rgba(255, 255, 255, 0.5);
-    --rt-cm-wrapper: rgba(10, 10, 10, 0.75);
-    --rt-cm-border: rgba(100, 100, 100, 0.20);
-    --rt-cm-hover-light: rgba(40, 30, 15, 0.65);
-    --rt-cm-hover-dark: rgba(80, 60, 30, 0.35);
-
-    --rt-bd-blur: blur(5px);
-}
-
 .group\:mirror { /*TODO: Modal*/
     display: var(--rt-ds-none);
     position: var(--rt-ps-absolute);
@@ -2485,10 +2371,10 @@ i {
         top: 5%;
         left: 50%;
         transform: translate(-50%, -50%);
-        animation: hidden 1s;
-        -webkit-animation: hidden 1s;
-        -moz-animation: hidden 1s;
-        -o-animation: hidden 1s;
+        animation: hidden 1.5s;
+        -webkit-animation: hidden 1.5s;
+        -moz-animation: hidden 1.5s;
+        -o-animation: hidden 1.5s;
     }
 
         .modal\:nofity .content\:message {
@@ -2535,19 +2421,6 @@ i {
                 border-style: dotted !important;
             }
 /******************************?SIZE?******************************/
-:root { /*!Only modify with Sass or Less!*/
-    --rt-sz-0: 0;
-    --rt-sz-1: 0.25em;
-    --rt-sz-2: 0.50em;
-    --rt-sz-3: 0.75em;
-    --rt-sz-4: 1em;
-
-    --rt-dg-90: 90deg;
-    --rt-dg-180: 180deg;
-    --rt-dg-270: 270deg;
-    --rt-dg-360: 360deg;
-}
-
 .width { /*TODO: Size width the content box element*/
     width: 0 !important;
 }
