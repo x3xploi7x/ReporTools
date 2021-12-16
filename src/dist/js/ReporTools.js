@@ -29,16 +29,23 @@
             * @param {Function} -> addClass 
             * @param {Description} -> Add Class In Element's Refered 
             */
-            addClass: function(element, classes=[]) {
-                const temp = doc.querySelector(element);
+            addClass: function(element, classes) {
+                const temp = doc.querySelectorAll(element);
                 
-                var aux = [];
                 var str = '';
+                //var aux = [];
 
-                for(var i = 0; i <= classes.length - 1; i++) aux.push(classes[i]);
+                for(let i = 0; i <= classes.length - 1; i++) {
+                    str += classes[i];
+                }
 
-                str += aux.toString().replaceAll(',', ' ');
-                temp.classList.add(str); // Remove Space's In DOM
+                for(var j = 0; j <= temp.length; j++) {
+                    try {
+                        temp[j].classList.add(str);
+                    } catch(exception) {
+                        //console.log(exception.innerText);
+                    }
+                }
             },
 
             /**
@@ -46,13 +53,11 @@
             * @param {Description} -> Add Class In Element's Refered 
             */
             removeClass: function(selector, classes) {
-                const temp = doc.querySelector(selector);
-                //temp.classList.remove(classes);
+                var temp = doc.querySelectorAll(selector);
 
-                for(var i = 0; i <= temp.classList.length - 1; i++) {
-                    if(temp.classList[i] === classes) temp.classList.remove(classes);
+                for(let i = 0; i <= temp.length - 1; i++) {
+                    temp[i].classList.remove(classes);
                 }
-                //console.log(temp.classList);
             },
 
             /**
@@ -63,10 +68,29 @@
                 var element = doc.querySelector(selector);
                 var aux = [];
                 
-                for(var i = 0; i <= Object.keys(props).length - 1; i++) aux.push(Object.values(props)[i]);
-    
+                for(let i = 0; i <= Object.keys(props).length - 1; i++) {
+                    aux.push(Object.values(props)[i]);
+                }
+
                 element.classList.remove(aux[0]);
                 element.classList.add(aux[1]);
+            },
+
+            /**
+            * @param {Function} -> DestroyElement 
+            * @param {Description} -> Destroy Element With Not Used In DOM 
+            */
+            empty: function (selector) {
+                const parent = document.querySelector(selector);
+                var childs;
+
+                if(parent.childNodes.length > 0) {
+                    for(let i = 0; i <= parent.childNodes.length; i++) {
+                        childs = parent.childNodes[i];
+                    }
+
+                    parent.remove(childs);
+                }
             },
     
             /**
@@ -78,20 +102,29 @@
                 var element;
                 var aux = [];
 
-                for(var i = 0; i <= Object.keys(props).length - 1; i++) aux.push(Object.values(props)[i]);
+                for(let i = 0; i <= Object.keys(props).length - 1; i++) {
+                    aux.push(Object.values(props)[i]);
+                }
 
                 parent = doc.querySelector(aux[0]);
-                element = doc.createElement(aux[1]); 
-                element.setAttribute('id', aux[2]);
-                element.setAttribute('class', aux[3]);
 
-                if(element.nodeName === 'INPUT' || element.nodeName === 'BUTTON') element.setAttribute('type', aux[4]);
-                else delete Object.keys(props)[5]; // Remove Attr Not Used In Production
+                if(!doc.getElementById(aux[2])) { // If not exists in DOM
+                    element = doc.createElement(aux[1]);
+                    element.setAttribute('id', aux[2]);
+                    element.setAttribute('class', aux[3]);
+    
+                    if(element.nodeName === 'INPUT' || element.nodeName === 'BUTTON') {
+                        element.setAttribute('type', aux[4]);
+                    } else {
+                        delete Object.keys(props)[5]; // Remove Attr Not Used In Production
+                    }
 
-                parent.appendChild(element);
+                    parent.appendChild(element);
+                }
+
                 return element;
             },
-    
+
             /**
             * @param {Function} -> showMessage 
             * @param {Description} -> Deploy Pop-Up Message To - Result's, Error's, Data 
@@ -122,7 +155,7 @@
                     </div>
                 `;
 
-                for(var i = 0; i <= Object.keys(props).length - 1; i++) {
+                for(let i = 0; i <= Object.keys(props).length - 1; i++) {
                     doc.getElementById("letter__header").innerText = Object.values(props)[0];
                     doc.getElementById("letter__message").innerText = Object.values(props)[1];
                 }
@@ -159,8 +192,10 @@
                 
                 var element;
 
-                for(var i = 0; i <= Object.keys(props).length - 1; i++) {
-                    if(element.nodeName === 'INPUT' || element.nodeName === 'BUTTON') delete Object.keys(props)[2];
+                for(let i = 0; i <= Object.keys(props).length - 1; i++) {
+                    if(element.nodeName === 'INPUT' || element.nodeName === 'BUTTON') {
+                        delete Object.keys(props)[2];
+                    }
                 }
 
                 doc.getElementById("text__reference").innerText = title;
@@ -201,7 +236,7 @@
             * @param {Function} -> showLoader 
             * @param {Description} -> Deploy Spinner To Charge Info 
             */
-            showLoader: function(props={color, time}) {
+            showLoader: function(props={color, time, state}) {
                 // View State Modal
                 options.onCreateElement({
                     parent: '#container',
@@ -211,20 +246,37 @@
                 });
 
                 var aux = [];
-
+                
                 const parent = doc.getElementById('container__modal');
                 parent.innerHTML = `
                     <div id="spinner" class="spinner:dotted">
                     </div>
                 `;
                 
-                for(var i = 0; i <= Object.keys(props).length - 1; i++) aux.push(Object.values(props)[i]);
-                
+                for(let i = 0; i <= Object.keys(props).length - 1; i++) {
+                    aux.push(Object.values(props)[i]);
+                }
+
                 doc.getElementById('spinner').classList.add(`spinner:${aux[0]}`);
                 
-                setTimeout(function() {
-                    parent.remove(body);
-                }, aux[1]);
+                if(aux[1] == 0 || typeof(aux[1]) === 'undefined') {
+                    var step = aux[2];
+
+                    switch(step) {
+                        case 'on': // Replace With onDestroyElement
+                            options.removeClass('#spinner', 'display');
+                            break;
+
+                        case 'off':
+                            options.addClass('#spinner', 'display');
+                            parent.remove(body);
+                            break;
+                    }
+                } else {
+                    setTimeout(function() {
+                        parent.remove(body);
+                    }, aux[1]);
+                }
             },
             
             /**
@@ -262,21 +314,23 @@
         
                 switch(period) {
                     case "day":
-                        for(var i = 1; i < 32; i++) {
+                        for(let i = 1; i < 32; i++) {
                             let count = i < 10 ? "0" + i : i;
                             parent.innerHTML += `<option id=item__${count} class="option:item" value=${count}>${day[i]}</option>`;
                         }
-                        break;
+                    break;
         
                     case "month":
-                        for(var i = 0; i <= month.length - 1; i++) {
+                        for(let i = 0; i <= month.length - 1; i++) {
                             let count = i < 9 ? "0" + (i + 1) : i + 1; 
                             parent.innerHTML += `<option id=item__${i+1} class="option:item" value=${count}>${month[i]}</option>`;
                         }
-                        break;
+                    break;
         
                     case "year":
-                        for(var i = 0; i <= year.length - 1; i++) parent.innerHTML += `<option id=item__${i} class="option:item" value=${i+1}>${year[i]}</option>`;
+                        for(let i = 0; i <= year.length - 1; i++) {
+                            parent.innerHTML += `<option id=item__${i} class="option:item" value=${i+1}>${year[i]}</option>`;
+                        }
                     break;
                 }
             }
