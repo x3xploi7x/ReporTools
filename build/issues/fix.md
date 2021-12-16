@@ -65,6 +65,12 @@
 
 
 
-### Update 20211208
+### Updates 20211208
 - Add new functionality's to most best performance
 - Importan's change's to documentation tool (README.md file)
+
+
+
+### Updates 20211216
+- Add new file in public assets(env.css) refered global var's
+- Remove duplicate fields & showed data process
