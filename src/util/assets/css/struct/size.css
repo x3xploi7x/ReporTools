@@ -1,17 +1,4 @@
 /******************************?SIZE?******************************/
-:root { /*!Only modify with Sass or Less!*/
-    --rt-sz-0: 0;
-    --rt-sz-1: 0.25em;
-    --rt-sz-2: 0.50em;
-    --rt-sz-3: 0.75em;
-    --rt-sz-4: 1em;
-
-    --rt-dg-90: 90deg;
-    --rt-dg-180: 180deg;
-    --rt-dg-270: 270deg;
-    --rt-dg-360: 360deg;
-}
-
 .width { /*TODO: Size width the content box element*/
     width: 0 !important;
 }
