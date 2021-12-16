@@ -5,9 +5,9 @@
 **/
 
 /* Setting's */
+@import     "settings/env.css";
 @import     "settings/normalize.css";
 @import     "settings/base.css";
-@import     "settings/env.css";
 
 /* Font's */
 @import 	"typography/fonts.css";
