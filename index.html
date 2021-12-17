@@ -7,14 +7,20 @@
 	    <meta name="description" content="make & easy website's not require other libreries">
 	    <meta name="keywords" content="reports, pages, tools, framework, ui/ux">
 	    <title>ReporTools - Home</title>
-	    <link type="text/css" rel="stylesheet" href="src/dist/css/ReporTools.min.css">
+	    <link type="text/css" rel="stylesheet" href="src/util/assets/css/main.css">
+		<!-- <style type="text/css">
+			input[type="text"]:not(:focus), 
+			input[type="password"]:not(:focus) {
+				background-color: var(--rt-bg-grey-ligth);
+			}
+		</style> -->
 	</head>
 	<!-- #region app-container -->
-	<body class="app background:grey font:family-lucida justify:content-center align:items-middle">
+	<body id="app" class="app background:grey padding:y-50% font:family-lucida justify:content-center align:items-middle">
 		<!-- #region root -->
 		<div id="container" class="root:container width:1000px height:600px scroll:auto">
 			<!-- #region header -->
-			<header id="container__header" class="group:header">
+			<header id="container__header" class="group:header test">
 				<!-- #region title -->
 				<section class="section padding:y-100%">
 					<div class="size:1">
@@ -46,11 +52,11 @@
 
 					<!-- #region search -->
 					<div class="size:10 direction:end">
-						<input class="text:large text:hover" type="text" placeholder="Search query" autocomplete="off">
+						<input id='txt__search' class="text:large text:hover" type="text" placeholder="Search query" autocomplete="off">
 					</div>
 
 					<div class="size:12 direction:start">
-						<button id="button__continue" class="button:medium button:hover background:black color:white">Go!</button>
+						<button id="button__continue" class="button:small button:hover background:black color:white">Go</button>
 					</div>
 					<!-- #region search -->
 				</section>
@@ -63,18 +69,24 @@
 				<!-- #region hero -->
 				<section class="section">
 					<div class="size:5 background:white">
-						<ul class="list:portrait">
+						<ul class="list:portrait list:hover scroll:y">
 							<li class="list:item direction:col">
-								<h1 class="letter:large font:weight-bold">Article Heading</h1>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam aliquid consequuntur</p>
+								<div>
+									<h1 class="letter:medium font:weight-bold">Article Heading</h1>
+									<p class="letter:small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam aliquid consequuntur</p>
+								</div>
 							</li>
 							<li class="list:item direction:col">
-								<h2 class="letter:large font:weight-bold">Subsection</h2>
-								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet blanditiis perferendis, consequuntur cum delectus quae. Debitis impedit dolorum illum pariatur laudantium, ad accusamus deserunt quod at rerum doloremque minima facilis.</p>
+								<div>
+									<h2 class="letter:medium font:weight-bold">Subsection</h2>
+									<p class="letter:small">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet blanditiis perferendis, consequuntur cum delectus quae. Debitis impedit dolorum illum pariatur laudantium, ad accusamus deserunt quod at rerum doloremque minima facilis.</p>
+								</div>
 							</li>
 							<li class="list:item direction:col">
-								<h2 class="letter:large font:weight-bold">Another subsection</h2>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia hic voluptas vitae aspernatur qui error, tempora quod in aliquid quae provident suscipit reiciendis ipsum enim, nesciunt amet. Sequi, deserunt quisquam?</p>
+								<div>
+									<h2 class="letter:medium font:weight-bold">Another subsection</h2>
+									<p class="letter:small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia hic voluptas vitae aspernatur qui error, tempora quod in aliquid quae provident suscipit reiciendis ipsum enim, nesciunt amet. Sequi, deserunt quisquam?</p>
+								</div>
 							</li>
 						</ul>
 					</div>
@@ -102,7 +114,7 @@
 			<!-- #endregion main -->
 
 			<!-- #region footer -->
-			<footer id="container__footer" class="group:footer">
+			<footer id="container__footer" class="group:footer test">
 				<section class="section background:white padding:100%">
 					<div class="size:6">
 						<span class="letter:small font:weight-bold direction:start">©Copyright 2050 by nobody. All rights reserved</span>
@@ -112,41 +124,19 @@
 			<!-- #endregion footer -->
 		</div>
 		<!-- #endregion root -->
-		<script type="text/javascript" src="src/dist/js/ReporTools.min.js"></script>
+		<script type="text/javascript" src="src/dist/js/ReporTools.js"></script>
 		<script type="text/javascript">
-			/*$.onCreateElement({
-				parent: '#container',
-				target: 'div',
-				id: 'test',
-				classes: 'display:block width:800px height:800px background:red color:white'
-			});*/
-
 			document.getElementById('button__continue').addEventListener('click', function() {
-				// PopUp - Message //
-				/*$.showMessage({
-					title: 'Atention',
-					content: 'Say Hello'
-				});*/
-
-				// PopUp - Form //
-				/*$.showForm('Say Hello', {
-					id: 'test',
-					classes: 'background:red width:600px height:600px',
-					data: 	`<ul class='list:portrait'>
-								<li class='list:item'>
-									<a href='https://github.com/x3xploi7x/ReporTools'>Click Me!</a>
-								</li>
-							</ul>`
-				});*/
-
-				// PopUp - Notify //
-				/*$.showNotify('Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam aliquid consequuntur');*/
+				// _.showLoader({
+				// 	color: 'black',
+				// 	time: 0,
+				// 	state: 'on'
+				// });
 				
-				// Spinner - Loader //
-				/*$.showLoader('on', {
-					color: 'red',
-					time: 1000
-				});*/
+				_.showMessage({
+					title: 'User',
+					content: 'Say Hello'
+				});
 			}, false);
 		</script>
 	</body>
