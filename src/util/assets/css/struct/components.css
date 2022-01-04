@@ -10,7 +10,7 @@
     right: 0;
     bottom: 0;
     backdrop-filter: var(--rt-bd-blur);
-    opacity: 0.98;
+    /* opacity: 0.98; */
     z-index: 9999;
 }
 
@@ -80,7 +80,7 @@
         }
 
         .modal\:form .content\:main {
-            height: 80%;
+            height: 250px;
         }
 
         .modal\:form .content\:footer {
@@ -97,15 +97,15 @@
         top: 5%;
         left: 50%;
         transform: translate(-50%, -50%);
-        animation: hidden 1.5s;
-        -webkit-animation: hidden 1.5s;
-        -moz-animation: hidden 1.5s;
-        -o-animation: hidden 1.5s;
+        animation: hidden 5.5s;
+        -webkit-animation: hidden 5.5s;
+        -moz-animation: hidden 5.5s;
+        -o-animation: hidden 5.5s;
     }
 
         .modal\:nofity .content\:message {
             width: 100%;
-            height: 100%;
+            height: 150px;
         }
 
     .group\:mirror .spinner\:solid, 
