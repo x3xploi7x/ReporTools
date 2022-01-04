@@ -6,82 +6,75 @@
 !(function(global, factory){
     if(typeof exports === 'object' && typeof module !== 'object') module.exports = factory();
     else if(typeof define === 'function' && define.amd) define(factory);
-    else (global = global || self, global._ = factory())
-}(this, (function(_){
+    else (global = global || self, global.rp = factory())
+}(this, (function(rp){
     'use strict';
     
-    var win = window; // Priority
-    var doc = document; // Priority
-    var body = doc.body; // Priority
-    var self = this;
-    var options = {};
-
-    const VERSION = '1.3.0';
-    const AUTHOR = 'x3ploi7x';
-    const COMPILE = true;
-    const DEBBUG = !(COMPILE);
-    const AGENT = win.navigator.userAgent;
-    const STORAGE = win.localStorage; // Default Null
+    var propertys = {
+        win: window, // Priority
+        doc: document, // Priority
+        self: this
+    };
     
-    _ = (function() {
-        return options = {
+    const namespace = {
+        NAME: 'ReporTools',
+        VERSION: '1.3.0',
+        AUTHOR: 'x3ploi7x',
+        DESCRIPTION: undefined,
+        COMPILE: true,
+        DEBBUG: false,
+        AGENT: propertys.win.navigator.userAgent,
+        STORAGE: propertys.win.localStorage // Default Null
+    };
+    
+    rp = (function() {
+        var options = {
             /**
             * @param {Function} -> addClass 
             * @param {Description} -> Add Class In Element's Refered 
             */
-            addClass: function(element, classes) {
-                const temp = doc.querySelectorAll(element);
+            // addClass: function(element, classes) {
+            //     const temp = propertys.doc.querySelector(element);
                 
-                var str = '';
-                //var aux = [];
-
-                for(let i = 0; i <= classes.length - 1; i++) {
-                    str += classes[i];
-                }
-
-                for(var j = 0; j <= temp.length; j++) {
-                    try {
-                        temp[j].classList.add(str);
-                    } catch(exception) {
-                        //console.log(exception.innerText);
-                    }
-                }
-            },
+            //     for(let i = 0; i <= temp.length - 1; i++) {
+            //         temp[i].classList.addClass(classes);
+            //     }
+            // },
 
             /**
             * @param {Function} -> addClass 
             * @param {Description} -> Add Class In Element's Refered 
             */
-            removeClass: function(selector, classes) {
-                var temp = doc.querySelectorAll(selector);
+            // removeClass: function(selector, classes) {
+            //     var temp = propertys.doc.querySelectorAll(selector);
 
-                for(let i = 0; i <= temp.length - 1; i++) {
-                    temp[i].classList.remove(classes);
-                }
-            },
+            //     for(let i = 0; i <= temp.length - 1; i++) {
+            //         temp[i].classList.remove(classes);
+            //     }
+            // },
 
             /**
             * @param {Function} -> toggleClass 
             * @param {Description} -> Change Classes To Most Important First 
             */
-            toggleClass: function(selector, props={remove, add}) {
-                var element = doc.querySelector(selector);
-                var aux = [];
+            // toggleClass: function(selector, props={remove, add}) {
+            //     var element = propertys.doc.querySelector(selector);
+            //     var aux = [];
                 
-                for(let i = 0; i <= Object.keys(props).length - 1; i++) {
-                    aux.push(Object.values(props)[i]);
-                }
+            //     for(let i = 0; i <= Object.keys(props).length - 1; i++) {
+            //         aux.push(Object.values(props)[i]);
+            //     }
 
-                element.classList.remove(aux[0]);
-                element.classList.add(aux[1]);
-            },
+            //     element.classList.remove(aux[0]);
+            //     element.classList.add(aux[1]);
+            // },
 
             /**
             * @param {Function} -> DestroyElement 
             * @param {Description} -> Destroy Element With Not Used In DOM 
             */
             empty: function (selector) {
-                const parent = document.querySelector(selector);
+                const parent = propertys.doc.querySelector(selector);
                 var childs;
 
                 if(parent.childNodes.length > 0) {
@@ -106,10 +99,10 @@
                     aux.push(Object.values(props)[i]);
                 }
 
-                parent = doc.querySelector(aux[0]);
+                parent = propertys.doc.querySelector(aux[0]);
 
-                if(!doc.getElementById(aux[2])) { // If not exists in DOM
-                    element = doc.createElement(aux[1]);
+                if(!propertys.doc.getElementById(aux[2])) { // If not exists in DOM
+                    element = propertys.doc.createElement(aux[1]);
                     element.setAttribute('id', aux[2]);
                     element.setAttribute('class', aux[3]);
     
@@ -130,38 +123,42 @@
             * @param {Description} -> Deploy Pop-Up Message To - Result's, Error's, Data 
             */
             showMessage: function(props={title, content}) {
-                // View State Modal
-                options.onCreateElement({
-                    parent: '#container',
-                    target: 'div',
-                    id: 'container__modal',
-                    classes: 'group:mirror display:block'
-                });
+                if(!propertys.doc.getElementById('container__modal')) { // If not exist's in DOM
+                    // View State Modal
+                    options.onCreateElement({
+                        parent: '#container',
+                        target: 'div',
+                        id: 'container__modal',
+                        classes: 'group:mirror'
+                    });
+                }
 
-                const parent = doc.getElementById('container__modal');
-                parent.innerHTML = `
-                    <div id="modal__popup" class="modal:alert background:white font:family-lucida">
-                        <div class="content:title">
-                            <h1 id="letter__header" class="letter:medium color:grey-dark font:weight-bold font:transform-upper"></h1>
-                        </div>
-                        <div class="divider:x">
-                        </div>
-                        <div class="content:message padding:100%">
-                            <p id="letter__message" class="color:grey font:weight-bold"></p>
-                        </div>
-                        <div class="content:options">
-                            <button id="button__notify" class="button:small background:blue color:white" type="button" onclick="return false;">Continuar</button>
-                        </div>
-                    </div>
-                `;
+                const   parent = propertys.doc.getElementById('container__modal');
+                        parent.classList.add('display:block');
+                        parent.innerHTML = `
+                            <div id="modal__popup" class="modal:alert background:white font:family-lucida">
+                                <div class="content:title">
+                                    <h1 id="letter__header" class="letter:medium color:grey-dark font:weight-bold font:transform-upper"></h1>
+                                </div>
+                                <div class="divider:x">
+                                </div>
+                                <div class="content:message padding:100%">
+                                    <p id="letter__message" class="color:grey font:weight-bold"></p>
+                                </div>
+                                <div class="content:options">
+                                    <button id="button__notify" class="button:small background:blue color:white" type="button" onclick="return false;">Continuar</button>
+                                </div>
+                            </div>
+                        `;
 
                 for(let i = 0; i <= Object.keys(props).length - 1; i++) {
-                    doc.getElementById("letter__header").innerText = Object.values(props)[0];
-                    doc.getElementById("letter__message").innerText = Object.values(props)[1];
+                    parent.querySelector('#letter__header').innerText = Object.values(props)[0];
+                    parent.querySelector('#letter__message').innerText = Object.values(props)[1];
                 }
         
-                doc.getElementById("button__notify").addEventListener("click", function(){
-                    parent.remove(body); // Change With ToggleClass Function
+                parent.querySelector('#button__notify').addEventListener('click', function(){
+                    parent.removeChild(parent.querySelector('#modal__popup')); // Change With ToggleClass Function
+                    parent.classList.remove('display:block');
                 }, false);
             },
             
@@ -169,38 +166,35 @@
             * @param {Function} -> showForm 
             * @param {Description} -> Deploy & Append Element Data Refered In Pop-Up 
             */
-             showForm: function(title, props={id, classes, type, data}) {
-                // View State Modal
-                options.onCreateElement({
-                    parent: '#container',
-                    target: 'div',
-                    id: 'container__modal',
-                    classes: 'group:mirror display:block'
-                });
-
-                const parent = doc.getElementById('container__modal');
-                parent.innerHTML = `
-                    <div id="modal__popup" class="modal:form background:white font:family-lucida">
-                        <div id="div__main" class="content:main padding:y-50% direction:center">
-                            <span id="text__reference" class="letter:small color:grey-dark font:weight-bold"></span>
-                        </div>
-                        <div id="div__footer" class="content:footer direction:center">
-                            <button id="button__notify" class="button:small margin:x-75% background:red color:white" type="button">Continuar</button>
-                        </div>
-                    </div>
-                `;
-                
-                var element;
-
-                for(let i = 0; i <= Object.keys(props).length - 1; i++) {
-                    if(element.nodeName === 'INPUT' || element.nodeName === 'BUTTON') {
-                        delete Object.keys(props)[2];
-                    }
+             showForm: function(title, props={data}) {
+                if(!propertys.doc.getElementById('container__modal')) { // If not exist's in DOM
+                    // View State Modal
+                    options.onCreateElement({
+                        parent: '#container',
+                        target: 'div',
+                        id: 'container__modal',
+                        classes: 'group:mirror'
+                    });
                 }
 
-                doc.getElementById("text__reference").innerText = title;
-                doc.getElementById("button__notify").addEventListener("click", function(){
-                    parent.remove(body);
+                const   parent = propertys.doc.getElementById('container__modal');
+                        parent.classList.add('display:block');
+                        parent.innerHTML = `
+                            <div id="modal__container" class="modal:form background:white font:family-lucida">
+                                <div id="div__main" class="content:main padding:y-50% direction:center scroll:y-auto">
+                                    <span id="text__reference" class="letter:small color:grey-dark font:weight-bold"></span>
+                                </div>
+                                <div id="div__footer" class="content:footer direction:center">
+                                    <button id="button__notify" class="button:small margin:x-75% background:red color:white" type="button">Continuar</button>
+                                </div>
+                            </div>
+                        `;
+
+                parent.querySelector("#text__reference").innerText = title;
+                parent.querySelector("#div__main").innerHTML += props.data;
+                parent.querySelector("#button__notify").addEventListener("click", function(){
+                    parent.removeChild(parent.querySelector('#modal__container')); // Change With ToggleClass Function
+                    parent.classList.remove('display:block');
                 }, false);
             },
             
@@ -209,137 +203,144 @@
             * @param {Description} -> Deploy Notify's With Product Data Info 
             */
              showNotify: function(content) {
-                // View State Modal 
-                options.onCreateElement({
-                    parent: '#container',
-                    target: 'div',
-                    id: 'container__modal',
-                    classes: 'group:mirror display:block'
-                });
+                if(!propertys.doc.getElementById('container__modal')) { // If not exist's in DOM
+                    // View State Modal
+                    options.onCreateElement({
+                        parent: '#container',
+                        target: 'div',
+                        id: 'container__modal',
+                        classes: 'group:mirror'
+                    });
+                }
 
-                const parent = doc.getElementById("container__modal");
-                parent.innerHTML = `
-                    <div class="modal:notify font:family-monaco>"
-                        <div class="content:message padding:50%">
-                            <span id="text__message" class="letter:small color:grey-dark direction:start font:weight-bold"></span>
-                        </div>
-                    </div>
-                `;
-                doc.getElementById("text__message").innerText = content;
+                const   parent = propertys.doc.getElementById("container__modal");
+                        parent.classList.add('display:block');
+                        parent.innerHTML = `
+                            <div id="modal__notify" class="modal:notify font:family-monaco scroll:y-auto">
+                                <div class="content:message padding:50%">
+                                    <span id="text__message" class="letter:small color:grey-dark direction:start font:weight-bold"></span>
+                                </div>
+                            </div>
+                        `;
+
+                parent.querySelector("#text__message").innerText = content;
                 
                 setTimeout(function() {
-                    parent.remove(body);
-                }, 1000); // Static Time Not Change
+                    parent.removeChild(parent.querySelector('#modal__notify')); // Change With ToggleClass Function
+                    parent.classList.remove('display:block');
+                }, 4500); // Static Time Not Change
             },
             
             /**
             * @param {Function} -> showLoader 
             * @param {Description} -> Deploy Spinner To Charge Info 
             */
-            showLoader: function(props={color, time, state}) {
-                // View State Modal
-                options.onCreateElement({
-                    parent: '#container',
-                    target: 'div',
-                    id: 'container__modal',
-                    classes: 'group:mirror display:block'
-                });
+            showLoader: function(props={type, color, time}) {
+                if(!propertys.doc.getElementById('container__modal')) { // If not exist's in DOM
+                    // View State Modal
+                    options.onCreateElement({
+                        parent: '#container',
+                        target: 'div',
+                        id: 'container__modal',
+                        classes: 'group:mirror'
+                    });
+                }
 
-                var aux = [];
+                const   parent = propertys.doc.getElementById('container__modal');
+                        parent.classList.add('display:block');
+                        parent.innerHTML = `
+                            <div id="modal__spinner"></div>
+                        `;
                 
-                const parent = doc.getElementById('container__modal');
-                parent.innerHTML = `
-                    <div id="spinner" class="spinner:dotted">
-                    </div>
-                `;
+                var aux = [];
                 
                 for(let i = 0; i <= Object.keys(props).length - 1; i++) {
                     aux.push(Object.values(props)[i]);
                 }
 
-                doc.getElementById('spinner').classList.add(`spinner:${aux[0]}`);
+                parent.querySelector('#modal__spinner').classList.add(`spinner:${aux[0]}`);
+                parent.querySelector('#modal__spinner').classList.add(`spinner:${aux[1]}`);
                 
-                if(aux[1] == 0 || typeof(aux[1]) === 'undefined') {
-                    var step = aux[2];
+                // switch(state) {
+                //     case 'on': // Replace With onDestroyElement
+                //         parent.classList.add('display:block');
+                //     break;
 
-                    switch(step) {
-                        case 'on': // Replace With onDestroyElement
-                            options.removeClass('#spinner', 'display');
-                            break;
+                //     case 'off':
+                //         parent.classList.removeClass('display:block');
+                //         parent.removeChild(parent.querySelector('#modal__spinner'));
+                //     break;
+                // }
+                
+                var duration = aux[2]; //(parseInt(aux[2]) / 1000);
 
-                        case 'off':
-                            options.addClass('#spinner', 'display');
-                            parent.remove(body);
-                            break;
-                    }
-                } else {
+                function async() {
                     setTimeout(function() {
-                        parent.remove(body);
-                    }, aux[1]);
+                        parent.classList.remove('display:block');
+                        parent.removeChild(parent.querySelector('#modal__spinner'));
+                    }, duration);
                 }
+
+                async();
             },
             
             /**
             * @param {Function} -> setCard 
             * @param {Description} -> Create Card To Show Importance Information 
             */
-            setCard: function(selector, props={title, img, description}) { // Modify
-                document.querySelector(selector).innerHTML = `
-                    <div class="card:expand card:hover background:grey-light font:family-verdana direction:center">
-                        <ul class="list:portrait">
-                            <li class="list:item">
-                                <h1 class="letter:large font:weight-bold">Lorem</h1>
-                            </li>
-                            <li class="list:item">
-                                <img class="image:large" src="src/util/assets/img/things/DOCS_REFERENCE.png">
-                            </li>
-                            <li class="list:item">
-                                <p class="letter:small">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint repudiandae ipsa quisquam labore laudantium. Beatae sequi laborum quos aliquam nobis, eos, nostrum sunt magni id ratione incidunt fugit maxime dignissimos.</p>
-                            </li>
-                        </ul>
-                    </div>
-                `;
-            },
+            // setCard: function(selector, props={title, img, description}) { // Modify
+            //     propertys.doc.querySelector(selector).innerHTML = `
+            //         <div class="card:expand card:hover background:grey-light font:family-verdana direction:center">
+            //             <ul class="list:portrait">
+            //                 <li class="list:item">
+            //                     <h1 class="letter:large font:weight-bold">Lorem</h1>
+            //                 </li>
+            //                 <li class="list:item">
+            //                     <img class="image:large" src="src/util/assets/img/things/DOCS_REFERENCE.png">
+            //                 </li>
+            //                 <li class="list:item">
+            //                     <p class="letter:small">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint repudiandae ipsa quisquam labore laudantium. Beatae sequi laborum quos aliquam nobis, eos, nostrum sunt magni id ratione incidunt fugit maxime dignissimos.</p>
+            //                 </li>
+            //             </ul>
+            //         </div>
+            //     `;
+            // },
 
             /**
-            * @param {Function} -> setDate 
+            * @param {Function} -> getDate 
             * @param {Description} -> Get DateTime [day's, month's, year's] To Charge In Element's 
             */
-            setDate: function(selector, period) {
-                var parent = doc.querySelector(selector);
-                
-                const day = 0;
-                const month = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-                const year = [2015, 2016, 2017, 2018, 2019, 2020, 2021];
-        
-                switch(period) {
-                    case "day":
-                        for(let i = 1; i < 32; i++) {
-                            let count = i < 10 ? "0" + i : i;
-                            parent.innerHTML += `<option id=item__${count} class="option:item" value=${count}>${day[i]}</option>`;
-                        }
-                    break;
-        
-                    case "month":
-                        for(let i = 0; i <= month.length - 1; i++) {
-                            let count = i < 9 ? "0" + (i + 1) : i + 1; 
-                            parent.innerHTML += `<option id=item__${i+1} class="option:item" value=${count}>${month[i]}</option>`;
-                        }
-                    break;
-        
-                    case "year":
-                        for(let i = 0; i <= year.length - 1; i++) {
-                            parent.innerHTML += `<option id=item__${i} class="option:item" value=${i+1}>${year[i]}</option>`;
-                        }
-                    break;
-                }
+            getDate: function() {
+                const name = [
+                    'Enero',
+                    'Febrero',
+                    'Marzo',
+                    'Abril',
+                    'May',
+                    'Junio',
+                    'Julio',
+                    'Agosto',
+                    'Septiembre',
+                    'Octubre',
+                    'Noviembre',
+                    'Diciembre'
+                ];
+
+                var date = new Date();
+                var day = date.getDate() < 10 ? "0" + date.getDay() + "" : "" + date.getDate();
+                var month = date.getMonth() > 0 ? date.getMonth() + 0 : date.getMonth() + 1;
+                var year = date.getFullYear();
+
+                return `Day: ${day} / Month: ${name[month]} / Year: ${year}`;
             }
         };
+
+        return options;
     });
    
     //----------------------------------------------------------------------------------------------------//
-    if(typeof _ === "function") return _();
-    else if(VERSION <= '1.0') throw(`This Version Not Compatible:${VERSION}, by:${AUTHOR}`); 
-    else throw(`This Version Not Support With navigator:${AGENT}, by:${AUTHOR}`);
+    if(typeof rp === 'function' && rp != 'undefined') return rp();
+    else if(namespace.VERSION <= '1.0') throw(`This Version Not Compatible:${namespace.VERSION}, by:${namespace.AUTHOR}.`); 
+    else throw(`This Version Not Support With Navigator:${namespace.AGENT}.`);
     //----------------------------------------------------------------------------------------------------//
 })));
