@@ -74,3 +74,9 @@
 ### Updates 20211216
 - Add new file in public assets(env.css) refered global var's
 - Remove duplicate fields & showed data process
+
+
+
+### Updates 20220105
+- Add functions to export(Excel, Pdf) applications
+- Change version to -> 1.5
