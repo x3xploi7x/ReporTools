@@ -8,12 +8,6 @@
 	    <meta name="keywords" content="reports, pages, tools, framework, ui/ux">
 	    <title>ReporTools - Home</title>
 	    <link type="text/css" rel="stylesheet" href="src/util/assets/css/main.css">
-		<!-- <style type="text/css">
-			input[type="text"]:not(:focus), 
-			input[type="password"]:not(:focus) {
-				background-color: var(--rt-bg-grey-ligth);
-			}
-		</style> -->
 	</head>
 	<!-- #region app-container -->
 	<body id="app" class="app background:grey padding:y-50% font:family-lucida justify:content-center align:items-middle">
@@ -120,22 +114,70 @@
 						<span class="letter:small font:weight-bold direction:start">©Copyright 2050 by nobody. All rights reserved</span>
 					</div>
 				</section>
+
+				<section class="section background:white display">
+					<div class="size:1">
+						<table id="table__content" class="table:normal table:hover">
+							<thead class="background:blue color:white">
+								<tr>
+									<th>Name</th>
+									<th>Age</th>
+									<th>Gender</th>
+								</tr>
+							</thead>
+
+							<tbody class="color:blue">
+								<tr>
+									<td>Example</td>
+									<th>27</th>
+									<th>Male</th>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
 			</footer>
 			<!-- #endregion footer -->
 		</div>
 		<!-- #endregion root -->
 		<script type="text/javascript" src="src/dist/js/ReporTools.js"></script>
 		<script type="text/javascript">
+			
+			window.addEventListener("DOMContentLoaded", function() {
+				/**
+				 * Deploy Spinner
+				*/
+				_.showLoader({
+					type: 'dashed',
+					color: 'blue',
+					time: 500
+				});
+			}, false);
+
 			document.getElementById('button__continue').addEventListener('click', function() {
-				// _.showLoader({
-				// 	color: 'black',
-				// 	time: 0,
-				// 	state: 'on'
+				// /**
+				//  * Deploy Modal Message 
+				// */
+				// _.showMessage({
+				// 	title: 'Test',
+				// 	content: `Hello: ${document.getElementById('txt__search').value}`
 				// });
-				
-				_.showMessage({
-					title: 'User',
-					content: 'Say Hello'
+
+				// /**
+				//  * Export To Excel Application 
+				// */
+				// _.exportToExcel({
+				// 	element: '#table__content',
+				// 	fileName: 'Example',
+				// 	dateFile: '2021-10-25'
+				// });
+
+				// /**
+				//  * Export To PDF Application 
+				// */
+				_.exportToPDF({
+					title: 'Test01',
+					element: '#table__content'
 				});
 			}, false);
 		</script>
