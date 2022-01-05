@@ -4,10 +4,14 @@
 //                                      Author : x3ploi7x                                             //
 //----------------------------------------------------------------------------------------------------//
 !(function(global, factory){
-    if(typeof exports === 'object' && typeof module !== 'object') module.exports = factory();
-    else if(typeof define === 'function' && define.amd) define(factory);
-    else (global = global || self, global.rp = factory())
-}(this, (function(rp){
+    if(typeof exports === 'object' && typeof module !== 'object') {
+        module.exports = factory();
+    } else if(typeof define === 'function' && define.amd) {
+        define(factory);
+    } else {
+        (global = global || self, global._ = factory())
+    }
+}(this, (function(_){
     'use strict';
     
     var propertys = {
@@ -26,8 +30,8 @@
         AGENT: propertys.win.navigator.userAgent,
         STORAGE: propertys.win.localStorage // Default Null
     };
-    
-    rp = (function() {
+
+    _ = (function() {
         var options = {
             /**
             * @param {Function} -> addClass 
@@ -166,7 +170,7 @@
             * @param {Function} -> showForm 
             * @param {Description} -> Deploy & Append Element Data Refered In Pop-Up 
             */
-             showForm: function(title, props={data}) {
+            showForm: function(title, props={data}) {
                 if(!propertys.doc.getElementById('container__modal')) { // If not exist's in DOM
                     // View State Modal
                     options.onCreateElement({
@@ -202,7 +206,7 @@
             * @param {Function} -> showNotify 
             * @param {Description} -> Deploy Notify's With Product Data Info 
             */
-             showNotify: function(content) {
+            showNotify: function(content) {
                 if(!propertys.doc.getElementById('container__modal')) { // If not exist's in DOM
                     // View State Modal
                     options.onCreateElement({
@@ -283,28 +287,6 @@
 
                 async();
             },
-            
-            /**
-            * @param {Function} -> setCard 
-            * @param {Description} -> Create Card To Show Importance Information 
-            */
-            // setCard: function(selector, props={title, img, description}) { // Modify
-            //     propertys.doc.querySelector(selector).innerHTML = `
-            //         <div class="card:expand card:hover background:grey-light font:family-verdana direction:center">
-            //             <ul class="list:portrait">
-            //                 <li class="list:item">
-            //                     <h1 class="letter:large font:weight-bold">Lorem</h1>
-            //                 </li>
-            //                 <li class="list:item">
-            //                     <img class="image:large" src="src/util/assets/img/things/DOCS_REFERENCE.png">
-            //                 </li>
-            //                 <li class="list:item">
-            //                     <p class="letter:small">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint repudiandae ipsa quisquam labore laudantium. Beatae sequi laborum quos aliquam nobis, eos, nostrum sunt magni id ratione incidunt fugit maxime dignissimos.</p>
-            //                 </li>
-            //             </ul>
-            //         </div>
-            //     `;
-            // },
 
             /**
             * @param {Function} -> getDate 
@@ -332,15 +314,102 @@
                 var year = date.getFullYear();
 
                 return `Day: ${day} / Month: ${name[month]} / Year: ${year}`;
+            },
+
+            /**
+            * @param {Function} -> exportToExcel 
+            * @param {Description} -> Export datatable to excel application 
+            */
+            exportToExcel: function(params={element, fileName, dateFile}) {
+                const schema = 'application/vnd.ms-excel' || 'urn:schemas-microsoft-com:office:excel' || 'application/vnd.opennxmlformats-officedocument.spreadsheetml.sheet';
+                const encode = 'charset=UTF-8';
+                const separator = '%EF%BB%BF';
+                
+                var aux = [];
+
+                for(let i = 0; i <= Object.keys(params).length - 1; i++) {
+                    aux.push(Object.values(params)[i]);
+                }
+
+                const   selector = propertys.doc.querySelector(aux[0]); 
+                        selector.setAttribute('border', '1px');
+                const temporal = selector.outerHTML.replace(/ /g, '%20'); // Remove space's in url reference
+                // temporal.replace(/<A[^>]*>|<\/A>/g, "");
+                // temporal.replace(/<img[^>]*>/gi, "");
+                // temporal.replace(/<input[^>]*>|<\/input>/gi, "");
+                
+                var file = String(aux[1]).concat(`_${aux[2]}.xls`);
+                var direction = propertys.doc.createElement('a');
+                
+                propertys.doc.body.appendChild(direction);
+
+                if(propertys.win.navigator.msSaveOrOpenBlob) {
+                    // Generate binary in document
+                    var blob = new Blob(
+                        ['\ufeff', temporal],
+                        {
+                            type: `${schema};${encode + separator}`
+                        }
+                    );
+
+                    propertys.win.navigator.msSaveOrOpenBlob(blob, direction) && blob.remove(propertys.doc.body);
+                    console.log(blob);
+                } else {
+                    // In case not generate binary custom document to export
+                    direction.href = `data:${schema};${encode},${separator + temporal}`
+                    direction.download = file;
+                    direction.click();
+                    direction.remove(propertys.doc.body);
+                }
+
+                selector.removeAttribute('border'); // Remove border showed in excel application
+            },
+
+            /**
+            * @param {Function} -> exportToPDF 
+            * @param {Description} -> Export datatable to pdf application 
+            */
+            exportToPDF: function (params={title, element}) {
+                var aux = [];
+
+                for(let i = 0; i <= Object.keys(params).length - 1; i++) {
+                    aux.push(Object.values(params)[i]);
+                }
+                
+                const header = aux[0];
+                const   selector = propertys.doc.querySelector(aux[1]);
+                        selector.setAttribute('border', '1px');
+
+                var temporal = selector.outerHTML; // Deploy html data to element selected
+                
+                // Options to PDF panel
+                var     mirror = propertys.win.open('', '', 'height=500,width=1000');
+                        mirror.document.write(`
+                            <html>
+                                <head>
+                                    <title>${header}</title>
+                                </head>
+                                <body>
+                                    ${temporal}
+                                </body>
+                        `);
+                        mirror.print();
+                        mirror.close();
+
+                selector.removeAttribute('border');
             }
         };
 
         return options;
     });
-   
+     
     //----------------------------------------------------------------------------------------------------//
-    if(typeof rp === 'function' && rp != 'undefined') return rp();
-    else if(namespace.VERSION <= '1.0') throw(`This Version Not Compatible:${namespace.VERSION}, by:${namespace.AUTHOR}.`); 
-    else throw(`This Version Not Support With Navigator:${namespace.AGENT}.`);
+    if(typeof _ === 'function' && _ != 'undefined') {
+        return _();
+    } else if(namespace.VERSION <= '1.0') {
+        throw(`This Version Not Compatible:${namespace.VERSION}, by:${namespace.AUTHOR}.`); 
+    } else { 
+        throw(`This Version Not Support With Navigator:${namespace.AGENT}.`);
+    }
     //----------------------------------------------------------------------------------------------------//
 })));
