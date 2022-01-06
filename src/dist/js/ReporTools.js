@@ -108,33 +108,33 @@
             * @param {Function} -> createElement 
             * @param {Description} -> Create Element If Not Exist's And Append In Parent Selector 
             */
-            // onCreateElement: function(props={parent, target, id, classes, type}) {
-            //     var parent;
-            //     var element;
-            //     var aux = [];
+            onCreateElement: function(props={parent, target, id, classes, type}) {
+                var parent;
+                var element;
+                var aux = [];
 
-            //     for(let i = 0; i <= Object.keys(props).length - 1; i++) {
-            //         aux.push(Object.values(props)[i]);
-            //     }
+                for(let i = 0; i <= Object.keys(props).length - 1; i++) {
+                    aux.push(Object.values(props)[i]);
+                }
 
-            //     parent = propertys.doc.querySelector(aux[0]);
+                parent = propertys.doc.querySelector(aux[0]);
 
-            //     if(!propertys.doc.getElementById(aux[2])) { // If not exists in DOM
-            //         element = propertys.doc.createElement(aux[1]);
-            //         element.setAttribute('id', aux[2]);
-            //         element.setAttribute('class', aux[3]);
+                if(!propertys.doc.getElementById(aux[2])) { // If not exists in DOM
+                    element = propertys.doc.createElement(aux[1]);
+                    element.setAttribute('id', aux[2]);
+                    element.setAttribute('class', aux[3]);
     
-            //         if(element.nodeName === 'INPUT' || element.nodeName === 'BUTTON') {
-            //             element.setAttribute('type', aux[4]);
-            //         } else {
-            //             delete Object.keys(props)[5]; // Remove Attr Not Used In Production
-            //         }
+                    if(element.nodeName === 'INPUT' || element.nodeName === 'BUTTON') {
+                        element.setAttribute('type', aux[4]);
+                    } else {
+                        delete Object.keys(props)[5]; // Remove Attr Not Used In Production
+                    }
 
-            //         parent.appendChild(element);
-            //     }
+                    parent.appendChild(element);
+                }
 
-            //     return element;
-            // },
+                return element;
+            },
 
             /**
             * @param {Function} -> showMessage 
