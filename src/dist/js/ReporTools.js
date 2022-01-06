@@ -4,6 +4,8 @@
 //                                      Author : x3ploi7x                                             //
 //----------------------------------------------------------------------------------------------------//
 !(function(global, factory){
+    'use strict';
+
     if(typeof exports === 'object' && typeof module !== 'object') {
         module.exports = factory();
     } else if(typeof define === 'function' && define.amd) {
@@ -13,13 +15,19 @@
     }
 }(this, (function(_){
     'use strict';
-    
+
     var propertys = {
         win: window, // Priority
         doc: document, // Priority
         self: this
     };
-    
+
+    var page = {
+        current: 1,
+        record: 10,
+        data: []
+    }
+
     const namespace = {
         NAME: 'ReporTools',
         VERSION: '1.3.0',
@@ -30,6 +38,12 @@
         AGENT: propertys.win.navigator.userAgent,
         STORAGE: propertys.win.localStorage // Default Null
     };
+
+    // Exact window dimention's
+    const width = propertys.win.innerWidth ? propertys.win.innerWidth : propertys.doc.documentElement.clientWidth;
+    const height = propertys.win.innerHeight ? propertys.win.innerHeight : propertys.doc.documentElement.clientHeight;
+    const left = propertys.win.screenLeft ? propertys.win.screenLeft : propertys.win.screenX;
+    const top = propertys.win.screenTop ? propertys.win.screenTop : propertys.win.screenY;
 
     _ = (function() {
         var options = {
@@ -77,50 +91,50 @@
             * @param {Function} -> DestroyElement 
             * @param {Description} -> Destroy Element With Not Used In DOM 
             */
-            empty: function (selector) {
-                const parent = propertys.doc.querySelector(selector);
-                var childs;
+            // empty: function (selector) {
+            //     const parent = propertys.doc.querySelector(selector);
+            //     var childs;
 
-                if(parent.childNodes.length > 0) {
-                    for(let i = 0; i <= parent.childNodes.length; i++) {
-                        childs = parent.childNodes[i];
-                    }
+            //     if(parent.childNodes.length > 0) {
+            //         for(let i = 0; i <= parent.childNodes.length; i++) {
+            //             childs = parent.childNodes[i];
+            //         }
 
-                    parent.remove(childs);
-                }
-            },
+            //         parent.remove(childs);
+            //     }
+            // },
     
             /**
             * @param {Function} -> createElement 
             * @param {Description} -> Create Element If Not Exist's And Append In Parent Selector 
             */
-            onCreateElement: function(props={parent, target, id, classes, type}) {
-                var parent;
-                var element;
-                var aux = [];
+            // onCreateElement: function(props={parent, target, id, classes, type}) {
+            //     var parent;
+            //     var element;
+            //     var aux = [];
 
-                for(let i = 0; i <= Object.keys(props).length - 1; i++) {
-                    aux.push(Object.values(props)[i]);
-                }
+            //     for(let i = 0; i <= Object.keys(props).length - 1; i++) {
+            //         aux.push(Object.values(props)[i]);
+            //     }
 
-                parent = propertys.doc.querySelector(aux[0]);
+            //     parent = propertys.doc.querySelector(aux[0]);
 
-                if(!propertys.doc.getElementById(aux[2])) { // If not exists in DOM
-                    element = propertys.doc.createElement(aux[1]);
-                    element.setAttribute('id', aux[2]);
-                    element.setAttribute('class', aux[3]);
+            //     if(!propertys.doc.getElementById(aux[2])) { // If not exists in DOM
+            //         element = propertys.doc.createElement(aux[1]);
+            //         element.setAttribute('id', aux[2]);
+            //         element.setAttribute('class', aux[3]);
     
-                    if(element.nodeName === 'INPUT' || element.nodeName === 'BUTTON') {
-                        element.setAttribute('type', aux[4]);
-                    } else {
-                        delete Object.keys(props)[5]; // Remove Attr Not Used In Production
-                    }
+            //         if(element.nodeName === 'INPUT' || element.nodeName === 'BUTTON') {
+            //             element.setAttribute('type', aux[4]);
+            //         } else {
+            //             delete Object.keys(props)[5]; // Remove Attr Not Used In Production
+            //         }
 
-                    parent.appendChild(element);
-                }
+            //         parent.appendChild(element);
+            //     }
 
-                return element;
-            },
+            //     return element;
+            // },
 
             /**
             * @param {Function} -> showMessage 
@@ -383,7 +397,7 @@
                 var temporal = selector.outerHTML; // Deploy html data to element selected
                 
                 // Options to PDF panel
-                var     mirror = propertys.win.open('', '', 'height=500,width=1000');
+                var     mirror = propertys.win.open('', '', `height=500,width=1000,left=${width/8},top=${height/8}`);
                         mirror.document.write(`
                             <html>
                                 <head>
@@ -397,7 +411,28 @@
                         mirror.close();
 
                 selector.removeAttribute('border');
-            }
+            },
+
+            /**
+            * @param {Function} -> renderTable 
+            * @param {Description} -> Render data table with process request 
+            */
+            // renderTable: function (params) {
+            // },
+
+            /**
+            * @param {Function} -> processRequest 
+            * @param {Description} -> Process fetch data 
+            */
+            // processRequest: function (params) {
+            // },
+
+            /**
+            * @param {Function} -> setPagination 
+            * @param {Description} -> Enabled pagination with process fetch & showed in data table 
+            */
+            // setPagination: function(params) {
+            // }
         };
 
         return options;
