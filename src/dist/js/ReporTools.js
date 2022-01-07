@@ -24,9 +24,264 @@
 
     var page = {
         current: 1,
-        record: 10,
-        data: []
-    }
+        record: 5,
+        data: [] // request xhr -> response json
+    };
+
+    var jsonTest = [
+        {
+            test: 'a',
+        },
+        {
+            test: 'b',
+        },
+        {
+            test: 'c',
+        },
+        {
+            test: 'd',
+        },
+        {
+            test: 'e',
+        },
+        {
+            test: 'f',
+        },
+        {
+            test: 'g',
+        },
+        {
+            test: 'h',
+        },
+        {
+            test: 'i',
+        },
+        {
+            test: 'j',
+        },
+        {
+            test: 'k',
+        },
+        {
+            test: 'l',
+        },
+        {
+            test: 'a',
+        },
+        {
+            test: 'b',
+        },
+        {
+            test: 'c',
+        },
+        {
+            test: 'd',
+        },
+        {
+            test: 'e',
+        },
+        {
+            test: 'f',
+        },
+        {
+            test: 'g',
+        },
+        {
+            test: 'h',
+        },
+        {
+            test: 'i',
+        },
+        {
+            test: 'j',
+        },
+        {
+            test: 'k',
+        },
+        {
+            test: 'l',
+        },
+        {
+            test: 'a',
+        },
+        {
+            test: 'b',
+        },
+        {
+            test: 'c',
+        },
+        {
+            test: 'd',
+        },
+        {
+            test: 'e',
+        },
+        {
+            test: 'f',
+        },
+        {
+            test: 'g',
+        },
+        {
+            test: 'h',
+        },
+        {
+            test: 'i',
+        },
+        {
+            test: 'j',
+        },
+        {
+            test: 'k',
+        },
+        {
+            test: 'l',
+        },
+        {
+            test: 'a',
+        },
+        {
+            test: 'b',
+        },
+        {
+            test: 'c',
+        },
+        {
+            test: 'd',
+        },
+        {
+            test: 'e',
+        },
+        {
+            test: 'f',
+        },
+        {
+            test: 'g',
+        },
+        {
+            test: 'h',
+        },
+        {
+            test: 'i',
+        },
+        {
+            test: 'j',
+        },
+        {
+            test: 'k',
+        },
+        {
+            test: 'l',
+        },
+        {
+            test: 'a',
+        },
+        {
+            test: 'b',
+        },
+        {
+            test: 'c',
+        },
+        {
+            test: 'd',
+        },
+        {
+            test: 'e',
+        },
+        {
+            test: 'f',
+        },
+        {
+            test: 'g',
+        },
+        {
+            test: 'h',
+        },
+        {
+            test: 'i',
+        },
+        {
+            test: 'j',
+        },
+        {
+            test: 'k',
+        },
+        {
+            test: 'l',
+        },
+        {
+            test: 'a',
+        },
+        {
+            test: 'b',
+        },
+        {
+            test: 'c',
+        },
+        {
+            test: 'd',
+        },
+        {
+            test: 'e',
+        },
+        {
+            test: 'f',
+        },
+        {
+            test: 'g',
+        },
+        {
+            test: 'h',
+        },
+        {
+            test: 'i',
+        },
+        {
+            test: 'j',
+        },
+        {
+            test: 'k',
+        },
+        {
+            test: 'l',
+        },
+        {
+            test: 'a',
+        },
+        {
+            test: 'b',
+        },
+        {
+            test: 'c',
+        },
+        {
+            test: 'd',
+        },
+        {
+            test: 'e',
+        },
+        {
+            test: 'f',
+        },
+        {
+            test: 'g',
+        },
+        {
+            test: 'h',
+        },
+        {
+            test: 'i',
+        },
+        {
+            test: 'j',
+        },
+        {
+            test: 'k',
+        },
+        {
+            test: 'l',
+        }
+    ];
 
     const namespace = {
         NAME: 'ReporTools',
@@ -142,7 +397,7 @@
             */
             showMessage: function(props={title, content}) {
                 // View State Modal
-                options.onCreateElement({
+                this.onCreateElement({
                     parent: '#container',
                     target: 'div',
                     id: 'container__modal',
@@ -184,7 +439,7 @@
             */
             showForm: function(title, props={data}) {
                 // View State Modal
-                options.onCreateElement({
+                this.onCreateElement({
                     parent: '#container',
                     target: 'div',
                     id: 'container__modal',
@@ -218,7 +473,7 @@
             */
             showNotify: function(content) {
                 // View State Modal
-                options.onCreateElement({
+                this.onCreateElement({
                     parent: '#container',
                     target: 'div',
                     id: 'container__modal',
@@ -249,7 +504,7 @@
             */
             showLoader: function(props={type, color, time}) {
                 // View State Modal
-                options.onCreateElement({
+                this.onCreateElement({
                     parent: '#container',
                     target: 'div',
                     id: 'container__modal',
@@ -319,7 +574,7 @@
                 var month = date.getMonth() > 0 ? date.getMonth() + 0 : date.getMonth() + 1;
                 var year = date.getFullYear();
 
-                return `Day: ${day} / Month: ${name[month]} / Year: ${year}`;
+                return `${day} / ${name[month]} / ${year}`;
             },
 
             /**
@@ -359,7 +614,7 @@
                     );
 
                     propertys.win.navigator.msSaveOrOpenBlob(blob, direction) && blob.remove(propertys.doc.body);
-                    console.log(blob);
+                    //console.log(blob);
                 } else {
                     // In case not generate binary custom document to export
                     direction.href = `data:${schema};${encode},${separator + temporal}`
@@ -406,25 +661,87 @@
             },
 
             /**
-            * @param {Function} -> renderTable 
-            * @param {Description} -> Render data table with process request 
+            * @param {Function} -> prevPage 
+            * @param {Description} -> Back page count 
             */
-            // renderTable: function (params) {
-            // },
+            prevPage: function() {
+                if(page.current > 1) {
+                    page.current--;
+                }
+
+                this.setPagination(page.current);
+            },
 
             /**
-            * @param {Function} -> processRequest 
-            * @param {Description} -> Process fetch data 
+            * @param {Function} -> nextPage 
+            * @param {Description} -> Next page count 
             */
-            // processRequest: function (params) {
-            // },
+            nextPage: function() {
+                if(page.current == 0) {
+                    page.current = 1;
+                }
+                
+                page.current++;
+                this.setPagination(page.current);
+            },
 
             /**
             * @param {Function} -> setPagination 
             * @param {Description} -> Enabled pagination with process fetch & showed in data table 
             */
-            // setPagination: function(params) {
-            // }
+            setPagination: function(pages, callback) {
+                // this.showLoader({
+                //     type: 'dashed',
+                //     color: 'blue',
+                //     time: 500
+                // });
+
+                if(pages < 1) {
+                    pages = 1;
+                }
+
+                if(pages > this.getPages()) { // Returned total number page's count with response json object data
+                    pages = this.getPages();
+                }
+
+                // return callback = function () {
+                //     document.getElementById('div__table').innerHTML = '';
+
+                //     var table = `
+                //         <table class="table:normal table:border table:hover">
+                //             <thead class="background:pink-light color:white">
+                //                 <tr>
+                //                     <th>Test</th>
+                //                 </tr>
+                //             </thead>
+                //             <tbody>
+                //     `;
+
+                //     for(let i = (pages - 1) * page.record; i < (pages * page.record) && i < jsonTest.length; i++) {
+                //         // document.getElementById('div__table').innerHTML += `
+                //         //     <span>${jsonTest[i].test}</span>
+                //         // `;
+
+                //         table += `
+                //             <tr>
+                //                 <td>${jsonTest[i].test}</td>
+                //             </tr>
+                //         `;
+                //     }
+
+                //     table += `
+                //             </tbody>
+                //         </table>
+                //     `;
+
+                //     document.getElementById('div__table').innerHTML = table;
+                // }
+            },
+
+            getPages: function () {
+                let calc = jsonTest.length / page.record;
+                return Math.ceil(calc);
+            }
         };
 
         return options;
