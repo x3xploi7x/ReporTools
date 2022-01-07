@@ -80,3 +80,4 @@
 ### Updates 20220105
 - Add functions to export(Excel, Pdf) applications
 - Change version to -> 1.5
+- Add paginator to process data
