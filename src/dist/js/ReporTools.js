@@ -24,7 +24,7 @@
 
     var page = {
         current: 1,
-        record: 5,
+        record: 100,
         data: [] // request xhr -> response json
     };
 
@@ -434,8 +434,8 @@
             * @param {Function} -> setPagination 
             * @param {Description} -> Enabled pagination with process fetch & showed in data table 
             */
-            setPagination: function(pages, callback) {
-                page.data.push(callback);
+            setPagination: function(pages) {
+                page.data.push(json);
                 // this.showLoader({
                 //     type: 'dashed',
                 //     color: 'blue',
@@ -473,8 +473,12 @@
                     //document.getElementById('table').innerHTML = table;
             },
 
+            getPageData: function (json) {
+                return page.data.push(json);
+            },
+
             getPages: function () {
-                let calc = page.data.length / page.record;
+                let calc = (page.data.length / page.record);
                 return Math.ceil(calc);
             }
         };
