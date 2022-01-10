@@ -28,24 +28,6 @@
         data: [] // request xhr -> response json
     };
 
-    // var jsonTest = [
-    //     {
-    //         test: 'a',
-    //     },
-    //     {
-    //         test: 'b',
-    //     },
-    //     {
-    //         test: 'c',
-    //     },
-    //     {
-    //         test: 'd',
-    //     },
-    //     {
-    //         test: 'e',
-    //     }
-    // ];
-
     const namespace = {
         NAME: 'ReporTools',
         VERSION: '1.3.0',
@@ -302,7 +284,7 @@
                 
                 var duration = aux[2]; //(parseInt(aux[2]) / 1000);
 
-                function async() {
+                function async() { // Suplied with promise -> async function
                     setTimeout(function() {
                         parent.classList.remove('display:block');
                         parent.removeChild(parent.querySelector('#modal__spinner'));
@@ -453,6 +435,7 @@
             * @param {Description} -> Enabled pagination with process fetch & showed in data table 
             */
             setPagination: function(pages, callback) {
+                page.data.push(callback);
                 // this.showLoader({
                 //     type: 'dashed',
                 //     color: 'blue',
@@ -467,42 +450,31 @@
                     pages = this.getPages();
                 }
 
-                // return callback = function () {
-                //     document.getElementById('div__table').innerHTML = '';
+                //return callback = function () {
+                    //document.getElementById('div__table').innerHTML = '';
 
-                //     var table = `
-                //         <table class="table:normal table:border table:hover">
-                //             <thead class="background:pink-light color:white">
-                //                 <tr>
-                //                     <th>Test</th>
-                //                 </tr>
-                //             </thead>
-                //             <tbody>
-                //     `;
+                    var table = '';
 
-                //     for(let i = (pages - 1) * page.record; i < (pages * page.record) && i < jsonTest.length; i++) {
-                //         // document.getElementById('div__table').innerHTML += `
-                //         //     <span>${jsonTest[i].test}</span>
-                //         // `;
+                    for(let i = (pages - 1) * page.record; i < (pages * page.record) && i < page.data.length; i++) {
+                        console.log(page.data);
+                        // document.getElementById('div__table').innerHTML += `
+                        //     <span>${jsonTest[i].test}</span>
+                        // `;
 
-                //         table += `
-                //             <tr>
-                //                 <td>${jsonTest[i].test}</td>
-                //             </tr>
-                //         `;
-                //     }
+                        // table += `
+                        //     <tr>
+                        //         <td>${jsonTest[i].id}</td>
+                        //         <td>${jsonTest[i].name}</td>
+                        //         <td>${jsonTest[i].location}</td>
+                        //     </tr>
+                        // `;
+                    }
 
-                //     table += `
-                //             </tbody>
-                //         </table>
-                //     `;
-
-                //     document.getElementById('div__table').innerHTML = table;
-                // }
+                    //document.getElementById('table').innerHTML = table;
             },
 
             getPages: function () {
-                let calc = jsonTest.length / page.record;
+                let calc = page.data.length / page.record;
                 return Math.ceil(calc);
             }
         };
