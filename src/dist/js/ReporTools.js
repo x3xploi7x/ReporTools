@@ -144,7 +144,7 @@
                 const child = propertys.doc.querySelector(element);
 
                 if(child) {
-                    child.remove(propertys.doc.body);
+                    child.parentNode.remove(propertys.doc.body);
                 } else {
                     throw('Element not exists in document');
                 }
