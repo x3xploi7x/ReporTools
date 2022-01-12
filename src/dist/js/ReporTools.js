@@ -103,7 +103,7 @@
             //         parent.remove(childs);
             //     }
             // },
-    
+            
             /**
             * @param {Function} -> createElement 
             * @param {Description} -> Create Element If Not Exist's And Append In Parent Selector 
@@ -134,6 +134,20 @@
                 }
 
                 return element;
+            },
+
+            /**
+            * @param {Function} -> deleteElement 
+            * @param {Description} -> Delete Element If Exist's In Parent Selector 
+            */
+            onDeleteElement: function(element) {
+                const child = propertys.doc.querySelector(element);
+
+                if(child) {
+                    child.remove(propertys.doc.body);
+                } else {
+                    throw('Element not exists in document');
+                }
             },
 
             /**
