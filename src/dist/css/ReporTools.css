@@ -2051,7 +2051,7 @@ i {
 .image\:medium, 
 .image\:large, 
 .image\:extra-large { /*TODO: Image's or Icon's property's*/
-    display: var(--rt-ds-block);   
+    /*display: var(--rt-ds-block);*/   
     width: 100%;
     height: auto;
     border-radius: 1.5em;
