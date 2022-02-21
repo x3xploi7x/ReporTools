@@ -1,0 +1,24 @@
+/*
+*   Step 1.- Import vars enviroment used in development
+*/
+@import url("core/globals.css");
+
+/*
+*    Step 2.- Reset all browser default style's
+*/
+@import url("core/reset.css");
+
+/*
+*   Step 3.- Modify element's priority tags in html 
+*/
+@import url("core/base.css");
+
+/*
+*   Step 4.- Add setting's to custom property's add in component's 
+*/
+@import url("core/settings.css");
+
+/*
+*   Step 5.- Component's render in dom
+*/
+@import url("core/components.css");

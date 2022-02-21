@@ -1,0 +1,81 @@
+*::selection {
+    background: var(--rt-bg-blue-light) !important;
+}
+
+body {
+    background-color: var(--rt-bg-white);
+    width: 100vw;
+    height: 100vh;
+    margin: var(--rt-sz-0);
+    overflow: hidden;
+}
+
+button, 
+input[type="text"], 
+input[type="button"], 
+input[type="submit"], 
+input[type="reset"], 
+input[type="check"], 
+input[type="date"], 
+select {
+    text-align: center;
+    cursor: pointer;
+}
+
+textarea, 
+input[type="text"], 
+input[type="password"] {
+    text-align: start;
+    cursor: text;
+}
+
+input:-internal-autofill-selected, 
+input:-webkit-autofill {
+    background-color: var(--rt-bg-blue-light) !important;
+    -webkit-text-fill-color: var(--rt-bg-black) !important;
+}
+
+input[type="text"]:disabled, 
+input[type="password"]:disabled,
+input[type="date"]:disabled {
+    background-color: var(--rt-bg-grey-dark);
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+a {
+    background-color: transparent !important;
+}
+
+a:active, 
+a:visited {
+    background: none !important;
+}
+
+ol li, 
+ul li {
+    vertical-align: -webkit-baseline-middle !important;
+}
+
+textarea {
+    overflow: auto;
+}
+
+img {
+    border-style: none;
+}
+
+audio,
+video, 
+svg {
+    display: var(--rt-ds-block);
+    overflow: none;
+}
+
+i {
+    font-size: normal;
+    font-style: initial;
+}

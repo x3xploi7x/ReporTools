@@ -1,0 +1,96 @@
+*, 
+::after, 
+::before { /*!Alter all document!*/
+    box-sizing: border-box;
+}
+
+html {
+    line-height: 1.25;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+}
+
+html, 
+body, 
+header, 
+footer, 
+main, 
+div, 
+span, 
+iframe, 
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+p, 
+dl, 
+dt, 
+dd, 
+ol, 
+ul, 
+table, 
+section { /*!Alter all document!*/
+    vertical-align: baseline;
+    margin: var(--rt-sz-0);
+    padding: var(--rt-sz-0);
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6,
+span, 
+p,
+b,
+strong {
+    font-size: var(--rt-sz-4);
+    font-weight: normal;
+}
+
+hr {
+    display: var(--rt-ds-block);
+    border: var(--rt-sz-0);
+}
+
+input, 
+button, 
+table, 
+select, 
+ul, 
+ol, 
+img {
+    box-sizing: content-box !important;
+}
+
+ol, 
+ul, 
+dl {
+    list-style: none;
+}
+
+select, 
+a {
+    text-decoration: none;
+}
+
+img, 
+picture, 
+video,
+iframe,
+figure {
+    width: var(--rt-pr-100);
+    max-width: var(--rt-pr-100);
+}
+
+svg {
+    width: var(--rt-pr-100);
+    fill: currentColor;
+}
+
+[hidden] {
+    visibility: hidden;
+}
