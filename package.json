@@ -1,15 +1,10 @@
-[
-	{
-		"name": "ReporTools",
-		"version": "1.5",
-		"author": "x3xploi7x",
-		"description": "The fast & easy build website to make tools to office",
-		"keywords": ["Office", "Work", "Job"],
-		"scripts":
-		{
-			"test": "@echo off run index.js -t",
-			"main": "src/util/assets/js/index.js"
-		},
-		"github": "github.com/x3xploi7x/ReporTools/ReporTools.master"
+{	
+	"name": "ReporTools",
+	"version": "1.5.2",
+	"author": "x3xploi7x",
+	"description": "The fast & easy build website to make tools to office",
+	"github": {
+		"main":	"github.com/x3xploi7x/ReporTools/ReporTools.master",
+		"bugs": "github.com/x3xploi7x/ReporTools/issues"
 	}
-]
+}
