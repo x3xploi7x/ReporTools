@@ -7,180 +7,234 @@
 	    <meta name="description" content="make & easy website's not require other libreries">
 	    <meta name="keywords" content="reports, pages, tools, framework, ui/ux">
 	    <title>ReporTools - Home</title>
-	    <link type="text/css" rel="stylesheet" href="src/util/assets/css/main.css">
+		<!-- Used In Development -->
+	    <!-- <link type="text/css" rel="stylesheet" href="src/util/styles/index.css"> -->
+		<!-- Used In Production -->
+		<link type="text/css" rel="stylesheet" href="src/dist/css/ReporTools.min.css">
 	</head>
-	<!-- #region app-container -->
-	<body id="app" class="app background:grey padding:y-50% font:family-lucida justify:content-center align:items-middle">
-		<!-- #region root -->
-		<div id="container" class="root:container width:1000px height:600px scroll:auto">
-			<!-- #region header -->
-			<header id="container__header" class="group:header test">
-				<!-- #region title -->
-				<section class="section padding:y-100%">
-					<div class="size:1">
-						<h1 class="letter:extra-large color:white font:weight-bold direction:center">Header</h1>
-					</div>
-				</section>
-				<!-- #endregion title -->
-
-				<!-- #region fields -->
-				<section class="section background:pink padding:y-100%">
-					<!-- #region nav -->
-					<div class="size:5">
-						<ul class="list:landscape list:hover height:100% color:black font:size-100% font:transform-uppercase">
-							<li class="list:item">
-								<a class="color:black" href="#" target="_self">Home</a>
-							</li>
-							<li class="list:item">
-								<a class="color:black" href="#" target="_self">Out Team</a>
-							</li>
-							<li class="list:item">
-								<a class="color:black" href="#" target="_self">Projects</a>
-							</li>
-							<li class="list:item">
-								<a class="color:black" href="#" target="_self">Contact</a>
-							</li>
-						</ul>
-					</div>
-					<!-- #endregion nav -->
-
-					<!-- #region search -->
-					<div class="size:10 direction:end">
-						<input id='txt__search' class="text:large text:hover" type="text" placeholder="Search query" autocomplete="off">
+	<body class="theme">
+		<div class="container:flex font:family-monaco">
+			<header class="flex:header background:purple padding:y-50%">
+				<div class="flex:row">
+					<div class="extra-small@display medium@display:block flex:cols-6 direction:center">
+						<h1 class="letter display:inline height:100% color:white font:weight-bold direction:middle">ReporTools</h1>
 					</div>
 
-					<div class="size:12 direction:start">
-						<button id="button__continue" class="button:small button:hover background:black color:white">Go</button>
+					<div class="extra-small@display:block extra-small@flex:cols-1 medium@display">
+						<button class="button width:15px height:15px">
+							<i class="icon icon:toggle-dark"></i>
+						</button>
 					</div>
-					<!-- #region search -->
-				</section>
-				<!-- #endregion fields -->
+
+					<div class="extra-small@flex:cols-8 medium@flex:cols-4">
+						<input class="text text:hover width:100%" type="text" placeholder="Search Keyword" />
+					</div>
+
+					<div class="extra-small@flex:cols-3 medium@flex:cols-2 direction:center">
+						<button class="button button:hover background:purple-light color:white width:75%" type="button">Continue</button>
+					</div>
+				</div>
 			</header>
-			<!-- #region header -->
 
-			<!-- #region main -->
-			<main id="container__body" class="group:body">
-				<!-- #region hero -->
-				<section class="section">
-					<div class="size:5 background:white">
-						<ul class="list:portrait list:hover scroll:y">
-							<li class="list:item direction:col">
-								<div>
-									<h1 class="letter:medium font:weight-bold">Article Heading</h1>
-									<p class="letter:small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam aliquid consequuntur</p>
+			<main class="flex:hero margin:y-100%">
+				<div class="flex:row align:items-middle">	
+					<div class="flex:cols-4">
+						<section class="card:cover background:purple shadow:component">
+							<div class="cover:content">
+								<div class="container:flex padding:y-25%">
+									<div class="flex:row">
+										<div class="flex:cols-2">
+											<img class="image width:60px height:60px margin:25% fit:cover" src="./src/util/assets/icons/dashboard/profile.png" alt="Not Found" />
+										</div>
+										<div class="flex:cols-10">
+											<ul class="list:portrait">
+												<li class="list:item color:white">Dr. Susan Standford</li>
+												<li class="list:item color:white">General Medical</li>
+											</ul>
+										</div>
+									</div>
 								</div>
-							</li>
-							<li class="list:item direction:col">
-								<div>
-									<h2 class="letter:medium font:weight-bold">Subsection</h2>
-									<p class="letter:small">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet blanditiis perferendis, consequuntur cum delectus quae. Debitis impedit dolorum illum pariatur laudantium, ad accusamus deserunt quod at rerum doloremque minima facilis.</p>
-								</div>
-							</li>
-							<li class="list:item direction:col">
-								<div>
-									<h2 class="letter:medium font:weight-bold">Another subsection</h2>
-									<p class="letter:small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia hic voluptas vitae aspernatur qui error, tempora quod in aliquid quae provident suscipit reiciendis ipsum enim, nesciunt amet. Sequi, deserunt quisquam?</p>
-								</div>
-							</li>
-						</ul>
+							</div>
+
+							<div class="cover:description">
+								<hr class="divider:x" />
+
+								<p class="letter color:white">Institue Of Massachusetts</p>
+							</div>
+						</section>
 					</div>
-					<!-- #endregion hero -->
 
-					<!-- #region sidebar -->
-					<div class="size:9 background:pink">
-						<!-- #region sidebar-title -->
-						<h1 class="letter:large">Related</h1>
-						<!-- #endregion sidebar-title -->
-
-						<!-- #region sidebar-menu -->
-						<ul class="list:portrait list:hover">
-							<li class="list:item">Oh i do like yo beside the seaside</li>
-							<li class="list:item">Oh i do like yo beside the sea</li>
-							<li class="list:item">Although in the North of England</li>
-							<li class="list:item">It never stops raining</li>
-							<li class="list:item">Oh well...</li>
-						</ul>
-						<!-- #region sidebar-menu -->
-					</div>
-					<!-- #endregion sidebar -->
-				</section>
-			</main>
-			<!-- #endregion main -->
-
-			<!-- #region footer -->
-			<footer id="container__footer" class="group:footer test">
-				<section class="section background:white padding:100%">
-					<div class="size:6">
-						<span class="letter:small font:weight-bold direction:start">©Copyright 2050 by nobody. All rights reserved</span>
-					</div>
-				</section>
-
-				<section class="section background:white display">
-					<div class="size:1">
-						<table id="table__content" class="table:normal table:hover">
-							<thead class="background:blue color:white">
+					<div class="flex:cols-8 height:200px scroll:y-auto">
+						<table class="table:normal table:hover">
+							<thead class="background:purple-light color:white">
 								<tr>
-									<th>Name</th>
-									<th>Age</th>
-									<th>Gender</th>
+									<th class="font:size-100% font:weight-bold" colspan="7">Schedules</th>
+								</tr>
+
+								<tr>
+									<th class="width:25% font:size-75%" colspan="1">Mon</th>
+									<th class="width:25% font:size-75%" colspan="1">Thu</th>
+									<th class="width:25% font:size-75%" colspan="1">Wed</th>
+									<th class="width:25% font:size-75%" colspan="1">Tue</th>
+									<th class="width:25% font:size-75%" colspan="1">Fri</th>
+									<th class="width:25% font:size-75%" colspan="1">Sun</th>
+									<th class="width:25% font:size-75%" colspan="1">Sat</th>
 								</tr>
 							</thead>
 
-							<tbody class="color:blue">
+							<tbody class="direction:center">
 								<tr>
-									<td>Example</td>
-									<th>27</th>
-									<th>Male</th>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+								</tr>
+
+								<tr>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+								</tr>
+
+								<tr>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+								</tr>
+
+								<tr>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+								</tr>
+
+								<tr>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+								</tr>
+
+								<tr>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+								</tr>
+
+								<tr>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+								</tr>
+
+								<tr>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+								</tr>
+
+								<tr>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+								</tr>
+
+								<tr>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+								</tr>
+
+								<tr>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
+									<td class="width:25% padding:y-50% font:size-75%">06:30 A.M</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-				</section>
+				</div>
+			</main>
+
+			<footer class="flex:footer background:purple padding:y-100% direction:col">
+				<div class="flex:row justify:content-center">
+					<div class="flex:cols-12 margin:y-50% direction:center">
+						<h1 class="letter color:white font:size-100% font:weight-bold">Send your comment's</h1>
+					</div>
+
+					<div class="flex:cols-6">
+						<form class="flex:row" method="post" target="#">
+							<div class="extra-small@flex:cols-6 small@flex:cols-6 margin:bottom-50% small@direction:end">
+								<input class="text extra-small@width:auto medium@width:100%" type="text" placeholder="Name" />
+								<input class="text extra-small@width:auto medium@width:100% margin:top-25%" type="mail" placeholder="Email" />
+							</div>
+							<div class="extra-small@flex:cols-6 small@flex:cols-6 small@direction:start">
+								<input class="text extra-small@width:auto medium@width:100%" type="text" placeholder="Last Name" />
+								<input class="text extra-small@width:auto medium@width:100% margin:top-25%" type="number" placeholder="phone" />
+							</div>
+							<div class="flex:cols-12 margin:bottom-50%">
+								<textarea class="text width:100%">Enter your comments. . .</textarea>
+							</div>
+							<div class="flex:cols-12 direction:center">
+								<button class="button button:hover background:blue-dark color:white extra-small@width:50% medium@width:25%" type="button">Send</button>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<div class="flex:row justify:content-center">
+					<div class="flex:cols-12">
+						<hr class="divider:x" />
+					</div>
+
+					<div class="flex:cols-6 direction:center">
+						<p class="letter color:white">Copyright 2022 - ReporTools As Software Solution's.</p>
+					</div>
+				</div>
+				</footer>
 			</footer>
-			<!-- #endregion footer -->
 		</div>
-		<!-- #endregion root -->
-		<script type="text/javascript" src="src/dist/js/ReporTools.js"></script>
-		<script type="text/javascript">
-			
-			window.addEventListener("DOMContentLoaded", function() {
-				/**
-				 * Deploy Spinner
-				*/
-				_.showLoader({
-					type: 'dashed',
-					color: 'blue',
-					time: 500
-				});
-			}, false);
-
-			document.getElementById('button__continue').addEventListener('click', function() {
-				// /**
-				//  * Deploy Modal Message 
-				// */
-				// _.showMessage({
-				// 	title: 'Test',
-				// 	content: `Hello: ${document.getElementById('txt__search').value}`
-				// });
-
-				// /**
-				//  * Export To Excel Application 
-				// */
-				// _.exportToExcel({
-				// 	element: '#table__content',
-				// 	fileName: 'Example',
-				// 	dateFile: '2021-10-25'
-				// });
-
-				// /**
-				//  * Export To PDF Application 
-				// */
-				_.exportToPDF({
-					title: 'Test01',
-					element: '#table__content'
-				});
-			}, false);
-		</script>
 	</body>
-	<!-- #endregion app-container -->
 </html>
