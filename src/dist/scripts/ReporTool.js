@@ -2,6 +2,7 @@
 //                                      Name : ReporTools                                             //
 //                                      Version : 1.5.2                                               //
 //                                      Author : x3ploi7x                                             //
+//                                      Github : https://github.com/x3xploi7x                         //
 //----------------------------------------------------------------------------------------------------//
 !(function(global, factory){
     'use strict';
