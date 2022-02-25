@@ -118,6 +118,102 @@
     height: 1000px !important;
 }
 
+.top { /*TODO: Size top the content box element*/
+    top: var(--rt-sz-0) !important;
+}
+
+.top\:auto {
+    top: auto !important;
+}
+
+.top\:25\% {
+    left: var(--rt-pr-25) !important;
+}
+
+.top\:50\% {
+    top: var(--rt-pr-50) !important;   
+}
+
+.top\:75\% {
+    top: var(--rt-pr-75) !important;
+}
+
+.top\:100\% {
+    top: var(--rt-pr-100) !important;
+}
+
+.bottom { /*TODO: Size bottom the content box element*/
+    bottom: var(--rt-sz-0) !important;
+}
+
+.bottom\:auto {
+    bottom: auto !important;
+}
+
+.bottom\:25\% {
+    bottom: var(--rt-pr-25) !important;
+}
+
+.bottom\:50\% {
+    bottom: var(--rt-pr-50) !important;   
+}
+
+.bottom\:75\% {
+    bottom: var(--rt-pr-75) !important;
+}
+
+.bottom\:100\% {
+    bottom: var(--rt-pr-100) !important;
+}
+
+.left { /*TODO: Size Left the content box element*/
+    left: var(--rt-sz-0) !important;
+}
+
+.left\:auto {
+    left: auto !important;
+}
+
+.left\:25\% {
+    left: var(--rt-pr-25) !important;
+}
+
+.left\:50\% {
+    left: var(--rt-pr-50) !important;   
+}
+
+.left\:75\% {
+    left: var(--rt-pr-75) !important;
+}
+
+.left\:100\% {
+    left: var(--rt-pr-100) !important;
+}
+
+.right { /*TODO: Size right the content box element*/
+    right: var(--rt-sz-0) !important;
+}
+
+.right\:auto {
+    right: auto !important;
+}
+
+.right\:25\% {
+    right: var(--rt-pr-25) !important;
+}
+
+.right\:50\% {
+    right: var(--rt-pr-50) !important;   
+}
+
+.right\:75\% {
+    right: var(--rt-pr-75) !important;
+}
+
+.right\:100\% {
+    right: var(--rt-pr-100) !important;
+}
+
 .border { /*TODO: Border element delimited in box*/
     border: var(--rt-sz-0) !important;
 }
