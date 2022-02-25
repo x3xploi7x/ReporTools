@@ -3,6 +3,7 @@
 //                                      Name : ReporTools                                             //
 //                                      Version : 1.5.2                                               //
 //                                      Author : x3ploi7x                                             //
+//                                      Github : https://github.com/x3xploi7x                         //
 //----------------------------------------------------------------------------------------------------//
 */
 :root { /*!Only modify with Sass or Less!*/
@@ -840,14 +841,14 @@ i {
     border-color: var(--rt-bg-turquoise-dark) !important;
 }
 
-@media (min-width: 240px) {
+@media only screen and (min-width: 240px) {
 	.app .container\:flex,
     .app .container\:grid {
 		max-width: var(--rt-md-extra-small) !important;
 	}
 }
 
-@media (min-width: 480px) { /*TODO: Breakpoint extra-small*/
+@media only screen and (max-width: 600px) { /*TODO: Breakpoint extra-small*/
     .extra-small\@width {
         width: var(--rt-sz-0) !important;
     }
@@ -966,6 +967,102 @@ i {
     
     .extra-small\@height\:1000\px {
         height: 1000px !important;
+    }
+
+    .extra-small\@top {
+        top: var(--rt-sz-0) !important;
+    }
+    
+    .extra-small\@top\:auto {
+        top: auto !important;
+    }
+    
+    .extra-small\@top\:25\% {
+        left: var(--rt-pr-25) !important;
+    }
+    
+    .extra-small\@top\:50\% {
+        top: var(--rt-pr-50) !important;   
+    }
+    
+    .extra-small\@top\:75\% {
+        top: var(--rt-pr-75) !important;
+    }
+    
+    .extra-small\@top\:100\% {
+        top: var(--rt-pr-100) !important;
+    }
+    
+    .extra-small\@bottom { 
+        bottom: var(--rt-sz-0) !important;
+    }
+    
+    .extra-small\@bottom\:auto {
+        bottom: auto !important;
+    }
+    
+    .extra-small\@bottom\:25\% {
+        bottom: var(--rt-pr-25) !important;
+    }
+    
+    .extra-small\@bottom\:50\% {
+        bottom: var(--rt-pr-50) !important;   
+    }
+    
+    .extra-small\@bottom\:75\% {
+        bottom: var(--rt-pr-75) !important;
+    }
+    
+    .extra-small\@bottom\:100\% {
+        bottom: var(--rt-pr-100) !important;
+    }
+    
+    .extra-small\@left { 
+        left: var(--rt-sz-0) !important;
+    }
+    
+    .extra-small\@left\:auto {
+        left: auto !important;
+    }
+    
+    .extra-small\@left\:25\% {
+        left: var(--rt-pr-25) !important;
+    }
+    
+    .extra-small\@left\:50\% {
+        left: var(--rt-pr-50) !important;   
+    }
+    
+    .extra-small\@left\:75\% {
+        left: var(--rt-pr-75) !important;
+    }
+    
+    .extra-small\@left\:100\% {
+        left: var(--rt-pr-100) !important;
+    }
+    
+    .extra-small\@right { 
+        right: var(--rt-sz-0) !important;
+    }
+    
+    .extra-small\@right\:auto {
+        right: auto !important;
+    }
+    
+    .extra-small\@right\:25\% {
+        right: var(--rt-pr-25) !important;
+    }
+    
+    .extra-small\@right\:50\% {
+        right: var(--rt-pr-50) !important;   
+    }
+    
+    .extra-small\@right\:75\% {
+        right: var(--rt-pr-75) !important;
+    }
+    
+    .extra-small\@right\:100\% {
+        right: var(--rt-pr-100) !important;
     }
     
     .extra-small\@border {
@@ -1540,7 +1637,7 @@ i {
     }
 }
 
-@media (min-width: 600px) { /*TODO: Breakpoint small*/
+@media only screen and (min-width: 600px) { /*TODO: Breakpoint small*/
     .small\@width {
         width: var(--rt-sz-0) !important;
     }
@@ -1659,6 +1756,102 @@ i {
     
     .small\@height\:1000\px {
         height: 1000px !important;
+    }
+
+    .small\@top { 
+        top: var(--rt-sz-0) !important;
+    }
+    
+    .small\@top\:auto {
+        top: auto !important;
+    }
+    
+    .small\@top\:25\% {
+        left: var(--rt-pr-25) !important;
+    }
+    
+    .small\@top\:50\% {
+        top: var(--rt-pr-50) !important;   
+    }
+    
+    .small\@top\:75\% {
+        top: var(--rt-pr-75) !important;
+    }
+    
+    .small\@top\:100\% {
+        top: var(--rt-pr-100) !important;
+    }
+    
+    .small\@bottom {
+        bottom: var(--rt-sz-0) !important;
+    }
+    
+    .small\@bottom\:auto {
+        bottom: auto !important;
+    }
+    
+    .small\@bottom\:25\% {
+        bottom: var(--rt-pr-25) !important;
+    }
+    
+    .small\@bottom\:50\% {
+        bottom: var(--rt-pr-50) !important;   
+    }
+    
+    .small\@bottom\:75\% {
+        bottom: var(--rt-pr-75) !important;
+    }
+    
+    .small\@bottom\:100\% {
+        bottom: var(--rt-pr-100) !important;
+    }
+    
+    .small\@left { 
+        left: var(--rt-sz-0) !important;
+    }
+    
+    .small\@left\:auto {
+        left: auto !important;
+    }
+    
+    .small\@left\:25\% {
+        left: var(--rt-pr-25) !important;
+    }
+    
+    .small\@left\:50\% {
+        left: var(--rt-pr-50) !important;   
+    }
+    
+    .small\@left\:75\% {
+        left: var(--rt-pr-75) !important;
+    }
+    
+    .small\@left\:100\% {
+        left: var(--rt-pr-100) !important;
+    }
+    
+    .small\@right { 
+        right: var(--rt-sz-0) !important;
+    }
+    
+    .small\@right\:auto {
+        right: auto !important;
+    }
+    
+    .small\@right\:25\% {
+        right: var(--rt-pr-25) !important;
+    }
+    
+    .small\@right\:50\% {
+        right: var(--rt-pr-50) !important;   
+    }
+    
+    .small\@right\:75\% {
+        right: var(--rt-pr-75) !important;
+    }
+    
+    .small\@right\:100\% {
+        right: var(--rt-pr-100) !important;
     }
     
     .small\@border {
@@ -2233,7 +2426,7 @@ i {
     }
 }
 
-@media (min-width: 768px) { /*TODO: Breakpoint medium*/
+@media only screen and (min-width: 768px) { /*TODO: Breakpoint medium*/
     .medium\@width {
         width: var(--rt-sz-0) !important;
     }
@@ -2336,6 +2529,102 @@ i {
     
     .medium\@height\:1000\px {
         height: 1000px !important;
+    }
+
+    .medium\@top { 
+        top: var(--rt-sz-0) !important;
+    }
+    
+    .medium\@top\:auto {
+        top: auto !important;
+    }
+    
+    .medium\@top\:25\% {
+        left: var(--rt-pr-25) !important;
+    }
+    
+    .medium\@top\:50\% {
+        top: var(--rt-pr-50) !important;   
+    }
+    
+    .medium\@top\:75\% {
+        top: var(--rt-pr-75) !important;
+    }
+    
+    .medium\@top\:100\% {
+        top: var(--rt-pr-100) !important;
+    }
+    
+    .medium\@bottom { 
+        bottom: var(--rt-sz-0) !important;
+    }
+    
+    .medium\@bottom\:auto {
+        bottom: auto !important;
+    }
+    
+    .medium\@bottom\:25\% {
+        bottom: var(--rt-pr-25) !important;
+    }
+    
+    .medium\@bottom\:50\% {
+        bottom: var(--rt-pr-50) !important;   
+    }
+    
+    .medium\@bottom\:75\% {
+        bottom: var(--rt-pr-75) !important;
+    }
+    
+    .medium\@bottom\:100\% {
+        bottom: var(--rt-pr-100) !important;
+    }
+    
+    .medium\@left { 
+        left: var(--rt-sz-0) !important;
+    }
+    
+    .medium\@left\:auto {
+        left: auto !important;
+    }
+    
+    .medium\@left\:25\% {
+        left: var(--rt-pr-25) !important;
+    }
+    
+    .medium\@left\:50\% {
+        left: var(--rt-pr-50) !important;   
+    }
+    
+    .medium\@left\:75\% {
+        left: var(--rt-pr-75) !important;
+    }
+    
+    .medium\@left\:100\% {
+        left: var(--rt-pr-100) !important;
+    }
+    
+    .medium\@right { 
+        right: var(--rt-sz-0) !important;
+    }
+    
+    .medium\@right\:auto {
+        right: auto !important;
+    }
+    
+    .medium\@right\:25\% {
+        right: var(--rt-pr-25) !important;
+    }
+    
+    .medium\@right\:50\% {
+        right: var(--rt-pr-50) !important;   
+    }
+    
+    .medium\@right\:75\% {
+        right: var(--rt-pr-75) !important;
+    }
+    
+    .medium\@right\:100\% {
+        right: var(--rt-pr-100) !important;
     }
     
     .medium\@border {
@@ -2910,7 +3199,7 @@ i {
     }
 }
 
-@media (min-width: 992px) { /*TODO: Breakpoint large*/
+@media only screen and (min-width: 992px) { /*TODO: Breakpoint large*/
     .large\@width {
         width: var(--rt-sz-0) !important;
     }
@@ -3029,6 +3318,102 @@ i {
     
     .large\@height\:1000\px {
         height: 1000px !important;
+    }
+
+    .large\@top {
+        top: var(--rt-sz-0) !important;
+    }
+    
+    .large\@top\:auto {
+        top: auto !important;
+    }
+    
+    .large\@top\:25\% {
+        left: var(--rt-pr-25) !important;
+    }
+    
+    .large\@top\:50\% {
+        top: var(--rt-pr-50) !important;   
+    }
+    
+    .large\@top\:75\% {
+        top: var(--rt-pr-75) !important;
+    }
+    
+    .large\@top\:100\% {
+        top: var(--rt-pr-100) !important;
+    }
+    
+    .large\@bottom { 
+        bottom: var(--rt-sz-0) !important;
+    }
+    
+    .large\@bottom\:auto {
+        bottom: auto !important;
+    }
+    
+    .large\@bottom\:25\% {
+        bottom: var(--rt-pr-25) !important;
+    }
+    
+    .large\@bottom\:50\% {
+        bottom: var(--rt-pr-50) !important;   
+    }
+    
+    .large\@bottom\:75\% {
+        bottom: var(--rt-pr-75) !important;
+    }
+    
+    .large\@bottom\:100\% {
+        bottom: var(--rt-pr-100) !important;
+    }
+    
+    .large\@left { 
+        left: var(--rt-sz-0) !important;
+    }
+    
+    .large\@left\:auto {
+        left: auto !important;
+    }
+    
+    .large\@left\:25\% {
+        left: var(--rt-pr-25) !important;
+    }
+    
+    .large\@left\:50\% {
+        left: var(--rt-pr-50) !important;   
+    }
+    
+    .large\@left\:75\% {
+        left: var(--rt-pr-75) !important;
+    }
+    
+    .large\@left\:100\% {
+        left: var(--rt-pr-100) !important;
+    }
+    
+    .large\@right { 
+        right: var(--rt-sz-0) !important;
+    }
+    
+    .large\@right\:auto {
+        right: auto !important;
+    }
+    
+    .large\@right\:25\% {
+        right: var(--rt-pr-25) !important;
+    }
+    
+    .large\@right\:50\% {
+        right: var(--rt-pr-50) !important;   
+    }
+    
+    .large\@right\:75\% {
+        right: var(--rt-pr-75) !important;
+    }
+    
+    .large\@right\:100\% {
+        right: var(--rt-pr-100) !important;
     }
     
     .large\@border {
@@ -3603,7 +3988,7 @@ i {
     }
 }
 
-@media (min-width: 1200px) { /*TODO: Breakpoint extra-large*/
+@media only screen and (min-width: 1200px) { /*TODO: Breakpoint extra-large*/
     .extra-large\@width {
         width: var(--rt-sz-0) !important;
     }
@@ -3722,6 +4107,102 @@ i {
     
     .extra-large\@height\:1000\px {
         height: 1000px !important;
+    }
+
+    .extra-large\@top { 
+        top: var(--rt-sz-0) !important;
+    }
+    
+    .extra-large\@top\:auto {
+        top: auto !important;
+    }
+    
+    .extra-large\@top\:25\% {
+        left: var(--rt-pr-25) !important;
+    }
+    
+    .extra-large\@top\:50\% {
+        top: var(--rt-pr-50) !important;   
+    }
+    
+    .extra-large\@top\:75\% {
+        top: var(--rt-pr-75) !important;
+    }
+    
+    .extra-large\@top\:100\% {
+        top: var(--rt-pr-100) !important;
+    }
+    
+    .extra-large\@bottom { 
+        bottom: var(--rt-sz-0) !important;
+    }
+    
+    .extra-large\@bottom\:auto {
+        bottom: auto !important;
+    }
+    
+    .extra-large\@bottom\:25\% {
+        bottom: var(--rt-pr-25) !important;
+    }
+    
+    .extra-large\@bottom\:50\% {
+        bottom: var(--rt-pr-50) !important;   
+    }
+    
+    .extra-large\@bottom\:75\% {
+        bottom: var(--rt-pr-75) !important;
+    }
+    
+    .extra-large\@bottom\:100\% {
+        bottom: var(--rt-pr-100) !important;
+    }
+    
+    .extra-large\@left { 
+        left: var(--rt-sz-0) !important;
+    }
+    
+    .extra-large\@left\:auto {
+        left: auto !important;
+    }
+    
+    .extra-large\@left\:25\% {
+        left: var(--rt-pr-25) !important;
+    }
+    
+    .extra-large\@left\:50\% {
+        left: var(--rt-pr-50) !important;   
+    }
+    
+    .extra-large\@left\:75\% {
+        left: var(--rt-pr-75) !important;
+    }
+    
+    .extra-large\@left\:100\% {
+        left: var(--rt-pr-100) !important;
+    }
+    
+    .extra-large\@right { 
+        right: var(--rt-sz-0) !important;
+    }
+    
+    .extra-large\@right\:auto {
+        right: auto !important;
+    }
+    
+    .extra-large\@right\:25\% {
+        right: var(--rt-pr-25) !important;
+    }
+    
+    .extra-large\@right\:50\% {
+        right: var(--rt-pr-50) !important;   
+    }
+    
+    .extra-large\@right\:75\% {
+        right: var(--rt-pr-75) !important;
+    }
+    
+    .extra-large\@right\:100\% {
+        right: var(--rt-pr-100) !important;
     }
     
     .extra-large\@border {
@@ -4296,7 +4777,7 @@ i {
     }
 }
 
-@media (min-width: 1820px) {
+@media only screen and (min-width: 1820px) {
 	.app .container\:flex,
     .app .container\:grid {
         max-width: var(--rt-bp-grant) !important;
@@ -4307,6 +4788,9 @@ i {
     .theme {
         background-color: var(--rt-bg-white);
     }
+	/* body {
+		background-color: var(--rt-bg-white);
+	} */
 
 	input[type="text"], 
 	input[type="password"], 
@@ -4369,12 +4853,23 @@ i {
 		background-color: var(--rt-bg-grey);
 		border-radius: 2em;
 	}
+
+    .scroll\:auto::-webkit-scrollbar-thumb:hover, 
+	.scroll\:x-auto::-webkit-scrollbar-thumb:hover, 
+	.scroll\:y-auto::-webkit-scrollbar-thumb:hover,
+	.scroll\:x-visible::-webkit-scrollbar-thumb:hover, 
+	.scroll\:y-visible::-webkit-scrollbar-thumb:hover {
+        background-color: var(--rt-bg-grey-dark);
+    }
 }
 
 @media (prefers-color-scheme: dark) { /*TODO: Custom in dark mode*/
     .theme {
         background-color: var(--rt-bg-grey-dark);
     }
+	/* body {
+        background-color: var(--rt-bg-grey-dark);
+	} */
 
 	input[type="text"], 
 	input[type="password"], 
@@ -4447,10 +4942,20 @@ i {
 	.scroll\:y-auto::-webkit-scrollbar-thumb,
 	.scroll\:x-visible::-webkit-scrollbar-thumb, 
 	.scroll\:y-visible::-webkit-scrollbar-thumb {
-		background-color: var(--rt-bg-grey-light);
+		background-color: var(--rt-bg-grey);
 		border-radius: 2em;
 	}
+
+    .scroll\:auto::-webkit-scrollbar-thumb:hover, 
+	.scroll\:x-auto::-webkit-scrollbar-thumb:hover, 
+	.scroll\:y-auto::-webkit-scrollbar-thumb:hover,
+	.scroll\:x-visible::-webkit-scrollbar-thumb:hover, 
+	.scroll\:y-visible::-webkit-scrollbar-thumb:hover {
+        background-color: var(--rt-bg-grey-light);
+    }
 }
+
+@media (prefers-reduced-motion: reduce) { } /*TODO: Reduce motion produced with user in device*/
 
 @media print { /*TODO: Configuration to print screen paper*/
 	@page {
@@ -4743,6 +5248,102 @@ i {
 
 .height\:1000\px {
     height: 1000px !important;
+}
+
+.top { /*TODO: Size top the content box element*/
+    top: var(--rt-sz-0) !important;
+}
+
+.top\:auto {
+    top: auto !important;
+}
+
+.top\:25\% {
+    left: var(--rt-pr-25) !important;
+}
+
+.top\:50\% {
+    top: var(--rt-pr-50) !important;   
+}
+
+.top\:75\% {
+    top: var(--rt-pr-75) !important;
+}
+
+.top\:100\% {
+    top: var(--rt-pr-100) !important;
+}
+
+.bottom { /*TODO: Size bottom the content box element*/
+    bottom: var(--rt-sz-0) !important;
+}
+
+.bottom\:auto {
+    bottom: auto !important;
+}
+
+.bottom\:25\% {
+    bottom: var(--rt-pr-25) !important;
+}
+
+.bottom\:50\% {
+    bottom: var(--rt-pr-50) !important;   
+}
+
+.bottom\:75\% {
+    bottom: var(--rt-pr-75) !important;
+}
+
+.bottom\:100\% {
+    bottom: var(--rt-pr-100) !important;
+}
+
+.left { /*TODO: Size Left the content box element*/
+    left: var(--rt-sz-0) !important;
+}
+
+.left\:auto {
+    left: auto !important;
+}
+
+.left\:25\% {
+    left: var(--rt-pr-25) !important;
+}
+
+.left\:50\% {
+    left: var(--rt-pr-50) !important;   
+}
+
+.left\:75\% {
+    left: var(--rt-pr-75) !important;
+}
+
+.left\:100\% {
+    left: var(--rt-pr-100) !important;
+}
+
+.right { /*TODO: Size right the content box element*/
+    right: var(--rt-sz-0) !important;
+}
+
+.right\:auto {
+    right: auto !important;
+}
+
+.right\:25\% {
+    right: var(--rt-pr-25) !important;
+}
+
+.right\:50\% {
+    right: var(--rt-pr-50) !important;   
+}
+
+.right\:75\% {
+    right: var(--rt-pr-75) !important;
+}
+
+.right\:100\% {
+    right: var(--rt-pr-100) !important;
 }
 
 .border { /*TODO: Border element delimited in box*/
@@ -5313,6 +5914,7 @@ i {
 .flex\:row .flex\:cols-11, 
 .flex\:row .flex\:cols-12 {
     flex: var(--rt-sz-0) var(--rt-sz-0) auto;
+    /* text-align: center; */
 } 
 
 .flex\:row .flex\:cols-1 {
@@ -5623,10 +6225,13 @@ i {
 }
 
 .button { /*TODO: Button's property's*/
+    /* display: var(--rt-ds-inline-block);
+    position: var(--rt-ps-relative); */
     width: auto;
     border-color: var(--rt-bg-none);
     border-style:solid;
     border-radius: 0.45em;
+    /* padding: var(--rt-sz-1); */
     margin: auto;
     padding: var(--rt-sz-2) 0.10em; 
     font-weight: 400;
@@ -5639,6 +6244,8 @@ i {
 }
 
 .text { /*TODO: Text field's property's*/
+    /* display: var(--rt-ds-block); */
+    /* width: var(--rt-pr-100); */
     width: auto;
     border: 1.5px solid rgba(10, 10, 10, 0.45);
     border-radius: var(--rt-sz-2);
@@ -5651,6 +6258,8 @@ i {
 }
     
 .select { /*TODO: Combo's property's*/
+    /* display: var(--rt-ds-block); */
+    /* width: var(--rt-pr-100); */
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
     background-position: right center !important;
     background-size: 1.6em;
@@ -5768,6 +6377,7 @@ i {
 
 .list\:hover .list\:item:hover, 
 .list\:hover-scale .list\:item:hover {
+    /* box-shadow: var(--rt-bs-hover); */
     background-color: var(--rt-bg-blue);
     color: var(--rt-bg-white);
 }
@@ -5927,16 +6537,30 @@ i {
 .scroll\:auto::-webkit-scrollbar,
 .scroll\:y-auto::-webkit-scrollbar,
 .scroll\:y-visible::-webkit-scrollbar {
+    /* display: var(--rt-ds-none); */
     width: var(--rt-sz-2);
     height: var(--rt-pr-100);
 }
 
+/* .scroll\:auto:hover::-webkit-scrollbar,
+.scroll\:y-auto:hover::-webkit-scrollbar,
+.scroll\:y-visible:hover::-webkit-scrollbar {
+    display: var(--rt-ds-inline-block);
+} */
+
 .scroll\:auto::-webkit-scrollbar,
 .scroll\:x-auto::-webkit-scrollbar,
 .scroll\:x-visible::-webkit-scrollbar {
+    /* display: var(--rt-ds-none); */
     width: var(--rt-pr-100);
     height: var(--rt-sz-2);
 }
+
+/* .scroll\:auto:hover:-webkit-scrollbar,
+.scroll\:x-auto:hover::-webkit-scrollbar,
+.scroll\:x-visible:hover::-webkit-scrollbar {
+    display: var(--rt-ds-block);
+} */
 
 .scroll\:auto::-webkit-scrollbar-track-piece:start,
 .scroll\:visible::-webkit-scrollbar-track-piece:start,
