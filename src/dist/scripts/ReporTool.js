@@ -1,8 +1,7 @@
 //----------------------------------------------------------------------------------------------------//
 //                                      Name : ReporTools                                             //
-//                                      Version : 1.5.2                                               //
+//                                      Version : 1.5.7                                               //
 //                                      Author : x3ploi7x                                             //
-//                                      Github : https://github.com/x3xploi7x                         //
 //----------------------------------------------------------------------------------------------------//
 !(function(global, factory){
     'use strict';
@@ -61,8 +60,8 @@
             // },
 
             /**
-            * @param {Function} -> addClass 
-            * @param {Description} -> Add Class In Element's Refered 
+            * @param {Function} -> removeClass 
+            * @param {Description} -> Remove Class In Element's Refered 
             */
             // removeClass: function(selector, classes) {
             //     var temp = propertys.doc.querySelectorAll(selector);
@@ -71,40 +70,21 @@
             //         temp[i].classList.remove(classes);
             //     }
             // },
-
             /**
             * @param {Function} -> toggleClass 
-            * @param {Description} -> Change Classes To Most Important First 
+            * @param {Description} -> Toggle CLass In Element's Refered 
             */
-            // toggleClass: function(selector, props={remove, add}) {
-            //     var element = propertys.doc.querySelector(selector);
-            //     var aux = [];
-                
-            //     for(let i = 0; i <= Object.keys(props).length - 1; i++) {
-            //         aux.push(Object.values(props)[i]);
+            // toggleClass: function(element, props={add, remove}) {
+            //     var parent = propertys.doc.querySelector(element);
+
+            //     if(!parent.classList.contains(Object.values(props[0]))) {
+            //         parent.classList.contains(Object.values(props[0]));
             //     }
 
-            //     element.classList.remove(aux[0]);
-            //     element.classList.add(aux[1]);
-            // },
-
-            /**
-            * @param {Function} -> DestroyElement 
-            * @param {Description} -> Destroy Element With Not Used In DOM 
-            */
-            // empty: function (selector) {
-            //     const parent = propertys.doc.querySelector(selector);
-            //     var childs;
-
-            //     if(parent.childNodes.length > 0) {
-            //         for(let i = 0; i <= parent.childNodes.length; i++) {
-            //             childs = parent.childNodes[i];
-            //         }
-
-            //         parent.remove(childs);
+            //     if(parent.classList.contains(Object.values(props[1]))) {
+            //         parent.classList.contains(Object.values(props[1]));
             //     }
             // },
-            
             /**
             * @param {Function} -> createElement 
             * @param {Description} -> Create Element If Not Exist's And Append In Parent Selector 
@@ -161,7 +141,7 @@
                     parent: '#container',
                     target: 'div',
                     id: 'container__modal',
-                    classes: 'group:mirror'
+                    classes: 'container:mirror'
                 });
 
                 const   parent = propertys.doc.getElementById('container__modal');
@@ -169,15 +149,15 @@
                         parent.innerHTML = `
                             <div id="modal__popup" class="modal:alert background:white font:family-lucida">
                                 <div class="content:title">
-                                    <h1 id="letter__header" class="letter:medium color:grey-dark font:weight-bold font:transform-upper"></h1>
+                                    <h1 id="letter__header" class="letter color:grey-dark font:size-100% font:weight-bold font:transform-upper"></h1>
                                 </div>
                                 <div class="divider:x">
                                 </div>
                                 <div class="content:message padding:100%">
-                                    <p id="letter__message" class="color:grey font:weight-bold"></p>
+                                    <p id="letter__message" class="color:grey font:size-75% font:weight-bold"></p>
                                 </div>
                                 <div class="content:options">
-                                    <button id="button__notify" class="button:small background:blue color:white" type="button" onclick="return false;">Continuar</button>
+                                    <button id="button__notify" class="button background:blue hover:blue-dark color:white" type="button" onclick="return false;">Continuar</button>
                                 </div>
                             </div>
                         `;
@@ -189,7 +169,8 @@
         
                 parent.querySelector('#button__notify').addEventListener('click', function(){
                     parent.removeChild(parent.querySelector('#modal__popup')); // Change With ToggleClass Function
-                    parent.classList.remove('display:block');
+                    //parent.classList.remove('display:block');
+                    parent.remove('body');
                 }, false);
             },
             
@@ -197,33 +178,37 @@
             * @param {Function} -> showForm 
             * @param {Description} -> Deploy & Append Element Data Refered In Pop-Up 
             */
-            showForm: function(title, props={data}) {
+            showForm: function(title, data) {
                 // View State Modal
                 this.onCreateElement({
                     parent: '#container',
                     target: 'div',
                     id: 'container__modal',
-                    classes: 'group:mirror'
+                    classes: 'container:mirror'
                 });
 
                 const   parent = propertys.doc.getElementById('container__modal');
                         parent.classList.add('display:block');
                         parent.innerHTML = `
                             <div id="modal__container" class="modal:form background:white font:family-lucida">
+                                <div id="div__header" class="content:header padding:y-50% direction:right">
+                                    <button id="button__close" class="icon icon:close-dark width:15px height:15px background:grey-light hover:grey border margin:x-25% round:100%" type="button"></button>
+                                </div>
                                 <div id="div__main" class="content:main padding:y-50% direction:center scroll:y-auto">
-                                    <span id="text__reference" class="letter:small color:grey-dark font:weight-bold"></span>
+                                    <span id="text__reference" class="letter color:grey-dark font:weight-bold"></span>
                                 </div>
                                 <div id="div__footer" class="content:footer direction:center">
-                                    <button id="button__notify" class="button:small margin:x-75% background:red color:white" type="button">Continuar</button>
+                                    <button id="button__notify" class="button margin:x-75% background:red hover:red-dark color:white" type="button">Continuar</button>
                                 </div>
                             </div>
                         `;
 
                 parent.querySelector("#text__reference").innerText = title;
-                parent.querySelector("#div__main").innerHTML += props.data;
-                parent.querySelector("#button__notify").addEventListener("click", function(){
+                parent.querySelector("#div__main").innerHTML += data;
+                parent.querySelector("#button__close, #button__notify").addEventListener("click", function(){
                     parent.removeChild(parent.querySelector('#modal__container')); // Change With ToggleClass Function
-                    parent.classList.remove('display:block');
+                    // parent.classList.remove('display:block');
+                    parent.remove('body');
                 }, false);
             },
             
@@ -237,7 +222,7 @@
                     parent: '#container',
                     target: 'div',
                     id: 'container__modal',
-                    classes: 'group:mirror'
+                    classes: 'container:mirror'
                 });
 
                 const   parent = propertys.doc.getElementById("container__modal");
@@ -245,7 +230,7 @@
                         parent.innerHTML = `
                             <div id="modal__notify" class="modal:notify font:family-monaco scroll:y-auto">
                                 <div class="content:message padding:50%">
-                                    <span id="text__message" class="letter:small color:grey-dark direction:start font:weight-bold"></span>
+                                    <span id="text__message" class="letter color:grey-dark direction:start font:weight-bold"></span>
                                 </div>
                             </div>
                         `;
@@ -254,7 +239,8 @@
                 
                 setTimeout(function() {
                     parent.removeChild(parent.querySelector('#modal__notify')); // Change With ToggleClass Function
-                    parent.classList.remove('display:block');
+                    //parent.classList.remove('display:block');
+                    parent.remove('body');
                 }, 4500); // Static Time Not Change
             },
             
@@ -268,7 +254,7 @@
                     parent: '#container',
                     target: 'div',
                     id: 'container__modal',
-                    classes: 'group:mirror'
+                    classes: 'container:mirror'
                 });
 
                 const   parent = propertys.doc.getElementById('container__modal');
@@ -302,7 +288,8 @@
                 function async() { // Suplied with promise -> async function
                     setTimeout(function() {
                         parent.classList.remove('display:block');
-                        parent.removeChild(parent.querySelector('#modal__spinner'));
+                        // parent.removeChild(parent.querySelector('#modal__spinner'));
+                        parent.remove('body');
                     }, duration);
                 }
 
@@ -314,20 +301,7 @@
             * @param {Description} -> Get DateTime [day's, month's, year's] To Charge In Element's 
             */
             getDate: function() {
-                const name = [
-                    'Enero',
-                    'Febrero',
-                    'Marzo',
-                    'Abril',
-                    'May',
-                    'Junio',
-                    'Julio',
-                    'Agosto',
-                    'Septiembre',
-                    'Octubre',
-                    'Noviembre',
-                    'Diciembre'
-                ];
+                const name = ['Enero', 'Febrero', 'Marzo', 'Abril', 'May', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 
                 var date = new Date();
                 var day = date.getDate() < 10 ? "0" + date.getDay() + "" : "" + date.getDate();
@@ -368,9 +342,7 @@
                     // Generate binary in document
                     var blob = new Blob(
                         ['\ufeff', temporal],
-                        {
-                            type: `${schema};${encode + separator}`
-                        }
+                        { type: `${schema};${encode + separator}` }
                     );
 
                     propertys.win.navigator.msSaveOrOpenBlob(blob, direction) && blob.remove(propertys.doc.body);
