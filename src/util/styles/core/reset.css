@@ -47,7 +47,7 @@ span,
 p,
 b,
 strong {
-    font-size: var(--rt-sz-4);
+    /* font-size: var(--rt-sz-4); */
     font-weight: normal;
 }
 
