@@ -49,3 +49,12 @@ ________________________________________________________________________________
 
 **Updates 20220211**
 - Best performances & don't write code in develpment
+
+**Updates 20220404**
+- Add hoverable change's color's with element's
+
+**Updates 20220413**
+- New icon's to svg
+
+**Updates 20220419**
+- Add transition's to element's
