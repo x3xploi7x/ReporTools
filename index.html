@@ -8,12 +8,12 @@
 	    <meta name="keywords" content="reports, pages, tools, framework, ui/ux">
 	    <title>ReporTools - Home</title>
 		<!---------------------- Development ------------------------>
-	    <link type="text/css" rel="stylesheet" href="src/util/styles/index.css">
+	    <link type="text/css" rel="stylesheet" href="src/dist/styles/ReporTools.css">
 		<!---------------------- Production ------------------------>
 		<!-- <link type="text/css" rel="stylesheet" href="src/dist/css/ReporTools.min.css"> -->
 	</head>
-	<body class="theme scroll:y-auto">
-		<div class="container:flex font:family-monaco">
+	<body class="theme">
+		<div id="container" class="container:flex font:family-monaco scroll:y-auto">
 			<!---------------------- Header ------------------------>
 			<header class="flex:header background:purple padding:y-50%">
 				<div class="flex:row">
@@ -29,12 +29,42 @@
 						<input class="text text:hover width:100%" type="text" placeholder="Search Keyword" />
 					</div>
 					<div class="extra-small@flex:cols-3 medium@flex:cols-2 direction:center">
-						<button class="button button:hover background:purple-light color:white width:75%" type="button">Continue</button>
+						<button id="button__search" class="button button:hover background:purple-light color:white width:75%" type="button">Continue</button>
 					</div>
 				</div>
 			</header>
 			<!---------------------- Header ------------------------>
 			<!---------------------- Hero ------------------------>
+			<nav class="flex:hero display background:purple width:25%">
+				<!---------------------- Modify ---------------------->
+				<ul class="list:landscape">
+					<li class="list:item">
+						<h1 class="nav:header">Home</h1>
+						<div class="nav:main">
+							<span class="display:block">Test 1</span>
+							<span class="display:block">Test 2</span>
+							<span class="display:block">Test 3</span>
+						</div>
+					</li>
+					<li class="list:item">
+						<h1 class="nav:header">About</h1>
+						<div class="nav:main">
+							<span class="display:block">Test 1</span>
+							<span class="display:block">Test 2</span>
+							<span class="display:block">Test 3</span>
+						</div>
+					</li>
+					<li class="list:item">
+						<h1 class="nav:header">Support</h1>
+						<div class="nav:main">
+							<span class="display:block">Test 1</span>
+							<span class="display:block">Test 2</span>
+							<span class="display:block">Test 3</span>
+						</div>
+					</li>
+				</ul>
+				<!---------------------- Modify ---------------------->
+			</nav>
 			<main class="flex:hero margin:y-100%">
 				<div class="flex:row align:items-middle">	
 					<div class="flex:cols-4">
@@ -42,8 +72,8 @@
 							<div class="cover:content">
 								<div class="container:flex padding:y-25%">
 									<div class="flex:row">
-										<div class="extra-small@flex:cols-4 medium@flex:cols-2">
-											<img class="image width:60px height:60px margin:25% fit:cover" src="./src/util/assets/icons/dashboard/profile.png" alt="Not Found" />
+										<div class="extra-small@flex:cols-4 medium@flex:cols-2 direction:center">
+											<img class="image width:30px height:60px padding:y-50% fit:cover" src="./src/util/assets/icons/dashboard/profile.png" alt="Not Found" />
 										</div>
 										<div class="extra-small@flex:cols-8 medium@flex:cols-10">
 											<ul class="list:portrait">
@@ -99,7 +129,7 @@
 								<input class="text extra-small@width:auto medium@width:100%" type="text" placeholder="Last Name" />
 								<input class="text extra-small@width:auto medium@width:100% margin:top-25%" type="number" placeholder="phone" />
 							</div>
-							<div class="flex:cols-12 margin:bottom-50%">
+							<div class="flex:cols-12 margin:bottom-50% direction:center">
 								<textarea class="text width:100%" placeholder="Enter your comments. . ."></textarea>
 							</div>
 							<div class="flex:cols-12 direction:center">
@@ -112,6 +142,25 @@
 					<div class="flex:cols-12">
 						<hr class="divider:x" />
 					</div>
+					<div class="flex:cols-12">
+						<ul class="list:lanscape list:hover display:flex justify:content-center">
+							<li class="list:item width:25% direction:center">
+								<a>
+									<img class="image width:30px height:30px round:3 fit:contain" src="src/util/assets/icons/dashboard/facebook.png" alt="Not Found" />
+								</a>
+							</li>
+							<li class="list:item width:25% direction:center">
+								<a>
+									<img class="image width:30px height:30px round:3 fit:contain" src="src/util/assets/icons/dashboard/twitter.png" alt="Not Found" />
+								</a>
+							</li>
+							<li class="list:item width:25% direction:center">
+								<a>
+									<img class="image width:30px height:30px round:3 fit:contain" src="src/util/assets/icons/dashboard/instagram.png" alt="Not Found" />
+								</a>
+							</li>
+						</ul>
+					</div>
 					<div class="flex:cols-6 direction:center">
 						<p class="letter color:white">Copyright 2022 - ReporTools As Software Solution's.</p>
 					</div>
@@ -119,6 +168,8 @@
 			</footer>
 			<!---------------------- Footer ------------------------>
 		</div>
+		<!---------------------- Production ------------------------>
+		<script type="text/javascript" src="src/dist/scripts/ReporTool.js"></script>
 		<script type="text/javascript">
 			window.addEventListener('DOMContentLoaded', function() {
 				const TABLE = document.getElementById('tbody__data');
@@ -138,6 +189,15 @@
 				
 				TABLE.innerHTML += data;
 			});
+			document.addEventListener('click', () => {
+				_.showForm('', 
+					`<div class="display:flex width:100% height:100% justify:content-center align:items-middle">
+					<label class="letter width:100%">Ingrese el periodo a generar
+						<input id="txt_periodo" class="text text:hover width:75%" type="month" min="2015-01" max="2022-12" onchange="fn_obtenPeriodo(this)" />
+					</label>
+				</div>`
+				);
+			}, false);
 		</script>
 	</body>
 </html>
