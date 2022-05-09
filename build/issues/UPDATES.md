@@ -58,3 +58,11 @@ ________________________________________________________________________________
 
 **Updates 20220419**
 - Add transition's to element's
+
+**Updates 20220505**
+- Modify structure in icon's
+- Add new rule, active/hover custom property's
+- Text underline/overline decoration
+
+**Updates 20220509**
+- Add gutter's (space in columns - rows) general (divide flex-grid)
