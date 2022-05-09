@@ -1,7 +1,7 @@
 :root { /*!Only modify with Sass or Less!*/
 	--rt-fn-arial: 'Arial';
 
-	--rt-fn-georigia: 'Georigia', serif;
+	--rt-fn-georgia: 'Georgia', serif;
 
 	--rt-fn-verdana: 'Verdana', sans-serif;
 	--rt-fn-lucida: 'Lucida Sans', sans-serif;
@@ -15,6 +15,7 @@
 
 :root { /*!Only modify with Sass or Less!*/
     --rt-bg-none: transparent;
+    --rt-bg-bordered: rgba(10, 10, 10, 0.45);
 	--rt-bg-hover-light: rgba(150, 150, 150, 0.25);
 	--rt-bg-hover-dark: rgba(150, 150, 150, 0.75);
 
@@ -29,8 +30,8 @@
 	--rt-bg-red-light: #f83e4b;
 	--rt-bg-red-dark: #9d0b28;
 	
-	--rt-bg-green: #347474;
-	--rt-bg-green-light: #4c9173;
+	--rt-bg-green: #2c5d63;
+	--rt-bg-green-light: #a2c11c;
 	--rt-bg-green-dark: #283739;
 	
 	--rt-bg-blue: #007cb9;
@@ -91,6 +92,8 @@
 	--rt-a-loader: loader;
 	--rt-a-fadeIn: fadeIn;
 	--rt-a-fadeOut: fadeOut;
+    --rt-a-navVisible: navVisible;
+    --rt-a-navHidden: navHidden;
 }
 
 :root { /*!Only modify with Sass or Less!*/
@@ -144,4 +147,8 @@
 	--rt-pr-50: 50%;
 	--rt-pr-75: 75%;
 	--rt-pr-100: 100%;
+
+    --rt-pt-10: 10pt;
+    --rt-pt-20: 20pt;
+    --rt-pt-30: 30pt;
 }
