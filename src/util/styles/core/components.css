@@ -6,20 +6,40 @@
     width: auto !important;
 }
 
+.width\:inherit {
+    width: inherit !important;
+}
+
+.width\:1 {
+    width: var(--rt-sz-1) !important;
+}
+
+.width\:2 {
+    width: var(--rt-sz-2) !important;
+}
+
+.width\:3 {
+    width: var(--rt-sz-3) !important;
+}
+
+.width\:4 {
+    width: var(--rt-sz-4) !important;
+}
+
 .width\:25\% {
-    width: calc(var(--rt-pr-25) - 2.5px) !important;
+    width: var(--rt-pr-25) !important;
 }
 
 .width\:50\% {
-    width: calc(var(--rt-pr-50) - 2.5px) !important;   
+    width: var(--rt-pr-50) !important;   
 }
 
 .width\:75\% {
-    width: calc(var(--rt-pr-75) - 5px) !important;
+    width: var(--rt-pr-75) !important;
 }
 
 .width\:100\% {
-    width: calc(var(--rt-pr-100) - 5px) !important;
+    width: var(--rt-pr-100) !important;
 }
 
 .width\:15\px {
@@ -66,20 +86,38 @@
     height: auto !important;
 }
 
+.height\:inherit {
+    height: inherit !important;
+}
+
+.height\:1 {
+    height: var(--rt-sz-1) !important;
+}
+
+.height\:2 {
+    height: var(--rt-sz-2) !important;
+}
+.height\:3 {
+    height: var(--rt-sz-3) !important;
+}
+.height\:4 {
+    height: var(--rt-sz-4) !important;
+}
+
 .height\:25\% {
-    height: calc(var(--rt-pr-25) - 1px) !important;
+    height: var(--rt-pr-25) !important;
 }
 
 .height\:50\% {
-    height: calc(var(--rt-pr-50) - 1px) !important;   
+    height: var(--rt-pr-50) !important;   
 }
 
 .height\:75\% {
-    height: calc(var(--rt-pr-75) - 2px) !important;
+    height: var(--rt-pr-75) !important;
 }
 
 .height\:100\% {
-    height: calc(var(--rt-pr-100) - 2px) !important;
+    height: var(--rt-pr-100) !important;
 }
 
 .height\:15\px {
@@ -127,7 +165,7 @@
 }
 
 .top\:25\% {
-    left: var(--rt-pr-25) !important;
+    top: var(--rt-pr-25) !important;
 }
 
 .top\:50\% {
@@ -140,6 +178,22 @@
 
 .top\:100\% {
     top: var(--rt-pr-100) !important;
+}
+
+.top\:\-25\% {
+    top: calc(var(--rt-pr-25) * 1) !important;
+}
+
+.top\:\-50\% {
+    top: calc(var(--rt-pr-50) * 1) !important;   
+}
+
+.top\:\-75\% {
+    top: calc(var(--rt-pr-75) * 1) !important;
+}
+
+.top\:\-100\% {
+    top: calc(var(--rt-pr-100) * 1) !important;
 }
 
 .bottom { /*TODO: Size bottom the content box element*/
@@ -166,6 +220,22 @@
     bottom: var(--rt-pr-100) !important;
 }
 
+.bottom\:\-25\% {
+    bottom: calc(var(--rt-pr-25) * 1) !important;
+}
+
+.bottom\:\-50\% {
+    bottom: calc(var(--rt-pr-50) * 1) !important;   
+}
+
+.bottom\:\-75\% {
+    bottom: calc(var(--rt-pr-75) * 1) !important;
+}
+
+.bottom\:\-100\% {
+    bottom: calc(var(--rt-pr-100) * 1) !important;
+}
+
 .left { /*TODO: Size Left the content box element*/
     left: var(--rt-sz-0) !important;
 }
@@ -190,12 +260,44 @@
     left: var(--rt-pr-100) !important;
 }
 
+.left\:\-25\% {
+    left: calc(var(--rt-pr-25) * -1) !important;
+}
+
+.left\:\-50\% {
+    left: calc(var(--rt-pr-50) * -1) !important;   
+}
+
+.left\:\-75\% {
+    left: calc(var(--rt-pr-75) * -1) !important;
+}
+
+.left\:\-100\% {
+    left: calc(var(--rt-pr-100) * -1) !important;
+}
+
 .right { /*TODO: Size right the content box element*/
     right: var(--rt-sz-0) !important;
 }
 
 .right\:auto {
     right: auto !important;
+}
+
+.right\:\-25\% {
+    right: calc(var(--rt-pr-25) * -1) !important;
+}
+
+.right\:\-50\% {
+    right: calc(var(--rt-pr-50) * -1) !important;   
+}
+
+.right\:\-75\% {
+    right: calc(var(--rt-pr-75) * -1) !important;
+}
+
+.right\:\-100\% {
+    right: calc(var(--rt-pr-100) * -1) !important;
 }
 
 .right\:25\% {
@@ -219,422 +321,806 @@
 }
 
 .border\:1 {
-    border: solid var(--rt-sz-1) !important;
+    border: solid var(--rt-sz-1);
 }
 
 .border\:2 {
-    border: solid var(--rt-sz-2) !important;
+    border: solid var(--rt-sz-2);
 }
 
 .border\:3 {
-    border: solid var(--rt-sz-3) !important;
+    border: solid var(--rt-sz-3);
+}
+
+.border\:4 {
+    border: solid var(--rt-sz-4);
 }
 
 .border\:left-1 {
-    border-left: solid var(--rt-sz-1) !important;
+    border-left: solid var(--rt-sz-1);
 }
 
 .border\:left-2 {
-    border-left: solid var(--rt-sz-2) !important;
+    border-left: solid var(--rt-sz-2);
 }
 
 .border\:left-3 {
-    border-left: solid var(--rt-sz-3) !important;
+    border-left: solid var(--rt-sz-3);
+}
+
+.border\:left-4 {
+    border-left: solid var(--rt-sz-4);
 }
 
 .border\:right-1 {
-    border-right: solid var(--rt-sz-1) !important;
+    border-right: solid var(--rt-sz-1);
 }
 
 .border\:right-2 {
-    border-right: solid var(--rt-sz-2) !important;
+    border-right: solid var(--rt-sz-2);
 }
 
 .border\:right-3 {
-    border-right: solid var(--rt-sz-3) !important;
+    border-right: solid var(--rt-sz-3);
+}
+
+.border\:right-4 {
+    border-right: solid var(--rt-sz-4);
 }
 
 .border\:top-1 {
-    border-top: solid var(--rt-sz-1) !important;
+    border-top: solid var(--rt-sz-1)
 }
 
 .border\:top-2 {
-    border-top: solid var(--rt-sz-2) !important;
+    border-top: solid var(--rt-sz-2);
 }
 
 .border\:top-3 {
-    border-top: solid var(--rt-sz-3) !important;
+    border-top: solid var(--rt-sz-3);
+}
+
+.border\:top-4 {
+    border-top: solid var(--rt-sz-4);
 }
 
 .border\:bottom-1 {
-    border-bottom: solid var(--rt-sz-1) !important;
+    border-bottom: solid var(--rt-sz-1);
 }
 
 .border\:bottom-2 {
-    border-bottom: solid var(--rt-sz-2) !important;
+    border-bottom: solid var(--rt-sz-2);
 }
 
 .border\:bottom-3 {
-    border-bottom: solid var(--rt-sz-3) !important;
+    border-bottom: solid var(--rt-sz-3);
 }
 
-.margin { /*TODO: Margin element in box*/
+.border\:bottom-4 {
+    border-bottom: solid var(--rt-sz-4);
+}
+
+.margin,
+.hover\@margin:hover { /*TODO: Margin element in box*/
     margin: var(--rt-sz-0) !important;
 }
 
-.margin\:auto {
+.margin\:auto,
+.hover\@margin\:auto:hover {
     margin: auto !important;
 }
 
-.margin\:25\% {
+.margin\:1,
+.hover\@margin\:1:hover {
     margin: var(--rt-sz-1) !important;
 }
 
-.margin\:50\% {
+.margin\:2,
+.hover\@margin\:2:hover {
     margin: var(--rt-sz-2) !important;
 }
 
-.margin\:75\% {
+.margin\:3,
+.hover\@margin\:3:hover {
     margin: var(--rt-sz-3) !important;
 }
 
-.margin\:100\% {
+.margin\:4,
+.hover\@margin\:4:hover {
     margin: var(--rt-sz-4) !important;
 }
 
-.margin\:x {
+.margin\:25\%,
+.hover\@margin\:25\%:hover {
+    margin: var(--rt-pr-25) !important;
+}
+
+.margin\:50\%,
+.hover\@margin\:50\%:hover {
+    margin: var(--rt-pr-50) !important;
+}
+
+.margin\:75\%,
+.hover\@margin\:75\%:hover {
+    margin: var(--rt-pr-75) !important;
+}
+
+.margin\:100\%,
+.hover\@margin\:100\%:hover {
+    margin: var(--rt-pr-100) !important;
+}
+
+.margin\:x,
+.hover\@margin\:x:hover {
     margin-left: var(--rt-sz-0) !important;
     margin-right: var(--rt-sz-0) !important;
 }
 
-.margin\:x-auto {
+.margin\:x-auto,
+.hover\@margin\:x-auto:hover {
     margin-left: auto !important;
     margin-right: auto !important;
 }
 
-.margin\:x-25\% {
+.margin\:x-1,
+.hover\@margin\:x-1:hover {
     margin-left: var(--rt-sz-1) !important;
     margin-right: var(--rt-sz-1) !important;
 }
 
-.margin\:x-50\% {
+.margin\:x-2,
+.hover\@margin\:x-2:hover {
     margin-left: var(--rt-sz-2) !important;
     margin-right: var(--rt-sz-2) !important;
 }
 
-.margin\:x-75\% {
+.margin\:x-3,
+.hover\@margin\:x-3:hover {
     margin-left: var(--rt-sz-3) !important;
     margin-right: var(--rt-sz-3) !important;
 }
 
-.margin\:x-100\% {
+.margin\:x-4,
+.hover\@margin\:x-4:hover {
     margin-left: var(--rt-sz-4) !important;
     margin-right: var(--rt-sz-4) !important;
 }
 
-.margin\:left-25\% {
+.margin\:x-25\%,
+.hover\@margin\:x-25\%:hover {
+    margin-left: var(--rt-pr-25) !important;
+    margin-right: var(--rt-pr-25) !important;
+}
+
+.margin\:x-50\%,
+.hover\@margin\:x-50\%:hover {
+    margin-left: var(--rt-pr-50) !important;
+    margin-right: var(--rt-pr-50) !important;
+}
+
+.margin\:x-75\%,
+.hover\@margin\:x-75\%:hover {
+    margin-left: var(--rt-pr-75) !important;
+    margin-right: var(--rt-pr-75) !important;
+}
+
+.margin\:x-100\%,
+.hover\@margin\:x-100\%:hover {
+    margin-left: var(--rt-pr-100) !important;
+    margin-right: var(--rt-pr-100) !important;
+}
+
+.margin\:left-1,
+.hover\@margin\:left-1:hover {
     margin-left: var(--rt-sz-1) !important;
 }
 
-.margin\:left-50\% {
+.margin\:left-2,
+.hover\@margin\:left-2:hover {
     margin-left: var(--rt-sz-2) !important;
 }
 
-.margin\:left-75\% {
+.margin\:left-3,
+.hover\@margin\:left-3:hover {
     margin-left: var(--rt-sz-3) !important;
 }
 
-.margin\:left-100\% {
+.margin\:left-4,
+.hover\@margin\:left-4:hover {
     margin-left: var(--rt-sz-4) !important;
 }
 
-.margin\:right-25\% {
+.margin\:left-25\%,
+.hover\@margin\:left-25\%:hover {
+    margin-left: var(--rt-pr-25) !important;
+}
+
+.margin\:left-50\%,
+.hover\@margin\:left-50\%:hover {
+    margin-left: var(--rt-pr-50) !important;
+}
+
+.margin\:left-75\%,
+.hover\@margin\:left-75\%:hover {
+    margin-left: var(--rt-pr-75) !important;
+}
+
+.margin\:left-100\%,
+.hover\@margin\:left-100\%:hover {
+    margin-left: var(--rt-pr-100) !important;
+}
+
+.margin\:right-1,
+.hover\@margin\:right-1:hover {
     margin-right: var(--rt-sz-1) !important;
 }
 
-.margin\:right-50\% {
+.margin\:right-2,
+.hover\@margin\:right-2:hover {
     margin-right: var(--rt-sz-2) !important;
 }
 
-.margin\:right-75\% {
+.margin\:right-3,
+.hover\@margin\:right-3:hover {
     margin-right: var(--rt-sz-3) !important;
 }
 
-.margin\:right-100\% {
+.margin\:right-4,
+.hover\@margin\:right-4:hover {
     margin-right: var(--rt-sz-4) !important;
 }
 
-.margin\:y {
+.margin\:right-25\%,
+.hover\@margin\:right-25\%:hover {
+    margin-right: var(--rt-pr-25) !important;
+}
+
+.margin\:right-50\%,
+.hover\@margin\:right-50\%:hover {
+    margin-right: var(--rt-pr-50) !important;
+}
+
+.margin\:right-75\%,
+.hover\@margin\:right-75\%:hover {
+    margin-right: var(--rt-pr-75) !important;
+}
+
+.margin\:right-100\%,
+.hover\@margin\:right-100\%:hover {
+    margin-right: var(--rt-pr-100) !important;
+}
+
+.margin\:y,
+.hover\@margin\:y:hover {
     margin-top: var(--rt-sz-0) !important;
     margin-bottom: var(--rt-sz-0) !important;
 }
 
-.margin\:y-auto {
+.margin\:y-auto,
+.hover\@margin\:y-auto:hover {
     margin-top: auto !important;
     margin-bottom: auto !important;
 }
 
-.margin\:y-25\% {
+.margin\:y-1,
+.hover\@margin\:y-1:hover {
     margin-top: var(--rt-sz-1) !important;
     margin-bottom: var(--rt-sz-1) !important;
 }
 
-.margin\:y-50\% {
+.margin\:y-2,
+.hover\@margin\:y-2:hover {
     margin-top: var(--rt-sz-2) !important;
     margin-bottom: var(--rt-sz-2) !important;
 }
 
-.margin\:y-75\% {
+.margin\:y-3,
+.hover\@margin\:y-3:hover {
     margin-top: var(--rt-sz-3) !important;
     margin-bottom: var(--rt-sz-3) !important;
 }
 
-.margin\:y-100\% {
+.margin\:y-4,
+.hover\@margin\:y-4:hover {
     margin-top: var(--rt-sz-4) !important;
     margin-bottom: var(--rt-sz-4) !important;
 }
 
-.margin\:top-25\% {
+.margin\:y-25\%,
+.hover\@margin\:y-25\%:hover {
+    margin-top: var(--rt-pr-25) !important;
+    margin-bottom: var(--rt-pr-25) !important;
+}
+
+.margin\:y-50\%,
+.hover\@margin\:y-50\%:hover {
+    margin-top: var(--rt-pr-50) !important;
+    margin-bottom: var(--rt-pr-50) !important;
+}
+
+.margin\:y-75\%,
+.hover\@margin\:y-75\%:hover {
+    margin-top: var(--rt-pr-75) !important;
+    margin-bottom: var(--rt-pr-75) !important;
+}
+
+.margin\:y-100\%,
+.hover\@margin\:y-100\%:hover {
+    margin-top: var(--rt-pr-100) !important;
+    margin-bottom: var(--rt-pr-100) !important;
+}
+
+.margin\:top-1,
+.hover\@margin\:top-1:hover {
     margin-top: var(--rt-sz-1) !important;
 }
 
-.margin\:top-50\% {
+.margin\:top-2,
+.hover\@margin\:top-2:hover {
     margin-top: var(--rt-sz-2) !important;
 }
 
-.margin\:top-5\% {
+.margin\:top-3,
+.hover\@margin\:top-3:hover {
     margin-top: var(--rt-sz-3) !important;
 }
 
-.margin\:top-100\% {
+.margin\:top-4,
+.hover\@margin\:top-4:hover {
     margin-top: var(--rt-sz-4) !important;
 }
 
-.margin\:bottom-25\% {
+.margin\:top-25\%,
+.hover\@margin\:top-25\%:hover {
+    margin-top: var(--rt-pr-25) !important;
+}
+
+.margin\:top-50\%,
+.hover\@margin\:top-50\%:hover {
+    margin-top: var(--rt-pr-50) !important;
+}
+
+.margin\:top-75\%,
+.hover\@margin\:top-75\%:hover {
+    margin-top: var(--rt-pr-75) !important;
+}
+
+.margin\:top-100\%,
+.hover\@margin\:top-100\%:hover {
+    margin-top: var(--rt-pr-100) !important;
+}
+
+.margin\:bottom-1,
+.hover\@margin\:bottom-1:hover {
     margin-bottom: var(--rt-sz-1) !important;
 }
 
-.margin\:bottom-50\% {
+.margin\:bottom-2,
+.hover\@margin\:bottom-2:hover {
     margin-bottom: var(--rt-sz-2) !important;
 }
 
-.margin\:bottom-75\% {
+.margin\:bottom-3,
+.hover\@margin\:bottom-3:hover {
     margin-bottom: var(--rt-sz-3) !important;
 }
 
-.margin\:bottom-100\% {
+.margin\:bottom-4,
+.hover\@margin\:bottom-4:hover {
     margin-bottom: var(--rt-sz-4) !important;
 }
 
-.padding { /*TODO: Padding reference element in box content*/
+.margin\:bottom-25\%,
+.hover\@margin\:bottom-25\%:hover {
+    margin-bottom: var(--rt-pr-25) !important;
+}
+
+.margin\:bottom-50\%,
+.hover\@margin\:bottom-50\%:hover {
+    margin-bottom: var(--rt-pr-50) !important;
+}
+
+.margin\:bottom-75\%,
+.hover\@margin\:bottom-75\%:hover {
+    margin-bottom: var(--rt-pr-75) !important;
+}
+
+.margin\:bottom-100\%,
+.hover\@margin\:bottom-100\%:hover {
+    margin-bottom: var(--rt-pr-100) !important;
+}
+
+.padding,
+.hover\@padding { /*TODO: Padding reference element in box content*/
     padding: var(--rt-sz-0) !important;
 }
 
-.padding\:auto {
+.padding\:auto,
+.hover\@padding\:auto {
     padding: auto !important;
 }
 
-.padding\:25\% {
+.padding\:1,
+.hover\@padding\:1 {
     padding: var(--rt-sz-1) !important;
 }
 
-.padding\:50\% {
+.padding\:2,
+.hover\@padding\:2 {
     padding: var(--rt-sz-2) !important;
 }
 
-.padding\:75\% {
+.padding\:3,
+.hover\@padding\:3 {
     padding: var(--rt-sz-3) !important;
 }
 
-.padding\:100\% {
+.padding\:4,
+.hover\@padding\:4 {
     padding: var(--rt-sz-4) !important;
 }
 
-.padding\:x {
+.padding\:25\%,
+.hover\@padding\:25\% {
+    padding: var(--rt-pr-25) !important;
+}
+
+.padding\:50\%,
+.hover\@padding\:50\% {
+    padding: var(--rt-pr-50) !important;
+}
+
+.padding\:75\%,
+.hover\@padding\:75\% {
+    padding: var(--rt-pr-75) !important;
+}
+
+.padding\:100\%,
+.hover\@padding\:100\% {
+    padding: var(--rt-pr-100) !important;
+}
+
+.padding\:x,
+.hover\@padding\:x {
     padding-left: var(--rt-sz-0) !important;
     padding-right: var(--rt-sz-0) !important;
 }
 
-.padding\:x-auto {
+.padding\:x-auto,
+.hover\@padding\:x-auto {
     padding-left: auto !important;
     padding-right: auto !important;    
 }
 
-.padding\:x-25\% {
+.padding\:x-1,
+.hover\@padding\:x-1 {
     padding-left: var(--rt-sz-1) !important;
     padding-right: var(--rt-sz-1) !important;
 }
 
-.padding\:x-50\% {
+.padding\:x-2,
+.hover\@padding\:x-2 {
     padding-left: var(--rt-sz-2) !important;
     padding-right: var(--rt-sz-2) !important;
 }
 
-.padding\:x-75\% {
+.padding\:x-3,
+.hover\@padding\:x-3 {
     padding-left: var(--rt-sz-3) !important;
     padding-right: var(--rt-sz-3) !important;
 }
 
-.padding\:x-100\% {
+.padding\:x-4,
+.hover\@padding\:x-4 {
     padding-left: var(--rt-sz-4) !important;
     padding-right: var(--rt-sz-4) !important;
 }
 
-.padding\:left-25\% {
+.padding\:x-25\%,
+.hover\@padding\:x-25\% {
+    padding-left: var(--rt-pr-25) !important;
+    padding-right: var(--rt-pr-25) !important;
+}
+
+.padding\:x-50\%,
+.hover\@padding\:x-50\% {
+    padding-left: var(--rt-pr-50) !important;
+    padding-right: var(--rt-pr-50) !important;
+}
+
+.padding\:x-75\%,
+.hover\@padding\:x-75\% {
+    padding-left: var(--rt-pr-75) !important;
+    padding-right: var(--rt-pr-75) !important;
+}
+
+.padding\:x-100\%,
+.hover\@padding\:x-100\% {
+    padding-left: var(--rt-pr-100) !important;
+    padding-right: var(--rt-pr-100) !important;
+}
+
+.padding\:left-1,
+.hover\@padding\:left-1 {
     padding-left: var(--rt-sz-1) !important;
 }
 
-.padding\:left-50\% {
+.padding\:left-2,
+.hover\@padding\:left-2 {
     padding-left: var(--rt-sz-2) !important;
 }
 
-.padding\:left-75\% {
+.padding\:left-3,
+.hover\@padding\:left-3 {
     padding-left: var(--rt-sz-3) !important;
 }
 
-.padding\:left-100\% {
+.padding\:left-4,
+.hover\@padding\:left-4 {
     padding-left: var(--rt-sz-4) !important;
 }
 
-.padding\:right-25\% {
+.padding\:left-25\%,
+.hover\@padding\:left-25\% {
+    padding-left: var(--rt-pr-25) !important;
+}
+
+.padding\:left-50\%,
+.hover\@padding\:left-50\% {
+    padding-left: var(--rt-pr-50) !important;
+}
+
+.padding\:left-75\%,
+.hover\@padding\:left-75\% {
+    padding-left: var(--rt-pr-75) !important;
+}
+
+.padding\:left-100\%,
+.hover\@padding\:left-100\% {
+    padding-left: var(--rt-pr-100) !important;
+}
+
+.padding\:right-1,
+.hover\@padding\:right-1 {
     padding-right: var(--rt-sz-1) !important;
 }
 
-.padding\:right-50\% {
+.padding\:right-2,
+.hover\@padding\:right-2 {
     padding-right: var(--rt-sz-2) !important;
 }
 
-.padding\:right-75\% {
+.padding\:right-3,
+.hover\@padding\:right-3 {
     padding-right: var(--rt-sz-3) !important;
 }
 
-.padding\:right-100\% {
+.padding\:right-4,
+.hover\@padding\:right-4 {
     padding-right: var(--rt-sz-4) !important;
 }
 
-.padding\:y {
+.padding\:right-25\%,
+.hover\@padding\:right-25\% {
+    padding-right: var(--rt-pr-25) !important;
+}
+
+.padding\:right-50\%,
+.hover\@padding\:right-50\% {
+    padding-right: var(--rt-pr-50) !important;
+}
+
+.padding\:right-75\%,
+.hover\@padding\:right-75\% {
+    padding-right: var(--rt-pr-75) !important;
+}
+
+.padding\:right-100\%,
+.hover\@padding\:right-100\% {
+    padding-right: var(--rt-pr-100) !important;
+}
+
+.padding\:y,
+.hover\@padding\:y {
     padding-top: var(--rt-sz-0) !important;
     padding-bottom: var(--rt-sz-0) !important;
 }
 
-.padding\:y-auto {
+.padding\:y-auto,
+.hover\@padding\:y-auto {
     padding-top: auto !important;
     padding-bottom: auto !important;    
 }
 
-.padding\:y-25\% {
+.padding\:y-1,
+.hover\@padding\:y-1 {
     padding-top: var(--rt-sz-1) !important;
     padding-bottom: var(--rt-sz-1) !important;
 }
 
-.padding\:y-50\% {
+.padding\:y-2,
+.hover\@padding\:y-2 {
     padding-top: var(--rt-sz-2) !important;
     padding-bottom: var(--rt-sz-2) !important;
 }
 
-.padding\:y-75\% {
+.padding\:y-3,
+.hover\@padding\:y-3 {
     padding-top: var(--rt-sz-3) !important;
     padding-bottom: var(--rt-sz-3) !important;
 }
 
-.padding\:y-100\% {
+.padding\:y-4,
+.hover\@padding\:y-4 {
     padding-top: var(--rt-sz-4) !important;
     padding-bottom: var(--rt-sz-4) !important;
 }
 
-.padding\:top-25\% {
+.padding\:y-25\%,
+.hover\@padding\:y-25\% {
+    padding-top: var(--rt-pr-25) !important;
+    padding-bottom: var(--rt-pr-25) !important;
+}
+
+.padding\:y-50\%,
+.hover\@padding\:y-50\% {
+    padding-top: var(--rt-pr-50) !important;
+    padding-bottom: var(--rt-pr-50) !important;
+}
+
+.padding\:y-75\%,
+.hover\@padding\:y-75\% {
+    padding-top: var(--rt-pr-75) !important;
+    padding-bottom: var(--rt-pr-75) !important;
+}
+
+.padding\:y-100\%,
+.hover\@padding\:y-100\% {
+    padding-top: var(--rt-pr-100) !important;
+    padding-bottom: var(--rt-pr-100) !important;
+}
+
+.padding\:top-1,
+.hover\@padding\:top-1 {
     padding-top: var(--rt-sz-1) !important;
 }
 
-.padding\:top-50\% {
+.padding\:top-2,
+.hover\@padding\:top-2 {
     padding-top: var(--rt-sz-2) !important;
 }
 
-.padding\:top-75\% {
+.padding\:top-3,
+.hover\@padding\:top-3 {
     padding-top: var(--rt-sz-3) !important;
 }
 
-.padding\:top-100\% {
+.padding\:top-4,
+.hover\@padding\:top-4 {
     padding-top: var(--rt-sz-4) !important;
 }
 
-.padding\:bottom-25\% {
+.padding\:top-25\%,
+.hover\@padding\:top-25\% {
+    padding-top: var(--rt-pr-25) !important;
+}
+
+.padding\:top-50\%,
+.hover\@padding\:top-50\% {
+    padding-top: var(--rt-pr-50) !important;
+}
+
+.padding\:top-75\%,
+.hover\@padding\:top-75\% {
+    padding-top: var(--rt-pr-75) !important;
+}
+
+.padding\:top-100\%,
+.hover\@padding\:top-100\% {
+    padding-top: var(--rt-pr-100) !important;
+}
+
+.padding\:bottom-1,
+.hover\@padding\:bottom-1 {
     padding-bottom: var(--rt-sz-1) !important;
 }
 
-.padding\:bottom-50\% {
+.padding\:bottom-2,
+.hover\@padding\:bottom-2 {
     padding-bottom: var(--rt-sz-2) !important;
 }
 
-.padding\:bottom-75\% {
+.padding\:bottom-3,
+.hover\@padding\:bottom-3 {
     padding-bottom: var(--rt-sz-3) !important;
 }
 
-.padding\:bottom-100\% {
+.padding\:bottom-4,
+.hover\@padding\:bottom-4 {
     padding-bottom: var(--rt-sz-4) !important;
 }
 
-.rotate\:90\deg { /*TODO: Rotate element in window*/
+.padding\:bottom-25\%,
+.hover\@padding\:bottom-25\% {
+    padding-bottom: var(--rt-pr-25) !important;
+}
+
+.padding\:bottom-50\%,
+.hover\@padding\:bottom-50\% {
+    padding-bottom: var(--rt-pr-50) !important;
+}
+
+.padding\:bottom-75\%,
+.hover\@padding\:bottom-75\% {
+    padding-bottom: var(--rt-pr-75) !important;
+}
+
+.padding\:bottom-100\%,
+.hover\@padding\:bottom-100\% {
+    padding-bottom: var(--rt-pr-100) !important;
+}
+
+.rotate\:90deg { /*TODO: Rotate element in window*/
     transform: rotate(var(--rt-dg-90)) !important;
 }
 
-.rotate\:180\deg {
+.rotate\:180deg {
     transform: rotate(var(--rt-dg-180)) !important;
 }
 
-.rotate\:270\deg {
+.rotate\:270deg {
     transform: rotate(var(--rt-dg-270)) !important;
 }
 
-.rotate\:360\deg {
+.rotate\:360deg {
     transform: rotate(var(--rt-dg-360)) !important;
 }
 
-.rotate\:x-90\deg {
+.rotate\:x-90deg {
     transform: rotateX(var(--rt-dg-90)) !important;
 }
 
-.rotate\:x-180\deg {
+.rotate\:x-180deg {
     transform: rotateX(var(--rt-dg-180)) !important;
 }
 
-.rotate\:x-270\deg {
+.rotate\:x-270deg {
     transform: rotateX(var(--rt-dg-270)) !important;
 }
 
-.rotate\:x-360\deg {
+.rotate\:x-360deg {
     transform: rotateX(var(--rt-dg-360)) !important;
 }
 
-.rotate\:y-90\deg {
+.rotate\:y-90deg {
     transform: rotateY(var(--rt-dg-90)) !important;
 }
 
-.rotate\:y-180\deg {
+.rotate\:y-180deg {
     transform: rotateY(var(--rt-dg-180)) !important;
 }
 
-.rotate\:y-270\deg {
+.rotate\:y-270deg {
     transform: rotateY(var(--rt-dg-270)) !important;
 }
 
-.rotate\:y-360\deg {
+.rotate\:y-360deg {
     transform: rotateY(var(--rt-dg-180)) !important;
 }
 
-.rotate\:z-90\deg {
+.rotate\:z-90deg {
     transform: rotateZ(var(--rt-dg-90)) !important;
 }
 
-.rotate\:z-180\deg {
+.rotate\:z-180deg {
     transform: rotateZ(var(--rt-dg-180)) !important;
 }
 
-.rotate\:z-270\deg {
+.rotate\:z-270deg {
     transform: rotateZ(var(--rt-dg-270)) !important;
 }
 
-.rotate\:z-360\deg {
+.rotate\:z-360deg {
     transform: rotateZ(var(--rt-dg-360)) !important;
 }
 
@@ -765,8 +1251,6 @@
     width: var(--rt-pr-100);
     max-width: var(--rt-pr-100);
     flex-shrink: var(--rt-sz-0);
-    /* padding-left: var(--rt-sz-1);
-    padding-right: var(--rt-sz-1); */
 }
 
 .flex\:row .flex\:cols-1,
@@ -782,7 +1266,6 @@
 .flex\:row .flex\:cols-11, 
 .flex\:row .flex\:cols-12 {
     flex: var(--rt-sz-0) var(--rt-sz-0) auto;
-    /* text-align: center; */
 } 
 
 .flex\:row .flex\:cols-1 {
@@ -921,6 +1404,102 @@
     align-items: flex-end !important;
 }
 
+.gutter\:1 {
+    gap: var(--rt-sz-1);
+}
+
+.gutter\:2 {
+    gap: var(--rt-sz-2);
+}
+
+.gutter\:3 {
+    gap: var(--rt-sz-3);
+}
+
+.gutter\:4 {
+    gap: var(--rt-sz-4);
+}
+
+.gutter\:25\% {
+    gap: var(--rt-pr-25);
+}
+
+.gutter\:50\% {
+    gap: var(--rt-pr-50);
+}
+
+.gutter\:75\% {
+    gap: var(--rt-pr-75);
+}
+
+.gutter\:100\% {
+    gap: var(--rt-pr-100);
+}
+
+.gutter\:row-1 {
+    row-gap: var(--rt-sz-1);
+}
+
+.gutter\:row-2 {
+    row-gap: var(--rt-sz-2);
+}
+
+.gutter\:row-3 {
+    row-gap: var(--rt-sz-3);
+}
+
+.gutter\:row-4 {
+    row-gap: var(--rt-sz-4);
+}
+
+.gutter\:row-25\% {
+    row-gap: var(--rt-pr-25);
+}
+
+.gutter\:row-50\% {
+    row-gap: var(--rt-pr-50);
+}
+
+.gutter\:row-75\% {
+    row-gap: var(--rt-pr-75);
+}
+
+.gutter\:row-100\% {
+    row-gap: var(--rt-pr-100);
+}
+
+.gutter\:col-1 {
+    column-gap: var(--rt-sz-1);
+}
+
+.gutter\:col-2 {
+    column-gap: var(--rt-sz-2);
+}
+
+.gutter\:col-3 {
+    column-gap: var(--rt-sz-3);
+}
+
+.gutter\:col-4 {
+    column-gap: var(--rt-sz-4);
+}
+
+.gutter\:col-25\% {
+    column-gap: var(--rt-pr-25);
+}
+
+.gutter\:col-50\% {
+    column-gap: var(--rt-pr-50);
+}
+
+.gutter\:col-75\% {
+    column-gap: var(--rt-pr-75);
+}
+
+.gutter\:col-100\% {
+    column-gap: var(--rt-pr-100);
+}
+
 .grid\:header,
 .grid\:hero,
 .grid\:footer {
@@ -1021,6 +1600,10 @@
     vertical-align: text-bottom !important;
 }
 
+.direction\:between {
+    text-align-last: justify !important;
+}
+
 .direction\:left-top {
     text-align: left !important;
     text-align: -webkit-left !important;
@@ -1088,18 +1671,23 @@
 	flex-direction: row !important;
 }
 
+.direction\:row-reverse {
+    flex-direction: row-reverse !important;
+}
+
 .direction\:col {
 	flex-direction: column !important;
 }
 
+.direction\:col-reverse {
+    flex-direction: column-reverse !important;
+}
+
 .button { /*TODO: Button's property's*/
-    /* display: var(--rt-ds-inline-block);
-    position: var(--rt-ps-relative); */
     width: auto;
-    border-color: var(--rt-bg-none);
-    border-style:solid;
-    border-radius: 0.45em;
-    /* padding: var(--rt-sz-1); */
+    border: 1.5px var(--rt-bg-bordered);
+    border-radius: var(--rt-sz-2);
+    border-style: solid;
     margin: auto;
     padding: var(--rt-sz-2) 0.10em; 
     font-weight: 400;
@@ -1112,13 +1700,12 @@
 }
 
 .text { /*TODO: Text field's property's*/
-    /* display: var(--rt-ds-block); */
-    /* width: var(--rt-pr-100); */
     width: auto;
-    border: 1.5px solid rgba(10, 10, 10, 0.45);
+    border: 1.5px var(--rt-bg-bordered);
     border-radius: var(--rt-sz-2);
+    border-style: solid;
     margin: auto;
-    padding: var(--rt-sz-2) 0.10em;
+    padding: calc(var(--rt-sz-2) + 0.5px) 0.10em;
     font-weight: 450;
     text-align: center !important;
     text-transform: capitalize;
@@ -1126,8 +1713,6 @@
 }
     
 .select { /*TODO: Combo's property's*/
-    /* display: var(--rt-ds-block); */
-    /* width: var(--rt-pr-100); */
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
     background-position: right center !important;
     background-size: 15px;
@@ -1213,14 +1798,11 @@
 .list\:portrait { /*TODO: List's property's*/
     height: auto;
     margin: auto;
-    padding: var(--rt-sz-1) var(--rt-sz-0);
     white-space: initial;
 }
 
 .list\:landscape .list\:item, 
 .list\:portrait .list\:item { /*TODO: List's item's property's*/
-    border-radius: var(--rt-sz-1);
-    padding: var(--rt-sz-2);
     text-align: center;
     word-break: break-word;
     justify-content: center;
@@ -1245,7 +1827,6 @@
 
 .list\:hover .list\:item:hover, 
 .list\:hover-scale .list\:item:hover {
-    /* box-shadow: var(--rt-bs-hover); */
     background-color: var(--rt-bg-blue);
     color: var(--rt-bg-white);
 }
@@ -1280,12 +1861,15 @@
 }
 
 .icon {
+    display: var(--rt-ds-block);
     color: var(--rt-bg-white);
-    width: 1.5em;
-    height: 1.5em;
     background-repeat: no-repeat;
     background-position: var(--rt-pr-50);
     background-size: var(--rt-pr-100) var(--rt-pr-100);
+}
+
+.icon:active {
+    transform: scale(0.9);
 }
 
 .icon\:close-light {
@@ -1429,30 +2013,16 @@
 .scroll\:auto::-webkit-scrollbar,
 .scroll\:y-auto::-webkit-scrollbar,
 .scroll\:y-visible::-webkit-scrollbar {
-    /* display: var(--rt-ds-none); */
     width: var(--rt-sz-2);
     height: var(--rt-pr-100);
 }
 
-/* .scroll\:auto:hover::-webkit-scrollbar,
-.scroll\:y-auto:hover::-webkit-scrollbar,
-.scroll\:y-visible:hover::-webkit-scrollbar {
-    display: var(--rt-ds-inline-block);
-} */
-
 .scroll\:auto::-webkit-scrollbar,
 .scroll\:x-auto::-webkit-scrollbar,
 .scroll\:x-visible::-webkit-scrollbar {
-    /* display: var(--rt-ds-none); */
     width: var(--rt-pr-100);
     height: var(--rt-sz-2);
 }
-
-/* .scroll\:auto:hover:-webkit-scrollbar,
-.scroll\:x-auto:hover::-webkit-scrollbar,
-.scroll\:x-visible:hover::-webkit-scrollbar {
-    display: var(--rt-ds-block);
-} */
 
 .scroll\:auto::-webkit-scrollbar-track-piece:start,
 .scroll\:visible::-webkit-scrollbar-track-piece:start,
@@ -1502,95 +2072,131 @@
 }
 
 .round\:1 {
-    border-radius: var(--rt-sz-1) !important;
+    border-radius: var(--rt-sz-1);
 }
 
 .round\:2 {
-    border-radius: var(--rt-sz-2) !important;
+    border-radius: var(--rt-sz-2);
 }
 
 .round\:3 {
-    border-radius: var(--rt-sz-3) !important;
+    border-radius: var(--rt-sz-3);
+}
+
+.round\:4 {
+    border-radius: var(--rt-sz-4);
+}
+
+.round\:top-left {
+    border-top-left-radius: var(--rt-sz-0) !important;
 }
 
 .round\:top-left-1 {
-    border-top-left-radius: var(--rt-sz-1) !important;
+    border-top-left-radius: var(--rt-sz-1);
 }
 
 .round\:top-left-2 {
-    border-top-left-radius: var(--rt-sz-2) !important;
+    border-top-left-radius: var(--rt-sz-2);
 }
 
 .round\:top-left-3 {
-    border-top-left-radius: var(--rt-sz-3) !important;
+    border-top-left-radius: var(--rt-sz-3);
+}
+
+.round\:top-left-4 {
+    border-top-left-radius: var(--rt-sz-4);
+}
+
+.round\:top-right {
+    border-top-right-radius: var(--rt-sz-0) !important;
 }
 
 .round\:top-right-1 {
-    border-top-right-radius: var(--rt-sz-1) !important;
+    border-top-right-radius: var(--rt-sz-1);
 }
 
 .round\:top-right-2 {
-    border-top-right-radius: var(--rt-sz-2) !important;
+    border-top-right-radius: var(--rt-sz-2);
 }
 
 .round\:top-right-3 {
-    border-top-right-radius: var(--rt-sz-3) !important;
+    border-top-right-radius: var(--rt-sz-3);
+}
+
+.round\:top-right-4 {
+    border-top-right-radius: var(--rt-sz-4);
+}
+
+.round\:bottom-left {
+    border-bottom-left-radius: var(--rt-sz-0) !important;
 }
 
 .round\:bottom-left-1 {
-    border-bottom-left-radius: var(--rt-sz-1) !important;
+    border-bottom-left-radius: var(--rt-sz-1);
 }
 
 .round\:bottom-left-2 {
-    border-bottom-left-radius: var(--rt-sz-2) !important;
+    border-bottom-left-radius: var(--rt-sz-2);
 }
 
 .round\:bottom-left-3 {
-    border-bottom-left-radius: var(--rt-sz-3) !important;
+    border-bottom-left-radius: var(--rt-sz-3);
+}
+
+.round\:bottom-left-4 {
+    border-bottom-left-radius: var(--rt-sz-4);
+}
+
+.round\:bottom-right {
+    border-bottom-right-radius: var(--rt-sz-0) !important;
 }
 
 .round\:bottom-right-1 {
-    border-bottom-right-radius: var(--rt-sz-1) !important;
+    border-bottom-right-radius: var(--rt-sz-1);
 }
 
 .round\:bottom-right-2 {
-    border-bottom-right-radius: var(--rt-sz-2) !important;
+    border-bottom-right-radius: var(--rt-sz-2);
 }
 
 .round\:bottom-right-3 {
-    border-bottom-right-radius: var(--rt-sz-3) !important;
+    border-bottom-right-radius: var(--rt-sz-3);
+}
+
+.round\:bottom-right-4 {
+    border-bottom-right-radius: var(--rt-sz-4);
 }
 
 .round\:25\% { /*TODO: Radius's property's*/
-    border-radius: var(--rt-pr-25) !important;
+    border-radius: var(--rt-pr-25);
 }
 
 .round\:50\% {
-    border-radius: var(--rt-pr-50) !important;
+    border-radius: var(--rt-pr-50);
 }
 
 .round\:75\% {
-    border-radius: var(--rt-pr-75) !important;
+    border-radius: var(--rt-pr-75);
 }
 
 .round\:100\% {
-    border-radius: var(--rt-pr-100) !important;
+    border-radius: var(--rt-pr-100);
 }
 
 .round\:15\px {
-    border-radius: 15px !important;
+    border-radius: 15px;
 }
 
 .round\:30\px {
-    border-radius: 30px !important;
+    border-radius: 30px;
 }
 
 .round\:45\px {
-    border-radius: 45px !important;
+    border-radius: 45px;
 }
 
 .round\:60\px {
-    border-radius: 60px !important;
+    border-radius: 60px;
 }
 
 .fit\:contain {
@@ -1653,6 +2259,62 @@
     transition: 5s;
 }
 
+.animation\:nav-visible,
+.hover\@animation\:nav-visible:hover {
+    animation: 1.5s var(--rt-a-navVisible);
+    -webkit-animation: 1.5s var(--rt-a-navVisible);
+    -moz-animation: 1.5s var(--rt-a-navVisible);
+    -o-animation: 1.5s var(--rt-a-navVisible);
+}
+
+.animation\:nav-hidden,
+.hover\@animation\:nav-hidden:hover {
+    animation: 1.5s var(--rt-a-navHidden);
+    -webkit-animation: 1.5s var(--rt-a-navHidden);
+    -moz-animation: 1.5s var(--rt-a-navHidden);
+    -o-animation: 1.5s var(--rt-a-navHidden);
+}
+
+.index\:1 {
+    z-index: 1;
+}
+
+.index\:10 {
+    z-index: 10;
+}
+
+.index\:100 {
+    z-index: 100;
+}
+
+.index\:1000 {
+    z-index: 1000;
+}
+
+.scale\:1,
+.hover\@scale\:1:hover,
+.active\@scale\:1:active {
+    transform: scale(0.5);
+}
+
+.scale\:2,
+.hover\@scale\:2:hover,
+.active\@scale\:2:active {
+    transform: scale(1);
+}
+
+.scale\:3,
+.hover\@scale\:3:hover,
+.active\@scale\:3:active {
+    transform: scale(1.5);
+}
+
+.scale\:4,
+.hover\@scale\:4:hover,
+.active\@scale\:4:active {
+    transform: scale(2);
+}
+
 .card\:contain,
 .card\:cover {
     display: var(--rt-ds-flex);
@@ -1701,7 +2363,7 @@
     bottom: var(--rt-sz-0);
     backdrop-filter: var(--rt-bd-blur);
     opacity: 0.98;
-    z-index: 9999;
+    z-index: 999;
 }
 
 .container\:mirror .modal\:alert,
@@ -1709,7 +2371,7 @@
 .container\:mirror .modal\:notify {
     position: var(--rt-ps-absolute);
     word-break: break-word;
-    z-index: 99999;
+    z-index: 9999;
 }
 
 .container\:mirror .modal\:alert,
