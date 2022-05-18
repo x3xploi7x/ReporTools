@@ -66,3 +66,6 @@ ________________________________________________________________________________
 
 **Updates 20220509**
 - Add gutter's (space in columns - rows) general (divide flex-grid)
+
+**Updates 20220517**
+- Modify selector relationship (parent > child)
