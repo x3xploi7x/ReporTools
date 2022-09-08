@@ -9287,7 +9287,7 @@ i {
     border-radius: var(--rt-sz-2);
     border-style: solid;
     margin: auto;
-    padding: var(--rt-sz-2) 0.10em; 
+    padding: var(--rt-sz-2) var(--rt-sz-0); 
     font-weight: 400;
     outline: none !important;
     word-break: break-word;
@@ -9303,7 +9303,7 @@ i {
     border-radius: var(--rt-sz-2);
     border-style: solid;
     margin: auto;
-    padding: calc(var(--rt-sz-2) + 0.5px) 0.10em;
+    padding: calc(var(--rt-sz-2) + 0.5px) var(--rt-sz-0);
     font-weight: 450;
     text-align: center !important;
     text-transform: capitalize;
@@ -9320,7 +9320,7 @@ i {
     text-align: left;
     text-overflow: ellipsis;
     margin: auto;
-    padding: var(--rt-sz-2) 0.10em;
+    padding: var(--rt-sz-2) var(--rt-sz-0);
     outline: none !important;
 }
     
